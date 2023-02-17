@@ -4,5 +4,5 @@ module.exports = {
   theme: {
     extend: require('./src/tokens'),
   },
-  plugins: [],
+  plugins: [require('./index.js')],
 };
