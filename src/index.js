@@ -1,6 +1,6 @@
 module.exports = require('tailwindcss/plugin')(
   function ({ addComponents }) {
-    addComponents(require('./components'))
+    addComponents(require('./components'));
   },
   {
     theme: {
@@ -67,4 +67,4 @@ module.exports = require('tailwindcss/plugin')(
       },
     },
   },
-)
+);

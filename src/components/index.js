@@ -1,3 +1,3 @@
-const button = require('./button')
+const button = require('./button');
 
-module.exports = [button]
+module.exports = [button];
