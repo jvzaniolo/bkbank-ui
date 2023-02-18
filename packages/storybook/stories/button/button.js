@@ -22,6 +22,7 @@ export function createButton({
   variant = 'solid',
   color = 'primary',
   text = 'Primary',
+  disabled = false,
 }) {
   return `
     <button class="${clsx(
@@ -29,7 +30,7 @@ export function createButton({
       variants[variant],
       colors[color],
       sizes[size],
-    )}" type="button">
+    )}" type="button" ${disabled ? 'disabled' : ''}>
       ${text}
     </button>
   `;
