@@ -4,13 +4,12 @@
   "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0",
     "prebuild": "npm run build:base && npm run build:components",
     "build": "prejss-cli dist/*.css --format commonjs",
     "build:base": "postcss --config packages/core packages/core/base/index.css -o dist/base.css",
     "build:components": "postcss --config packages/core packages/core/components/index.css -o dist/components.css",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook"
   },
   "repository": {
     "type": "git",
