@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./packages/storybook/stories/**/*.{js,mdx}'],
+  content: [{ raw: '' }],
   theme: {
     extend: { ...require('./packages/core/tokens') },
   },
