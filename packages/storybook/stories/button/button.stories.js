@@ -14,7 +14,7 @@ export default {
     color: 'primary',
     size: 'small',
     disabled: false,
-    text: 'Primary',
+    text: 'Shop now',
   },
   argTypes: {
     color: {
