@@ -4,7 +4,7 @@
   "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
   "main": "index.js",
   "scripts": {
-    "build": "run-p build:*",
+    "build": "run-p build:**",
     "build:base": "postcss --config packages/core packages/core/base/index.css -o dist/base.css",
     "build:components": "postcss --config packages/core packages/core/components/index.css -o dist/components.css",
     "storybook": "start-storybook -p 6006",
