@@ -1,6 +1,6 @@
 module.exports = require('tailwindcss/plugin')(
-  function ({ addComponents, theme }) {
-    addComponents(require('./packages/core/components')(theme));
+  function ({ addComponents }) {
+    addComponents(require('./dist/components'));
   },
   {
     theme: {
