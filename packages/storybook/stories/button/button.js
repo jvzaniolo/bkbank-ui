@@ -30,7 +30,7 @@ export function createButton({
       variants[variant],
       colors[color],
       sizes[size],
-    )}" type="button" ${disabled ? 'disabled' : ''}>
+    )}" type="button"${disabled ? ' disabled' : ''}>
       ${text}
     </button>
   `;

@@ -1,5 +1,5 @@
 .btn {
-  @apply py-2 px-6 text-sm font-medium leading-none rounded;
+  @apply rounded py-2 px-6 text-sm font-medium leading-none;
 
   &-md {
     @apply py-3 leading-normal;
@@ -10,28 +10,28 @@
 
   &-solid {
     &.btn-primary {
-      @apply bg-primary-pure text-white hover:bg-primary-medium active:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-lighter disabled:text-high-dark disabled:bg-high-medium;
+      @apply bg-primary-pure text-white hover:bg-primary-medium focus:outline-none focus:ring-2 focus:ring-primary-lighter active:bg-primary-dark disabled:bg-high-medium disabled:text-high-dark;
     }
     &.btn-secondary {
-      @apply bg-secondary-pure text-white hover:bg-secondary-medium active:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-secondary-light disabled:text-high-dark disabled:bg-high-medium;
+      @apply bg-secondary-pure text-white hover:bg-secondary-medium focus:outline-none focus:ring-2 focus:ring-secondary-light active:bg-secondary-dark disabled:bg-high-medium disabled:text-high-dark;
     }
   }
 
   &-outline {
     &.btn-primary {
-      @apply text-primary-pure border border-primary-pure hover:text-white hover:bg-primary-medium active:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-lighter disabled:text-high-dark disabled:border-high-dark disabled:bg-transparent;
+      @apply border border-primary-pure text-primary-pure hover:bg-primary-medium hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-lighter active:bg-primary-dark disabled:border-high-dark disabled:bg-transparent disabled:text-high-dark;
     }
     &.btn-secondary {
-      @apply text-secondary-pure border border-secondary-pure hover:text-white hover:bg-secondary-medium active:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-secondary-light disabled:text-high-dark disabled:border-high-dark disabled:bg-transparent;
+      @apply border border-secondary-pure text-secondary-pure hover:bg-secondary-medium hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary-light active:bg-secondary-dark disabled:border-high-dark disabled:bg-transparent disabled:text-high-dark;
     }
   }
 
   &-ghost {
     &.btn-primary {
-      @apply text-primary-pure hover:bg-high-light active:bg-high-dark focus:outline-none focus:ring-2 focus:ring-primary-lighter disabled:text-high-dark disabled:bg-transparent;
+      @apply text-primary-pure hover:bg-high-light focus:outline-none focus:ring-2 focus:ring-primary-lighter active:bg-high-dark disabled:bg-transparent disabled:text-high-dark;
     }
     &.btn-secondary {
-      @apply text-secondary-pure hover:bg-high-light active:bg-high-dark focus:outline-none focus:ring-2 focus:ring-secondary-light disabled:text-high-dark disabled:bg-transparent;
+      @apply text-secondary-pure hover:bg-high-light focus:outline-none focus:ring-2 focus:ring-secondary-light active:bg-high-dark disabled:bg-transparent disabled:text-high-dark;
     }
   }
 }
