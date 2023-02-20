@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./packages/storybook/**/*.{js,mdx}'],
+  content: [{ raw: '' }],
   theme: {
-    extend: { ...require('../core/tokens') },
+    extend: { ...require('./tokens') },
   },
   plugins: [],
 };

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "exit 0",
-    "build": "postcss src/index.css --dir dist",
-    "dev": "postcss src/index.css --dir dist --watch",
+    "prebuild": "postcss --config packages/core packages/core/components/index.css -o dist/components.css",
+    "build": "prejss-cli dist/components.css --format commonjs",
     "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -45,8 +45,11 @@
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
+    "prejss-cli": "^0.3.3",
+    "prettier": "^2.8.4"
+  },
+  "dependencies": {
     "postcss-js": "^4.0.1",
-    "prettier": "^2.8.4",
     "tailwindcss": "^3.2.7"
   }
 }
