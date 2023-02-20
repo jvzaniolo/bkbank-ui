@@ -4,8 +4,7 @@
   "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
   "main": "index.js",
   "scripts": {
-    "prebuild": "npm run build:base && npm run build:components",
-    "build": "prejss-cli dist/*.css --format commonjs",
+    "build": "run-p build:*",
     "build:base": "postcss --config packages/core packages/core/base/index.css -o dist/base.css",
     "build:components": "postcss --config packages/core packages/core/components/index.css -o dist/components.css",
     "storybook": "start-storybook -p 6006",
@@ -44,10 +43,10 @@
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-storybook": "^0.6.10",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
-    "prejss-cli": "^0.3.3",
     "prettier": "^2.8.4",
     "vite": "^4.1.3"
   },
