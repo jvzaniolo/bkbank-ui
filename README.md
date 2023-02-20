@@ -1,12 +1,12 @@
 # BK Bank UI
 
-The Bk Bank Design System written as a TailwindCSS plugin.
+BK Bank's Design System written as a TailwindCSS plugin.
 
 ## Installation
 
-First, configure your project to use [Tailwind CSS](https://tailwindcss.com/).
+First, set up your project to use [Tailwind CSS](https://tailwindcss.com/docs/installation).
 
-Then, install the design system:
+Then, install the design system as a dev dependency:
 
 ```bash
 npm install -D @bkbank/ui
