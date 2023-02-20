@@ -1,7 +1,37 @@
 .btn {
-  @apply px-3 py-1 text-sm font-medium rounded text-high-pure bg-primary-pure hover:bg-primary-medium active:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-pure;
+  @apply py-2 px-6 text-sm font-medium leading-none rounded;
 
   &-md {
-    @apply px-4 py-2 text-base;
+    @apply py-3 leading-normal;
+  }
+  &-lg {
+    @apply py-4 text-base leading-normal;
+  }
+
+  &-solid {
+    &.btn-primary {
+      @apply bg-primary-pure text-white hover:bg-primary-medium active:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-lighter disabled:text-high-dark disabled:bg-high-medium;
+    }
+    &.btn-secondary {
+      @apply bg-secondary-pure text-white hover:bg-secondary-medium active:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-secondary-light disabled:text-high-dark disabled:bg-high-medium;
+    }
+  }
+
+  &-outline {
+    &.btn-primary {
+      @apply text-primary-pure border border-primary-pure hover:text-white hover:bg-primary-medium active:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-lighter disabled:text-high-dark disabled:border-high-dark disabled:bg-transparent;
+    }
+    &.btn-secondary {
+      @apply text-secondary-pure border border-secondary-pure hover:text-white hover:bg-secondary-medium active:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-secondary-light disabled:text-high-dark disabled:border-high-dark disabled:bg-transparent;
+    }
+  }
+
+  &-ghost {
+    &.btn-primary {
+      @apply text-primary-pure hover:bg-high-light active:bg-high-dark focus:outline-none focus:ring-2 focus:ring-primary-lighter disabled:text-high-dark disabled:bg-transparent;
+    }
+    &.btn-secondary {
+      @apply text-secondary-pure hover:bg-high-light active:bg-high-dark focus:outline-none focus:ring-2 focus:ring-secondary-light disabled:text-high-dark disabled:bg-transparent;
+    }
   }
 }
