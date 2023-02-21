@@ -6,40 +6,21 @@ export default {
     docs: {
       description: {
         component:
-          'The base class `.btn` and size classes `.btn-{md|lg}` are independent of the color and variant classes. You can use them together to create a button with any color and variant.',
+          'The `button` component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. Base class: `.btn`. Sizes: `.btn-{md|lg}`. Variants: `.btn-{solid|outline|ghost}`. Colors: `.btn-{primary|secondary}`.',
       },
     },
   },
   args: {
+    size: 'small',
     variant: 'solid',
     color: 'primary',
-    size: 'small',
     disabled: false,
-    text: 'Shop now',
+    withIcon: false,
   },
   argTypes: {
-    color: {
-      description: 'Change the color of the button',
-      options: ['primary', 'secondary'],
-      control: {
-        type: 'radio',
-      },
-      table: {
-        defaultValue: { summary: 'primary' },
-      },
-    },
-    variant: {
-      description: 'Change the variant of the button',
-      options: ['solid', 'outline', 'ghost'],
-      control: {
-        type: 'radio',
-      },
-      table: {
-        defaultValue: { summary: 'solid' },
-      },
-    },
     size: {
-      description: 'Change the size of the button',
+      description:
+        'Change the size of the button.<br><br>Class: `.btn-{md|lg}`.',
       options: ['small', 'medium', 'large'],
       control: {
         type: 'radio',
@@ -48,39 +29,103 @@ export default {
         defaultValue: { summary: 'small' },
       },
     },
+    variant: {
+      description:
+        'Change the variant of the button.<br><br>Class: `.btn-{solid|outline|ghost}`.',
+      options: ['solid', 'outline', 'ghost'],
+      control: {
+        type: 'radio',
+      },
+      table: {
+        defaultValue: { summary: 'solid' },
+      },
+    },
+    color: {
+      description:
+        'Change the color of the button.<br><br>Class: `.btn-{primary|secondary}`.',
+      options: ['primary', 'secondary'],
+      control: {
+        type: 'radio',
+      },
+      table: {
+        defaultValue: { summary: 'primary' },
+      },
+    },
     disabled: {
-      description: 'Toggles the disabled state of the button',
+      description:
+        'Toggles the disabled state of the button.<br><br>Use the `disabled` attribute.',
       table: {
         defaultValue: { summary: false },
       },
     },
-    text: {
-      description: 'Change the text of the button',
+    withIcon: {
+      description:
+        'Adds an icon to the button example.<br><br>Target the `svg` or `i` element inside the button to apply styles.',
+      table: {
+        defaultValue: { summary: false },
+      },
     },
   },
 };
 
 export const Default = args => createButton(args);
 
+export const IconButton = () => `
+<div class="flex items-center gap-2">
+  <button type="button" class="btn btn-icon btn-solid btn-primary">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+  <button type="button" class="btn btn-icon btn-outline btn-primary">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+  <button type="button" class="btn btn-icon btn-ghost btn-primary">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+</div>
+`;
+IconButton.story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Use the `.btn-icon` class to create an icon button. All other variants still apply.',
+      },
+    },
+  },
+};
+
 export const Extending = () =>
-  `<button type="button" class="btn btn-solid btn-primary rounded-full">Rounded</button>`;
+  `<div class="flex items-center gap-2">
+    <button type="button" class="btn btn-solid btn-primary rounded-full">Rounded</button>
+    <button type="button" class="btn btn-icon btn-solid btn-primary rounded-full">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>`;
 
 Extending.story = {
   parameters: {
     docs: {
       description: {
         story:
-          "You can always extend the `button` with Tailwind utility classes. For example, let's say you want a rounded `button`, use the `rounded-full` class to make the button rounded.",
+          'The `button` component can be extended with Tailwind. For example, use the `.rounded-full` class to create a circular button.',
       },
     },
   },
 };
 
-export const OtherColors = () =>
-  `<button type="button" class="btn text-red-500 hover:bg-high-light active:bg-high-dark">Cancel</button>
-
+export const OtherColors = () => `
+<div class="flex items-center gap-2">
+  <button type="button" class="btn text-red-500 hover:bg-high-light active:bg-high-dark">Cancel</button>
   <button type="button" class="btn bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-300">Purchase</button>
-  `;
+</div>`;
 
 OtherColors.story = {
   parameters: {

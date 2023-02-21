@@ -1,11 +1,49 @@
 .btn {
-  @apply rounded py-2 px-6 text-sm font-medium leading-none;
+  @apply flex items-center gap-2 rounded py-2 px-6 text-sm font-medium leading-none;
+
+  svg,
+  i {
+    @apply h-4 w-4;
+  }
 
   &-md {
     @apply py-3 leading-normal;
+    svg,
+    i {
+      @apply h-5 w-5;
+    }
   }
+
   &-lg {
     @apply py-4 text-base leading-normal;
+    svg,
+    i {
+      @apply h-6 w-6;
+    }
+  }
+
+  &-icon {
+    @apply p-2;
+    svg,
+    i {
+      @apply h-4 w-4;
+    }
+
+    &.btn-md {
+      @apply p-3;
+      svg,
+      i {
+        @apply h-5 w-5;
+      }
+    }
+
+    &.btn-lg {
+      @apply p-4;
+      svg,
+      i {
+        @apply h-6 w-6;
+      }
+    }
   }
 
   &-solid {
