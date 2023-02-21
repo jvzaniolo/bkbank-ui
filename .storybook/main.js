@@ -1,29 +1,19 @@
 module.exports = {
   stories: [
-    '../packages/storybook/stories/**/*.stories.mdx',
+    '../packages/storybook/stories/**/*.mdx',
     '../packages/storybook/stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    {
-      name: '@storybook/addon-postcss',
-      options: {
-        cssLoaderOptions: {
-          importLoaders: 1,
-        },
-        postcssLoaderOptions: {
-          implementation: require('postcss'),
-        },
-      },
-    },
+    '@storybook/addon-styling',
   ],
-  framework: '@storybook/html',
-  features: {
-    storyStoreV7: true,
+  framework: {
+    name: '@storybook/html-vite',
+    options: {},
   },
-  core: {
-    builder: '@storybook/builder-vite',
+  docs: {
+    autodocs: true,
   },
 };

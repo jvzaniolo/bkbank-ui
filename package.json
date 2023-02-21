@@ -7,8 +7,8 @@
     "build": "run-p build:**",
     "build:base": "postcss --config packages/core packages/core/base/index.css -o dist/base.css",
     "build:components": "postcss --config packages/core packages/core/components/index.css -o dist/components.css",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -27,18 +27,16 @@
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
   "devDependencies": {
     "@babel/core": "^7.20.12",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/builder-vite": "^0.4.2",
-    "@storybook/builder-webpack4": "^6.5.16",
-    "@storybook/html": "^6.5.16",
-    "@storybook/manager-webpack4": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/addon-actions": "^7.0.0-beta.52",
+    "@storybook/addon-essentials": "^7.0.0-beta.52",
+    "@storybook/addon-interactions": "^7.0.0-beta.52",
+    "@storybook/addon-links": "^7.0.0-beta.52",
+    "@storybook/addon-styling": "^0.1.0",
+    "@storybook/html-vite": "^7.0.0-beta.52",
+    "@storybook/testing-library": "^0.0.14-next.1",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "clsx": "^1.2.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
@@ -49,6 +47,9 @@
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.0-beta.52",
     "vite": "^4.1.3"
   },
   "dependencies": {
