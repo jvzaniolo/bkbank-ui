@@ -1,0 +1,32 @@
+.checkbox {
+  @apply form-checkbox rounded border border-primary-pure text-primary-pure hover:ring-4 hover:ring-high-light focus:ring-2 focus:ring-primary-lighter focus:ring-offset-2 active:bg-high-medium active:ring-high-dark checked:active:bg-primary-pure disabled:border-high-dark disabled:text-high-dark;
+
+  & + span,
+  & + .checkbox-label {
+    @apply ml-3 text-low-dark;
+  }
+
+  &:checked + span,
+  &:checked + .checkbox-label {
+    @apply text-black;
+  }
+
+  &-error {
+    @apply border-error-pure text-error-pure checked:active:bg-error-pure;
+
+    & + span,
+    & + .checkbox-label {
+      @apply text-error-pure;
+    }
+
+    &:checked + span,
+    &:checked + .checkbox-label {
+      @apply text-error-pure;
+    }
+  }
+
+  &:disabled + span,
+  &:disabled + .checkbox-label {
+    @apply text-high-dark;
+  }
+}
