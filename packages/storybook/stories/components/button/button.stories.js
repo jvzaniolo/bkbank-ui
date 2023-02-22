@@ -6,7 +6,7 @@ export default {
     docs: {
       description: {
         component:
-          'The `button` component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. Base class: `.btn`. Sizes: `.btn-{md|lg}`. Variants: `.btn-{solid|outline|ghost}`. Colors: `.btn-{primary|secondary}`.',
+          'The `button` component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.<br>Base class: `.btn`. Sizes: `.btn-{md|lg}`. Variants: `.btn-{solid|outline|ghost}`. Colors: `.btn-{primary|secondary}`.',
       },
     },
   },
