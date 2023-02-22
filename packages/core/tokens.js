@@ -4,12 +4,12 @@ module.exports = {
   },
   colors: {
     primary: {
-      lightest: '#E0E0FF',
-      lighter: '#9EA4FD',
-      light: '#696FCA',
-      medium: '#000080',
+      lightest: '#CBD6FF',
+      lighter: '#A1A1FF',
+      light: '#7474DB',
+      medium: '#28289C',
+      dark: '#0F0F70',
       pure: '#00003C',
-      dark: '#000019',
     },
     secondary: {
       lightest: '#D7E2FF ',
@@ -55,7 +55,7 @@ module.exports = {
       light: '#A4A4A4',
       pure: '#000000',
       medium: '#7A7A7A',
-      dark: '#2F2F2F',
+      dark: '#545454',
     },
   },
 };
