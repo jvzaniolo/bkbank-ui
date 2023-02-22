@@ -70,6 +70,9 @@ export default {
 
 export const Default = args => createButton(args);
 
+/**
+ * Use the `.btn-icon` class to create an icon button. All other variants still apply.
+ */
 export const IconButton = () => `
 <div class="flex items-center gap-2">
   <button type="button" class="btn btn-icon btn-solid btn-primary">
@@ -89,17 +92,11 @@ export const IconButton = () => `
   </button>
 </div>
 `;
-IconButton.story = {
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Use the `.btn-icon` class to create an icon button. All other variants still apply.',
-      },
-    },
-  },
-};
 
+/**
+ * The `button` component can be extended with Tailwind.
+ * For example, use the `rounded-full` class to create a circular button.
+ */
 export const Extending = () =>
   `<div class="flex items-center gap-2">
     <button type="button" class="btn btn-solid btn-primary rounded-full">Rounded</button>
@@ -110,30 +107,12 @@ export const Extending = () =>
     </button>
   </div>`;
 
-Extending.story = {
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'The `button` component can be extended with Tailwind. For example, use the `.rounded-full` class to create a circular button.',
-      },
-    },
-  },
-};
-
+/**
+ * For now, we won't develop many variants of the button.
+ * If you need a different color, you can extend the base `.btn` class with other classes to create your own button.
+ */
 export const OtherColors = () => `
 <div class="flex items-center gap-2">
   <button type="button" class="btn text-red-500 hover:bg-high-light active:bg-high-dark">Cancel</button>
   <button type="button" class="btn bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-300">Purchase</button>
 </div>`;
-
-OtherColors.story = {
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "As of now, we won't develop many variants of the button. If you need a different color, you can extend the base `.btn` class with other classes to create your own button.",
-      },
-    },
-  },
-};
