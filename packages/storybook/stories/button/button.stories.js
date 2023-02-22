@@ -60,7 +60,7 @@ export default {
     },
     withIcon: {
       description:
-        'Adds an icon to the button example.<br><br>Target the `svg` or `i` element inside the button to apply styles.',
+        'Add any `svg` or `i` tag to add an Icon to the button.<br><br>Target the `svg` or `i` element inside the button to apply styles.',
       table: {
         defaultValue: { summary: false },
       },
