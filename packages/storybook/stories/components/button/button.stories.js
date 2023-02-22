@@ -92,27 +92,3 @@ export const IconButton = () => `
   </button>
 </div>
 `;
-
-/**
- * The `button` component can be extended with Tailwind.
- * For example, use the `rounded-full` class to create a circular button.
- */
-export const Extending = () =>
-  `<div class="flex items-center gap-2">
-    <button type="button" class="btn btn-solid btn-primary rounded-full">Rounded</button>
-    <button type="button" class="btn btn-icon btn-solid btn-primary rounded-full">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div>`;
-
-/**
- * For now, we won't develop many variants of the button.
- * If you need a different color, you can extend the base `.btn` class with other classes to create your own button.
- */
-export const OtherColors = () => `
-<div class="flex items-center gap-2">
-  <button type="button" class="btn text-red-500 hover:bg-high-light active:bg-high-dark">Cancel</button>
-  <button type="button" class="btn bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-300">Purchase</button>
-</div>`;
