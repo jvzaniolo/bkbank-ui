@@ -4,5 +4,5 @@ module.exports = {
   theme: {
     extend: { ...require('./packages/core/theme') },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
 };
