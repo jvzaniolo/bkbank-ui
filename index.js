@@ -16,7 +16,7 @@ module.exports = require('tailwindcss/plugin')(
   },
   {
     theme: {
-      extend: { ...require('./packages/core/tokens') },
+      extend: { ...require('./packages/core/theme') },
     },
   },
 );
