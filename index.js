@@ -8,9 +8,11 @@ function cssToJS(file) {
 }
 
 module.exports = require('tailwindcss/plugin')(
-  function ({ addBase, addComponents }) {
+  function ({ addBase, addComponents, addUtilities, addVariant }) {
     addBase(cssToJS('./dist/base.css'));
     addComponents(cssToJS('./dist/components.css'));
+    // addUtilities();
+    // addVariant();
   },
   {
     theme: {
