@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-styling',
   ],
+  staticDirs: ['../node_modules/@fontsource/montserrat'],
   framework: {
     name: '@storybook/html-vite',
     options: {},
