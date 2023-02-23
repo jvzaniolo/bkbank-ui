@@ -6,7 +6,7 @@ export default {
     docs: {
       description: {
         component:
-          'To use the checkbox component, add the `checkbox` class to the `input` element.<br>For the label, you can either use a `span` tag or apply the `.checkbox-label` class to another element.<br>Base class: `.checkbox`. States: `.checkbox-{error}`.',
+          'To use the checkbox component, add the `.checkbox` class to the `input` element.<br>For the label, you can either use a `span` or `label` tag or apply the `.checkbox-label` class to another element.<br>Base class: `.checkbox`. States: `.checkbox-{error}`.',
       },
     },
   },
@@ -54,8 +54,8 @@ export const Default = args => createCheckbox(args);
  * To use another element as the checkbox input label, add the `.checkbox-label` class to it and the element will inherit the styles.
  */
 export const CustomLabel = () => `
-<div class="inline-flex items-center">
+<label class="inline-flex items-center">
   <input id="checkbox" type="checkbox" class="checkbox" />
-  <label for="checkbox" class="checkbox-label">Checkbox</label>
-</div>
+  <div class="checkbox-label">I'm a &lt;div/&gt;</div>
+</label>
 `;
