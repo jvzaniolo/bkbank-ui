@@ -1,6 +1,6 @@
 {
   "name": "@bkbank/ui",
-  "version": "0.8.0-beta",
+  "version": "0.8.1-beta",
   "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "build:base": "postcss --config packages/core packages/core/base/index.css -o dist/base.css",
     "build:components": "postcss --config packages/core packages/core/components/index.css -o dist/components.css",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "release": "npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
