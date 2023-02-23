@@ -9,7 +9,7 @@
     "build:components": "postcss --config packages/core packages/core/components/index.css -o dist/components.css",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "release": "npm run build && npm publish --access public"
+    "release": "yarn build && yarn publish --access public"
   },
   "repository": {
     "type": "git",
