@@ -1,0 +1,15 @@
+nav[aria-label='breadcrumb'] ol {
+  @apply flex gap-2;
+
+  li a {
+    @apply rounded text-sm font-medium leading-normal text-primary-pure ring-offset-2 hover:text-primary-medium hover:underline focus:outline-none focus:ring-2 focus:ring-primary-lighter active:text-primary-medium;
+  }
+
+  li a[aria-current='page'] {
+    @apply pointer-events-none cursor-default text-low-medium;
+  }
+
+  li + li {
+    @apply before:mr-2 before:text-low-medium before:content-['/'];
+  }
+}
