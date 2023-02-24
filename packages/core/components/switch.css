@@ -1,0 +1,31 @@
+.switch {
+  @apply inline-flex items-center gap-2;
+
+  > input[type='checkbox'] {
+    @apply relative m-1 h-4 w-7 cursor-pointer appearance-none rounded-full border border-low-medium transition-colors before:absolute before:inset-y-0 before:my-auto before:h-[10px] before:w-[10px] before:translate-x-[2.5px] before:rounded-full before:bg-low-medium before:transition-all before:duration-200 before:ease-out before:content-[''] checked:border-primary-pure checked:bg-primary-pure checked:before:translate-x-[140%] checked:before:bg-white hover:outline-none hover:ring-4 hover:ring-high-light focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 active:bg-high-light active:ring-4 active:ring-high-dark active:ring-offset-0 checked:active:bg-primary-pure disabled:cursor-auto disabled:border-high-dark disabled:bg-white disabled:ring-0 disabled:before:bg-high-dark;
+  }
+
+  > label,
+  > span,
+  > .switch-label {
+    @apply text-sm font-medium leading-normal text-low-dark;
+  }
+
+  &-md {
+    > input[type='checkbox'] {
+      @apply h-6 w-11 before:h-4 before:w-4 before:translate-x-1;
+    }
+  }
+}
+
+.switch > input[type='checkbox']:checked ~ label,
+.switch > input[type='checkbox']:checked ~ span,
+.switch > input[type='checkbox']:checked ~ .switch-label {
+  @apply text-black;
+}
+
+.switch > input[type='checkbox']:disabled ~ label,
+.switch > input[type='checkbox']:disabled ~ span,
+.switch > input[type='checkbox']:disabled ~ .switch-label {
+  @apply select-none text-high-dark;
+}

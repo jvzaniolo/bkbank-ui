@@ -30,7 +30,7 @@ export const Radio = args => createRadio(args);
  * To use another element as the radio input label, add the `.radio-label` class to it and the element will inherit the styles.
  */
 export const CustomLabel = () => `
-<label class="inline-flex items-center">
+<label class="inline-flex items-center" for="radio">
   <input id="radio" type="radio" class="radio" />
   <div class="radio-label">I'm a &lt;div/&gt;</div>
 </label>

@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 
 export function createCheckbox({
-  isDisabled,
-  defaultChecked,
-  hasError,
-  indeterminate,
+  isDisabled = false,
+  defaultChecked = false,
+  hasError = false,
+  indeterminate = false,
 }) {
   if (indeterminate) {
     document.addEventListener('DOMContentLoaded', () => {

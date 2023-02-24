@@ -6,7 +6,11 @@ const sizes = {
   large: 'input-group-lg',
 };
 
-export function createInputGroup({ size, isInvalid, isDisabled }) {
+export function createInputGroup({
+  size = 'small',
+  isInvalid = false,
+  isDisabled = false,
+}) {
   return `
   <div>
     <div class="${clsx(
