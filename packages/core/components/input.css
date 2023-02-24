@@ -40,28 +40,34 @@
 
 .input.input-md ~ span,
 .input.input-md ~ label,
-.input.input-md ~ .input-label,
+.input.input-md ~ .input-label {
+  @apply -translate-y-2;
+}
+.input.input-md:placeholder-shown ~ .input-label,
+.input.input-md:placeholder-shown ~ label,
+.input.input-md:placeholder-shown ~ span {
+  @apply translate-y-[1.15rem];
+}
+/* The :focus selector must have priority over the :placeholder-shown */
 .input.input-md:focus ~ span,
 .input.input-md:focus ~ label,
 .input.input-md:focus ~ .input-label {
   @apply -translate-y-2;
 }
-.input-md:placeholder-shown ~ .input-label,
-.input-md:placeholder-shown ~ label,
-.input-md:placeholder-shown ~ span {
-  @apply translate-y-[1.15rem];
-}
 
 .input.input-lg ~ .input-label,
 .input.input-lg ~ label,
-.input.input-lg ~ span,
-.input.input-lg:focus ~ .input-label,
-.input.input-lg:focus ~ label,
-.input.input-lg:focus ~ span {
+.input.input-lg ~ span {
   @apply -translate-y-2;
 }
 .input-lg:placeholder-shown ~ .input-label,
 .input-lg:placeholder-shown ~ label,
 .input-lg:placeholder-shown ~ span {
   @apply translate-y-[1.4rem];
+}
+/* The :focus selector must have priority over the :placeholder-shown */
+.input.input-lg:focus ~ span,
+.input.input-lg:focus ~ label,
+.input.input-lg:focus ~ .input-label {
+  @apply -translate-y-2;
 }

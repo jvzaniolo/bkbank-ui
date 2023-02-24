@@ -42,18 +42,24 @@ export const Default = args => `
     })}" placeholder=" "${args.isDisabled ? ' disabled' : ''} />
     <label for="email">E-mail</label>
   </div>
-`;
 
-export const WithLabelWrapper = () => `
-  <label for="email" class="block relative">
-    <input id="email" type="email" class="input" placeholder=" " />
+  <!-- OR -->
+  <!-- <label for="email" class="block relative">
+    <input id="email" type="email" class="${clsx('input', {
+      'input-invalid': args.isInvalid,
+      'input-md': args.size === 'medium',
+      'input-lg': args.size === 'large',
+    })}" placeholder=" "${args.isDisabled ? ' disabled' : ''} />
     <span>E-mail</span>
-  </label>
-`;
+  </label> -->
 
-export const WithCustomLabelElement = () => `
-  <label for="email" class="block relative">
-    <input id="email" type="email" class="input" placeholder=" " />
-    <p class="input-label">E-mail</p>
-  </label>
+  <!-- OR -->
+  <!-- <label for="email" class="block relative">
+    <input id="email" type="email" class="${clsx('input', {
+      'input-invalid': args.isInvalid,
+      'input-md': args.size === 'medium',
+      'input-lg': args.size === 'large',
+    })}" placeholder=" "${args.isDisabled ? ' disabled' : ''} />
+    <div class="input-label">E-mail</div>
+  </label> -->
 `;
