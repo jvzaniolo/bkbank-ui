@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./packages/storybook/stories/**/*.{js,jsx,ts,tsx,mdx}'],
+  content: ['./storybook/stories/**/*.{js,jsx,ts,tsx,mdx}'],
   theme: {
-    extend: { ...require('./packages/core/theme') },
+    extend: { ...require('./dist/core/theme') },
   },
   plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
 };

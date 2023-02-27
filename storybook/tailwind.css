@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import '../packages/core/base.css';
+@import 'tailwindcss/components';
+@import '../packages/core/components.css';
+@import 'tailwindcss/utilities';
+
+@import '@fontsource/montserrat/variable.css';
+
+html {
+  @apply font-montserrat;
+}
