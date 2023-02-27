@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/html';
+import type { InputGroupArgs } from './create-input-group.js';
 import { createInputGroup } from './create-input-group.js';
 
 const meta = {
   title: 'Components/Input Group',
+  render: args => createInputGroup(args),
   parameters: {
     docs: {
       description: {
@@ -33,12 +35,10 @@ const meta = {
         'Set the input-group to disabled state.<br>Targets the `.input-group-disabled` class.',
     },
   },
-} satisfies Meta<typeof createInputGroup>;
+} satisfies Meta<InputGroupArgs>;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<InputGroupArgs>;
 
 export default meta;
 
-export const InputGroup: Story = {
-  render: ({ args }) => createInputGroup(args),
-};
+export const InputGroup: Story = {};

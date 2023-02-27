@@ -1,5 +1,11 @@
 import clsx from 'clsx';
 
+export type InputGroupArgs = {
+  size: keyof typeof sizes;
+  isInvalid: boolean;
+  isDisabled: boolean;
+};
+
 const sizes = {
   small: '',
   medium: 'input-group-md',
@@ -10,7 +16,7 @@ export function createInputGroup({
   size = 'small',
   isInvalid = false,
   isDisabled = false,
-}) {
+}: InputGroupArgs) {
   return `
   <div>
     <div class="${clsx(
