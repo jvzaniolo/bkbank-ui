@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/html';
+import type { ButtonArgs } from './create-button';
 import { createButton } from './create-button';
 
 const meta = {
   title: 'Components/Button',
+  render: args => createButton(args),
   parameters: {
     docs: {
       description: {
@@ -12,73 +14,188 @@ const meta = {
     },
   },
   args: {
-    size: 'small',
-    variant: 'solid',
-    color: 'primary',
+    base: 'btn',
+    size: undefined,
+    variant: undefined,
+    color: undefined,
     disabled: false,
     withIcon: false,
   },
   argTypes: {
+    base: {
+      description: 'Base class for the button component.',
+      table: { defaultValue: { summary: 'btn' } },
+      control: { type: '' },
+    },
     size: {
-      description:
-        'Change the size of the button.<br><br>Class: `.btn-{md|lg}`.',
-      options: ['small', 'medium', 'large'],
+      description: 'Available sizes for the button',
+      table: { defaultValue: { summary: 'Small' } },
+      options: [undefined, 'btn-md', 'btn-lg'],
       control: {
         type: 'radio',
-      },
-      table: {
-        defaultValue: { summary: 'small' },
+        labels: {
+          undefined: 'Small',
+          'btn-md': 'Medium',
+          'btn-lg': 'Large',
+        },
       },
     },
     variant: {
-      description:
-        'Change the variant of the button.<br><br>Class: `.btn-{solid|outline|ghost}`.',
-      options: ['solid', 'outline', 'ghost'],
+      description: 'Available variants for the button',
+      table: { defaultValue: { summary: 'Unstyled' } },
+      options: [undefined, 'btn-solid', 'btn-outline', 'btn-ghost'],
       control: {
         type: 'radio',
-      },
-      table: {
-        defaultValue: { summary: 'solid' },
+        labels: {
+          undefined: 'Unstyled',
+          'btn-solid': 'Solid',
+          'btn-outline': 'Outline',
+          'btn-ghost': 'Ghost',
+        },
       },
     },
     color: {
       description:
-        'Change the color of the button.<br><br>Class: `.btn-{primary|secondary}`.',
-      options: ['primary', 'secondary'],
+        'Available colors for the button. Needs a variant to be applied.',
+      options: [undefined, 'btn-primary', 'btn-secondary'],
       control: {
         type: 'radio',
+        labels: {
+          undefined: 'Unstyled',
+          'btn-primary': 'Primary',
+          'btn-secondary': 'Secondary',
+        },
       },
       table: {
-        defaultValue: { summary: 'primary' },
+        defaultValue: { summary: 'Unstyled' },
       },
     },
     disabled: {
-      description:
-        'Toggles the disabled state of the button.<br><br>Use the `disabled` attribute.',
+      description: 'Toggles the disabled state of the button',
       table: {
         defaultValue: { summary: false },
       },
     },
     withIcon: {
-      description:
-        'Add any `svg` or `i` tag to add an Icon to the button.<br><br>Target the `svg` or `i` element inside the button to apply styles.',
+      description: 'Toggles the icon state of the button.',
       table: {
         defaultValue: { summary: false },
       },
     },
   },
-} satisfies Meta<typeof createButton>;
+} satisfies Meta<ButtonArgs>;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<ButtonArgs>;
 
 export default meta;
 
 export const Default: Story = {
-  render: ({ args }) => createButton(args),
+  args: {
+    color: 'btn-primary',
+    variant: 'btn-solid',
+  },
 };
 
 /**
- * Use the `.btn-icon` class to create an icon button. All other variants still apply.
+ * Available sizes for the button component.
+ *
+ * Small: `@default`
+ * Medium: `btn-md`
+ * Large: `btn-lg`
+ */
+export const Sizes: Story = {
+  args: {
+    color: 'btn-primary',
+    variant: 'btn-solid',
+  },
+  render: args => `
+    <div class="flex items-center gap-2">
+      ${createButton(args)}
+      ${createButton({ ...args, size: 'btn-md' })}
+      ${createButton({ ...args, size: 'btn-lg' })}
+    </div>
+  `,
+};
+
+/**
+ * Available variants for the button component.
+ *
+ * Unstyled: `@default`
+ * Solid: `btn-solid`
+ * Outline: `btn-outline`
+ * Ghost: `btn-ghost`
+ */
+export const Variants: Story = {
+  args: {
+    color: 'btn-primary',
+  },
+  render: args => `
+    <div class="flex items-center gap-2">
+      ${createButton(args)}
+      ${createButton({ ...args, variant: 'btn-solid' })}
+      ${createButton({ ...args, variant: 'btn-outline' })}
+      ${createButton({ ...args, variant: 'btn-ghost' })}
+    </div>
+  `,
+};
+
+/**
+ * Available colors for the button component. Works with every variant.
+ *
+ * Unstyled: `@default`
+ * Primary: `btn-primary`
+ * Secondary: `btn-secondary`
+ */
+export const Colors: Story = {
+  args: {
+    variant: 'btn-solid',
+  },
+  render: args => `
+    <div class="flex items-center gap-2">
+      ${createButton(args)}
+      ${createButton({ ...args, color: 'btn-primary' })}
+      ${createButton({ ...args, color: 'btn-secondary' })}
+    </div>
+  `,
+};
+
+/**
+ * Available states for the button component. Target the `:disabled` pseudo-class to apply styles.
+ *
+ * Unstyled: `@default`
+ * Disabled: `:disabled`
+ */
+export const State: Story = {
+  args: {
+    variant: 'btn-solid',
+    color: 'btn-primary',
+  },
+  render: args => `
+    <div class="flex items-center gap-2">
+      ${createButton(args)}
+      ${createButton({ ...args, disabled: true })}
+    </div>
+  `,
+};
+
+/**
+ * To add an icon to a button, add any `<svg>` or `<i>` tag inside the button.
+ */
+export const WithIcon: Story = {
+  args: {
+    variant: 'btn-solid',
+    color: 'btn-primary',
+  },
+  render: args => `
+    <div class="flex items-center gap-2">
+      ${createButton(args)}
+      ${createButton({ ...args, withIcon: true })}
+    </div>
+  `,
+};
+
+/**
+ * Use the `btn-icon` class to create an icon button. Works with every variant.
  */
 export const IconButton: Story = {
   render: () => `
