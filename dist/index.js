@@ -14,13 +14,13 @@ function objectifyFile(file) {
     return postcss_js_1.default.objectify(root);
 }
 const plugin = (0, plugin_1.default)(function ({ addBase, addComponents }) {
-    addBase(objectifyFile('./dist/base.css'));
-    addComponents(objectifyFile('./dist/components.css'));
+    addBase(objectifyFile('./core/base.css'));
+    addComponents(objectifyFile('./core/components.css'));
     // addUtilities();
     // addVariant();
 }, {
     theme: {
-        extend: Object.assign({}, require('./packages/core/theme')),
+        extend: Object.assign({}, require('./core/theme')),
     },
     // Only include the plugins if we want to expose their classes
     // plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],

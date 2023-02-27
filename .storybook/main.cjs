@@ -1,6 +1,5 @@
-import type { StorybookConfig } from '@storybook/html-vite';
-
-const config: StorybookConfig = {
+/** @type {import('@storybook/html-vite').StorybookConfig} */
+module.exports = {
   stories: [
     '../storybook/stories/**/*.mdx',
     '../storybook/stories/**/*.stories.@(js|jsx|ts|tsx)',
@@ -10,7 +9,6 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
   ],
-  staticDirs: ['../node_modules/@fontsource/montserrat'],
   framework: {
     name: '@storybook/html-vite',
     options: {},
@@ -19,5 +17,3 @@ const config: StorybookConfig = {
     autodocs: true,
   },
 };
-
-export default config;
