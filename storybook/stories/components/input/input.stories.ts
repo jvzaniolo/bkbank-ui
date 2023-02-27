@@ -34,12 +34,10 @@ const meta = {
   },
 } satisfies Meta;
 
-type Story = StoryObj<typeof meta>;
-
 export default meta;
 
-export const Default: Story = {
-  render: ({ args }) => `
+export const Default: StoryObj = {
+  render: args => `
     <div class="block relative">
       <input id="email" type="email" class="${clsx('input', {
         'input-invalid': args.isInvalid,
