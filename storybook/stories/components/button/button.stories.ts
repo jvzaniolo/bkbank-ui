@@ -9,7 +9,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'The `button` component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.<br>Base class: `.btn`. Sizes: `.btn-{md|lg}`. Variants: `.btn-{solid|outline|ghost}`. Colors: `.btn-{primary|secondary}`.',
+          'The `button` component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.',
       },
     },
   },
@@ -29,49 +29,26 @@ const meta = {
     },
     size: {
       description: 'Available sizes for the button',
-      table: { defaultValue: { summary: 'Small' } },
+      table: { defaultValue: { summary: 'undefined' } },
       options: [undefined, 'btn-md', 'btn-lg'],
-      control: {
-        type: 'radio',
-        labels: {
-          undefined: 'Small',
-          'btn-md': 'Medium',
-          'btn-lg': 'Large',
-        },
-      },
+      control: { type: 'radio' },
     },
     variant: {
       description: 'Available variants for the button',
-      table: { defaultValue: { summary: 'Unstyled' } },
+      table: { defaultValue: { summary: 'undefined' } },
       options: [undefined, 'btn-solid', 'btn-outline', 'btn-ghost'],
-      control: {
-        type: 'radio',
-        labels: {
-          undefined: 'Unstyled',
-          'btn-solid': 'Solid',
-          'btn-outline': 'Outline',
-          'btn-ghost': 'Ghost',
-        },
-      },
+      control: { type: 'radio' },
     },
     color: {
       description:
         'Available colors for the button. Needs a variant to be applied.',
       options: [undefined, 'btn-primary', 'btn-secondary'],
-      control: {
-        type: 'radio',
-        labels: {
-          undefined: 'Unstyled',
-          'btn-primary': 'Primary',
-          'btn-secondary': 'Secondary',
-        },
-      },
-      table: {
-        defaultValue: { summary: 'Unstyled' },
-      },
+      control: { type: 'radio' },
+      table: { defaultValue: { summary: 'undefined' } },
     },
     disabled: {
-      description: 'Toggles the disabled state of the button',
+      description:
+        'Toggles the disabled state of the button.<br><br>Use the `:disabled` to apply styles.',
       table: {
         defaultValue: { summary: false },
       },
@@ -93,105 +70,10 @@ export const Default: Story = {
   args: {
     color: 'btn-primary',
     variant: 'btn-solid',
+    base: 'btn',
+    size: undefined,
+    disabled: false,
   },
-};
-
-/**
- * Available sizes for the button component.
- *
- * Small: `@default`
- * Medium: `btn-md`
- * Large: `btn-lg`
- */
-export const Sizes: Story = {
-  args: {
-    color: 'btn-primary',
-    variant: 'btn-solid',
-  },
-  render: args => `
-    <div class="flex items-center gap-2">
-      ${createButton(args)}
-      ${createButton({ ...args, size: 'btn-md' })}
-      ${createButton({ ...args, size: 'btn-lg' })}
-    </div>
-  `,
-};
-
-/**
- * Available variants for the button component.
- *
- * Unstyled: `@default`
- * Solid: `btn-solid`
- * Outline: `btn-outline`
- * Ghost: `btn-ghost`
- */
-export const Variants: Story = {
-  args: {
-    color: 'btn-primary',
-  },
-  render: args => `
-    <div class="flex items-center gap-2">
-      ${createButton(args)}
-      ${createButton({ ...args, variant: 'btn-solid' })}
-      ${createButton({ ...args, variant: 'btn-outline' })}
-      ${createButton({ ...args, variant: 'btn-ghost' })}
-    </div>
-  `,
-};
-
-/**
- * Available colors for the button component. Works with every variant.
- *
- * Unstyled: `@default`
- * Primary: `btn-primary`
- * Secondary: `btn-secondary`
- */
-export const Colors: Story = {
-  args: {
-    variant: 'btn-solid',
-  },
-  render: args => `
-    <div class="flex items-center gap-2">
-      ${createButton(args)}
-      ${createButton({ ...args, color: 'btn-primary' })}
-      ${createButton({ ...args, color: 'btn-secondary' })}
-    </div>
-  `,
-};
-
-/**
- * Available states for the button component. Target the `:disabled` pseudo-class to apply styles.
- *
- * Unstyled: `@default`
- * Disabled: `:disabled`
- */
-export const State: Story = {
-  args: {
-    variant: 'btn-solid',
-    color: 'btn-primary',
-  },
-  render: args => `
-    <div class="flex items-center gap-2">
-      ${createButton(args)}
-      ${createButton({ ...args, disabled: true })}
-    </div>
-  `,
-};
-
-/**
- * To add an icon to a button, add any `<svg>` or `<i>` tag inside the button.
- */
-export const WithIcon: Story = {
-  args: {
-    variant: 'btn-solid',
-    color: 'btn-primary',
-  },
-  render: args => `
-    <div class="flex items-center gap-2">
-      ${createButton(args)}
-      ${createButton({ ...args, withIcon: true })}
-    </div>
-  `,
 };
 
 /**
