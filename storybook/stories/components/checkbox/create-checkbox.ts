@@ -1,29 +1,37 @@
 import clsx from 'clsx';
 
+export type CheckboxArgs = {
+  base: 'checkbox';
+  state?: 'checkbox-error';
+  isDisabled?: boolean;
+  indeterminate?: boolean;
+  defaultChecked?: boolean;
+};
+
 export function createCheckbox({
-  isDisabled = false,
-  defaultChecked = false,
-  hasError = false,
-  indeterminate = false,
-}) {
+  base,
+  state,
+  isDisabled,
+  defaultChecked,
+  indeterminate,
+}: CheckboxArgs) {
   if (indeterminate) {
     document.addEventListener('DOMContentLoaded', () => {
-      const checkbox = document.querySelector('.checkbox') as HTMLInputElement;
-      checkbox.indeterminate = true;
+      const checkbox = document.querySelector<HTMLInputElement>('.checkbox');
+      if (checkbox) checkbox.indeterminate = true;
     });
   } else {
     document.addEventListener('DOMContentLoaded', () => {
-      const checkbox = document.querySelector('.checkbox') as HTMLInputElement;
-      checkbox.indeterminate = false;
+      const checkbox = document.querySelector<HTMLInputElement>('.checkbox');
+      if (checkbox) checkbox.indeterminate = false;
     });
   }
 
   return `
     <label class="inline-flex items-center">
-      <input type="checkbox" class="${clsx(
-        'checkbox',
-        hasError && 'checkbox-error',
-      )}"${isDisabled ? ' disabled' : ''}${defaultChecked ? ' checked' : ''} />
+      <input type="checkbox" class="${clsx(base, state)}"${
+    isDisabled ? ' disabled' : ''
+  }${defaultChecked ? ' checked' : ''} />
       <span>Checkbox</span>
     </label>
   `;
