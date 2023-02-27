@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/html';
+import type { SwitchArgs } from './create-switch';
 import { createSwitch } from './create-switch';
 
 const meta = {
   title: 'Components/Switch',
+  render: args => createSwitch(args),
   args: {
     size: 'small',
     isDisabled: false,
@@ -25,12 +27,10 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof createSwitch>;
+} satisfies Meta<SwitchArgs>;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<SwitchArgs>;
 
 export default meta;
 
-export const Default: Story = {
-  render: ({ args }) => createSwitch(args),
-};
+export const Default: Story = {};

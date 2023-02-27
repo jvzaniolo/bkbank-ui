@@ -1,6 +1,14 @@
 import clsx from 'clsx';
 
-export function createSwitch({ size = 'small', isDisabled = false }) {
+export type SwitchArgs = {
+  size: 'small' | 'medium';
+  isDisabled: boolean;
+};
+
+export function createSwitch({
+  size = 'small',
+  isDisabled = false,
+}: SwitchArgs) {
   return `
     <div class="${clsx('switch', {
       'switch-md': size === 'medium',
