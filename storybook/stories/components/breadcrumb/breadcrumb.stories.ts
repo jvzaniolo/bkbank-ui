@@ -10,13 +10,6 @@ const meta = {
       },
     },
   },
-} satisfies Meta;
-
-type Story = StoryObj<typeof meta>;
-
-export default meta;
-
-export const Default: Story = {
   render: () => `
     <nav aria-label="breadcrumb">
       <ol>
@@ -26,4 +19,8 @@ export const Default: Story = {
       </ol>
     </nav>
   `,
-};
+} satisfies Meta;
+
+export default meta;
+
+export const Default: StoryObj = {};
