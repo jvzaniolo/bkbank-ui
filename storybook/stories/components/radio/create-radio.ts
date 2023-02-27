@@ -1,6 +1,10 @@
 import clsx from 'clsx';
 
-export function createRadio({ isDisabled = false }) {
+export type RadioArgs = {
+  isDisabled: boolean;
+};
+
+export function createRadio({ isDisabled = false }: RadioArgs) {
   return `
     <div class="flex gap-3">
       <label class="inline-flex items-center">

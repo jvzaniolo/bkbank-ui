@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/html';
+import type { RadioArgs } from './create-radio';
 import { createRadio } from './create-radio';
 
 const meta = {
   title: 'Components/Radio',
+  render: args => createRadio(args),
   parameters: {
     docs: {
       description: {
@@ -23,15 +25,13 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof createRadio>;
+} satisfies Meta<RadioArgs>;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<RadioArgs>;
 
 export default meta;
 
-export const Radio: Story = {
-  render: ({ args }) => createRadio(args),
-};
+export const Radio: Story = {};
 
 /**
  * To use another element as the radio input label, add the `.radio-label` class to it and the element will inherit the styles.
