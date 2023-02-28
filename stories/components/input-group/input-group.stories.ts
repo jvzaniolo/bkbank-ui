@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import type { InputGroupArgs } from './create-input-group.js';
-import { createInputGroup } from './create-input-group.js';
+import type { InputGroupArgs } from './create-input-group';
+import { createInputGroup } from './create-input-group';
 
 const meta = {
   title: 'Components/Input Group',

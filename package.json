@@ -9,8 +9,8 @@
     "build:all": "postcss --config packages packages/core/all.css --dir dist --base packages",
     "build:base": "postcss --config packages packages/core/base.css --dir dist --base packages",
     "build:components": "postcss --config packages packages/core/components.css --dir dist --base packages",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -31,19 +31,23 @@
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@semantic-release/git": "^10.0.1",
-    "@storybook/addon-actions": "^7.0.0-beta.55",
-    "@storybook/addon-essentials": "^7.0.0-beta.55",
-    "@storybook/addon-interactions": "^7.0.0-beta.55",
-    "@storybook/addon-links": "^7.0.0-beta.55",
-    "@storybook/html": "^7.0.0-beta.55",
-    "@storybook/html-vite": "^7.0.0-alpha.58",
-    "@storybook/testing-library": "0.0.14-next.1",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/html": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@tailwindcss/forms": "^0.5.3",
     "@types/postcss-js": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "autoprefixer": "^10.4.13",
+    "babel-loader": "^8.3.0",
     "clsx": "^1.2.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-storybook": "^0.6.11",
@@ -53,19 +57,12 @@
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "semantic-release": "^20.1.0",
-    "storybook": "7.0.0-beta.54",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.4"
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.5.14",
     "postcss-js": "^4.0.1",
     "tailwindcss": "^3.2.7"
-  },
-  "peerDependencies": {
-    "typescript": "^4.9.5"
   }
 }

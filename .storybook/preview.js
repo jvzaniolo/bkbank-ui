@@ -1,4 +1,5 @@
-import '../storybook/tailwind.css';
+import '../stories/tailwind.css';
+import '@fontsource/montserrat/variable.css';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

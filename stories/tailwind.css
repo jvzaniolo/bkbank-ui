@@ -4,8 +4,6 @@
 @import '../packages/core/components.css';
 @import 'tailwindcss/utilities';
 
-@import '@fontsource/montserrat/variable.css';
-
 html {
   @apply font-montserrat;
 }
