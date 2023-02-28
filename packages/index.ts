@@ -19,7 +19,7 @@ const plugin = tailwindPlugin(
   },
   {
     theme: {
-      extend: { ...require('./core/theme') },
+      extend: { ...require('../theme.cjs') },
     },
     // Only include the plugins if we want to expose their classes
     // plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],

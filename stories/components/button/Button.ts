@@ -1,25 +1,45 @@
 import clsx from 'clsx';
 
 export type ButtonArgs = {
-  base: 'btn';
-  size?: 'btn-md' | 'btn-lg';
-  variant?: 'btn-solid' | 'btn-outline' | 'btn-ghost';
-  color?: 'btn-primary' | 'btn-secondary';
-  disabled?: boolean;
+  size?: 'small' | 'medium' | 'large';
+  variant?: 'unstyled' | 'solid' | 'outline' | 'ghost';
+  color?: 'unstyled' | 'primary' | 'secondary';
   withIcon?: boolean;
+  isDisabled?: boolean;
+};
+
+const sizes = {
+  small: '',
+  medium: 'btn-md',
+  large: 'btn-lg',
+};
+
+const variants = {
+  unstyled: '',
+  solid: 'btn-solid',
+  outline: 'btn-outline',
+  ghost: 'btn-ghost',
+};
+
+const colors = {
+  unstyled: '',
+  primary: 'btn-primary',
+  secondary: 'btn-secondary',
 };
 
 export function createButton({
-  base,
-  size,
-  color,
-  variant,
-  disabled,
-  withIcon,
+  size = 'small',
+  color = 'unstyled',
+  variant = 'unstyled',
+  isDisabled = false,
+  withIcon = false,
 }: ButtonArgs) {
-  return `<button class="${clsx(base, size, color, variant)}" type="button"${
-    disabled ? ' disabled' : ''
-  }>${
+  return `<button class="${clsx(
+    'btn',
+    sizes[size],
+    colors[color],
+    variants[variant],
+  )}" type="button"${isDisabled ? ' disabled' : ''}>${
     withIcon
       ? `
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="1em" hight="1em">

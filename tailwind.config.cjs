@@ -2,7 +2,7 @@
 module.exports = {
   content: ['./stories/**/*.{js,jsx,ts,tsx,mdx}'],
   theme: {
-    extend: { ...require('./dist/core/theme') },
+    extend: { ...require('./theme.cjs') },
   },
   plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
 };

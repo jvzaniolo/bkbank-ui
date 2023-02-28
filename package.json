@@ -4,7 +4,8 @@
   "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist/**/*",
+    "theme.cjs"
   ],
   "scripts": {
     "build": "npm-run-all tsc --parallel build:**",
