@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   fontFamily: {
     montserrat: ['Montserrat', 'sans-serif'],
   },
@@ -61,6 +61,4 @@ const config = {
       dark: '#545454',
     },
   },
-} as const;
-
-module.exports = config;
+};
