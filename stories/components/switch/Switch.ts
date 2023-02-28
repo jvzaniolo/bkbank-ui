@@ -10,10 +10,12 @@ export function createSwitch({
   isDisabled = false,
 }: SwitchArgs) {
   return `
-    <div class="${clsx('switch', {
-      'switch-md': size === 'medium',
-    })}">
-      <input type="checkbox" id="id"${isDisabled ? ' disabled' : ''}>
+    <div class="inline-flex items-center gap-2">
+      <input type="checkbox" id="id"${
+        isDisabled ? ' disabled' : ''
+      } class="${clsx('switch', {
+    'switch-md': size === 'medium',
+  })}">
       <label for="id">Switch</label>
     </div>
   `;
