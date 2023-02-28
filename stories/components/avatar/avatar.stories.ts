@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import type { AvatarArgs } from './create-avatar';
-import { createAvatar } from './create-avatar';
+import type { AvatarProps } from './Avatar';
+import { createAvatar } from './Avatar';
 
 const meta = {
   title: 'Components/Avatar',
-  render: args => createAvatar(args),
+  render: createAvatar,
   parameters: {
     docs: {
       description: {
@@ -51,9 +51,9 @@ const meta = {
       control: { type: 'radio' },
     },
   },
-} satisfies Meta<AvatarArgs>;
+} satisfies Meta<AvatarProps>;
 
-type Story = StoryObj<AvatarArgs>;
+type Story = StoryObj<AvatarProps>;
 
 export default meta;
 
