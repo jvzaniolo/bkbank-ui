@@ -7,7 +7,7 @@ const meta = {
     docs: {
       description: {
         component:
-          '<strong>Important:</strong> Make sure to follow the example markup structure to ensure proper styling and behavior. More specifically, the `label`, `span` or `.input-label` element must come immediately after the `input` and the `placeholder` content must be set to a single space.',
+          '**Important:** Make sure to follow the example markup structure to ensure proper styling and behavior. More specifically, the `label` must come immediately after the `input` and the `placeholder` content must be set to a single space.<br>Base class: `input`',
       },
     },
   },
@@ -16,8 +16,14 @@ const meta = {
     size: {
       options: ['small', 'medium', 'large'],
       control: { type: 'radio' },
-      table: { defaultValue: { summary: 'small' } },
-      description: 'Set input size.<br>Class: `.input-{md|lg}`.',
+      table: {
+        defaultValue: { summary: 'small' },
+        type: {
+          summary: 'input-{md|lg}',
+          detail: '- small: @default\n- medium: input-md\n- large: input-lg',
+        },
+      },
+      description: 'Set input size',
     },
     isInvalid: {
       table: { defaultValue: { summary: 'false' } },
