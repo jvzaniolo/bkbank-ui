@@ -63,4 +63,4 @@ const config = {
   },
 } as const;
 
-export default config;
+module.exports = config;
