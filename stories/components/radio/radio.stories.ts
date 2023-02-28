@@ -14,11 +14,19 @@ const meta = {
   },
   args: {
     isDisabled: false,
+    isInvalid: false,
   },
   argTypes: {
     isDisabled: {
       description:
-        'Disables the radio input.<br><br>Use the `disabled` attribute.',
+        'Disables the radio input.<br><br>Use the `:disabled` attribute.',
+      table: {
+        defaultValue: { summary: false },
+      },
+    },
+    isInvalid: {
+      description:
+        'Sets the radio to invalid.<br><br>Use the `:invalid` attribute or the `radio-invalid` class.',
       table: {
         defaultValue: { summary: false },
       },

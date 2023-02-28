@@ -13,24 +13,23 @@ export function createCheckbox({
   isDisabled = false,
   isIndeterminate = false,
 }: CheckboxArgs) {
-  if (isIndeterminate) {
-    document.addEventListener('DOMContentLoaded', () => {
-      const checkbox = document.querySelector<HTMLInputElement>('.checkbox');
-      if (checkbox) checkbox.indeterminate = true;
-    });
-  } else {
-    document.addEventListener('DOMContentLoaded', () => {
-      const checkbox = document.querySelector<HTMLInputElement>('.checkbox');
-      if (checkbox) checkbox.indeterminate = false;
-    });
-  }
+  const label = document.createElement('label');
+  label.className = 'inline-flex items-center';
 
-  return `
-    <label class="inline-flex items-center">
-      <input type="checkbox" class="${clsx('checkbox', {
-        'checkbox-error': isInvalid,
-      })}"${isDisabled ? ' disabled' : ''}${isChecked ? ' checked' : ''} />
-      <span>Checkbox</span>
-    </label>
-  `;
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.className = clsx('checkbox', { 'checkbox-invalid': isInvalid });
+
+  if (isInvalid) checkbox.ariaInvalid = 'true';
+  if (isDisabled) checkbox.disabled = true;
+  if (isChecked) checkbox.checked = true;
+  if (isIndeterminate) checkbox.indeterminate = true;
+
+  const span = document.createElement('span');
+  span.textContent = 'Checkbox';
+
+  label.appendChild(checkbox);
+  label.appendChild(span);
+
+  return label;
 }

@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/html';
-import type { AvatarArgs } from './Avatar';
-import { createAvatar } from './Avatar';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Avatar } from './Avatar';
 
 const meta = {
   title: 'Components/Avatar',
+  component: Avatar,
   parameters: {
     docs: {
       description: {
@@ -57,13 +57,12 @@ const meta = {
       },
     },
   },
-} satisfies Meta<AvatarArgs>;
+} satisfies Meta<typeof Avatar>;
 
 export default meta;
-type Story = StoryObj<AvatarArgs>;
+type Story = StoryObj<typeof Avatar>;
 
 export const Default: Story = {
-  render: args => createAvatar(args),
   args: {
     size: 'medium',
     color: 'primary',

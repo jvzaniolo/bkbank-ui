@@ -32,8 +32,7 @@ export function createInputGroup({
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          width="1em"
-          height="1em"
+          class="w-[1em] h-[1em]"
         >
           <path
             stroke-linecap="round"
@@ -50,22 +49,6 @@ export function createInputGroup({
         <label for="id">Floating label</label>
       </div>
 
-      <!-- OR -->
-      <!-- <label for="id" class="block relative w-full">
-        <input id="id" type="text" class="input" placeholder=" "${
-          isDisabled ? ' disabled' : ''
-        } />
-        <span>Floating label</span>
-      </label> -->
-
-      <!-- OR -->
-      <!-- <label for="id" class="block relative w-full">
-        <input id="id" type="text" class="input" placeholder=" "${
-          isDisabled ? ' disabled' : ''
-        } />
-        <div class="input-label">Floating label</div>
-      </label> -->
-
       <div class="input-group-icon inherit-color">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -73,8 +56,7 @@ export function createInputGroup({
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          width="1em"
-          height="1em"
+          class="w-[1em] h-[1em]"
         >
           <path
             stroke-linecap="round"

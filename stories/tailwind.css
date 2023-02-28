@@ -3,7 +3,3 @@
 @import 'tailwindcss/components';
 @import '../packages/core/components.css';
 @import 'tailwindcss/utilities';
-
-html {
-  @apply font-montserrat;
-}

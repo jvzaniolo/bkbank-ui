@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
-    '../stories/**/*.stories.mdx',
-    '../stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../stories/components/avatar/**/*.stories.mdx',
+    '../stories/components/avatar/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-links',
@@ -28,5 +28,5 @@ module.exports = {
       },
     },
   ],
-  framework: '@storybook/html',
+  framework: '@storybook/react',
 };
