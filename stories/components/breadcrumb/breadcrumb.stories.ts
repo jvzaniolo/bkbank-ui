@@ -6,7 +6,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "The breadcrumb component is used to show the current page's location within a navigational hierarchy that automatically adds separators via CSS.<br>This component follows the [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/).",
+          "Breadcrumbs are used to show the current page's location within a navigational hierarchy.<br>This component follows the [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/).",
       },
     },
   },
