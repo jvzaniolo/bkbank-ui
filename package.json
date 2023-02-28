@@ -10,7 +10,7 @@
     "build:base": "postcss --config packages packages/core/base.css --dir dist --base packages",
     "build:components": "postcss --config packages packages/core/components.css --dir dist --base packages",
     "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "semantic-release": "semantic-release"
   },
   "repository": {
