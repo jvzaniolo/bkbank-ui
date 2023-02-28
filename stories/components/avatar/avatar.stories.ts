@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import type { AvatarProps } from './Avatar';
+import type { AvatarArgs } from './Avatar';
 import { createAvatar } from './Avatar';
 
-const meta: Meta<AvatarProps> = {
+const meta: Meta<AvatarArgs> = {
   title: 'Components/Avatar',
   parameters: {
     docs: {
       description: {
         component:
-          'Avatars are used to show a thumbnail representation of an individual or business in the interface.',
+          'Avatars are used to show a thumbnail representation of an individual or business in the interface.<br>Base class: `avatar`',
       },
     },
   },
@@ -60,7 +60,7 @@ const meta: Meta<AvatarProps> = {
 };
 
 export default meta;
-type Story = StoryObj<AvatarProps>;
+type Story = StoryObj<AvatarArgs>;
 
 export const Default: Story = {
   render: args => createAvatar(args),

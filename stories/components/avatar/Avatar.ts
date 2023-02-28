@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export type AvatarProps = {
+export type AvatarArgs = {
   size: 'small' | 'medium' | 'large';
   color?: 'primary' | 'high' | 'unstyled';
   isActive?: boolean;
@@ -24,7 +24,7 @@ export function createAvatar({
   color = 'unstyled',
   isActive = false,
   content = 'text',
-}: AvatarProps) {
+}: AvatarArgs) {
   return `
     <div class="${clsx(
       'avatar',
