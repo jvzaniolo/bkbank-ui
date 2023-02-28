@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import type { CheckboxArgs } from './create-checkbox';
-import { createCheckbox } from './create-checkbox';
+import type { CheckboxArgs } from './Checkbox';
+import { createCheckbox } from './Checkbox';
 
 const meta = {
   title: 'Components/Checkbox',
@@ -9,42 +9,29 @@ const meta = {
     docs: {
       description: {
         component:
-          'To use the checkbox component, add the `.checkbox` class to the `input` element.<br>For the label, you can either use a `span` or `label` tag or apply the `.checkbox-label` class to another element.<br>Base class: `.checkbox`. States: `.checkbox-{error}`.',
+          'Checkboxes are used to select one or more options from a list of options.<br>Base class: `checkbox`',
       },
     },
   },
-  args: {
-    base: 'checkbox',
-    state: undefined,
-    isDisabled: false,
-    indeterminate: false,
-    defaultChecked: false,
-  },
   argTypes: {
-    base: {
-      description: 'Base class for the checkbox component.',
-      table: { defaultValue: { summary: 'checkbox' } },
-      control: { type: '' },
+    isChecked: {
+      description:
+        'Sets the checkbox to checked by default.<br><br>Use the `:checked` attribute.',
+      table: { defaultValue: { summary: false } },
     },
-    state: {
-      description: 'Available states for the checkbox.',
-      options: [undefined, 'checkbox-error'],
-      table: { defaultValue: { summary: 'undefined' } },
-      control: { type: 'radio' },
+    isInvalid: {
+      description:
+        'Sets the checkbox to invalid.<br><br>Use the `:invalid` attribute.',
+      table: { defaultValue: { summary: false } },
     },
     isDisabled: {
       description:
         'Disables the checkbox.<br><br>Use the `:disabled` attribute.',
       table: { defaultValue: { summary: false } },
     },
-    defaultChecked: {
+    isIndeterminate: {
       description:
-        'Sets the checkbox to checked by default.<br><br>Use the `:checked` attribute.',
-      table: { defaultValue: { summary: false } },
-    },
-    indeterminate: {
-      description:
-        'Sets the checkbox to indeterminate.<br><br>Use the `indeterminate` attribute (JavaScript only).',
+        'Sets the checkbox to indeterminate.<br><br>Use the `indeterminate` property (JavaScript only).',
       table: { defaultValue: { summary: false } },
     },
   },
@@ -54,12 +41,24 @@ type Story = StoryObj<CheckboxArgs>;
 
 export default meta;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    isChecked: false,
+    isInvalid: false,
+    isDisabled: false,
+    isIndeterminate: false,
+  },
+};
 
-/**
- * To use another element as the checkbox input label, add the `.checkbox-label` class to it and the element will inherit the styles.
- */
 export const CustomLabel: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'To use another element as the checkbox input label, add the `.checkbox-label` class to it and the element will inherit the styles.',
+      },
+    },
+  },
   render: () => `
     <label class="inline-flex items-center">
       <input id="checkbox" type="checkbox" class="checkbox" />

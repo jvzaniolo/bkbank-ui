@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 export type RadioArgs = {
-  isDisabled: boolean;
+  isDisabled?: boolean;
 };
 
 export function createRadio({ isDisabled = false }: RadioArgs) {

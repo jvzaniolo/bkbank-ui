@@ -9,7 +9,7 @@ const meta: Meta<ButtonArgs> = {
     docs: {
       description: {
         component:
-          'The `button` component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.<br>Base class: `btn`',
+          'Buttons are used to trigger actions and are typically found in forms, dialogs, and panels.<br>Base class: `btn`',
       },
     },
   },

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/html';
 import type { AvatarArgs } from './Avatar';
 import { createAvatar } from './Avatar';
 
-const meta: Meta<AvatarArgs> = {
+const meta = {
   title: 'Components/Avatar',
   parameters: {
     docs: {
@@ -57,7 +57,7 @@ const meta: Meta<AvatarArgs> = {
       },
     },
   },
-};
+} satisfies Meta<AvatarArgs>;
 
 export default meta;
 type Story = StoryObj<AvatarArgs>;

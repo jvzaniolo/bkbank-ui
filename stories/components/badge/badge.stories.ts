@@ -7,25 +7,26 @@ const meta = {
     docs: {
       description: {
         component:
-          'The `badge` component is used to represent a notification. Badges should **always have a text content**.',
+          'Badges are used to inform the user of the status of specific data. Badges should **always have a text content**.',
       },
     },
   },
   args: {
-    base: 'badge',
     color: undefined,
     content: '32',
   },
   argTypes: {
-    base: {
-      description: 'Base class for the badge.',
-      control: { type: '' },
-      table: { defaultValue: { summary: 'badge' } },
-    },
     color: {
-      description: 'Available colors for the badge.',
-      options: [undefined, 'badge-highlight'],
-      control: { type: 'radio', labels: { undefined: 'unstyled' } },
+      description: 'Change the color of the badge.',
+      options: ['unstyled', 'highlight'],
+      control: { type: 'radio' },
+      table: {
+        defaultValue: { summary: 'unstyled' },
+        type: {
+          summary: 'badge-highlight',
+          detail: '- unstyled: @default\n- highlight: badge-highlight',
+        },
+      },
     },
     content: {
       description: 'Change the content of the badge in the example.',
@@ -38,8 +39,11 @@ export default meta;
 
 export const Default: StoryObj = {
   args: {
-    color: 'badge-highlight',
+    color: 'highlight',
   },
   render: args =>
-    `<div class="${clsx(args.base, args.color)}">${args.content}</div>`,
+    `<div class="${clsx(
+      'badge',
+      args.color === 'highlight' && 'badge-highlight',
+    )}">${args.content}</div>`,
 };

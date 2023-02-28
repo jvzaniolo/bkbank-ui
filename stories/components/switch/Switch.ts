@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 
 export type SwitchArgs = {
-  size: 'small' | 'medium';
-  isDisabled: boolean;
+  size?: 'small' | 'medium';
+  isDisabled?: boolean;
 };
 
 export function createSwitch({

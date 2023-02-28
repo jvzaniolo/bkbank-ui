@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 
 export type InputGroupArgs = {
-  size: keyof typeof sizes;
-  isInvalid: boolean;
-  isDisabled: boolean;
+  size?: 'small' | 'medium' | 'large';
+  isInvalid?: boolean;
+  isDisabled?: boolean;
 };
 
 const sizes = {
@@ -21,7 +21,7 @@ export function createInputGroup({
   <div>
     <div class="${clsx(
       'input-group',
-      sizes[size as keyof typeof sizes],
+      sizes[size],
       isInvalid && 'input-group-invalid',
       isDisabled && 'input-group-disabled',
     )}">

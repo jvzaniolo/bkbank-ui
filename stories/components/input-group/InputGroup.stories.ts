@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/html';
-import type { InputGroupArgs } from './create-input-group';
-import { createInputGroup } from './create-input-group';
+import type { InputGroupArgs } from './InputGroup';
+import { createInputGroup } from './InputGroup';
 
 const meta = {
   title: 'Components/Input Group',
@@ -41,4 +41,4 @@ type Story = StoryObj<InputGroupArgs>;
 
 export default meta;
 
-export const InputGroup: Story = {};
+export const Default: Story = {};
