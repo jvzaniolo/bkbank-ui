@@ -1,19 +1,32 @@
 module.exports = {
   stories: [
-    '../packages/storybook/stories/**/*.mdx',
-    '../packages/storybook/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../stories/**/*.stories.mdx',
+    '../stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        cssLoaderOptions: {
+          // When you have splitted your css over multiple files
+          // and use @import('./other-styles.css')
+          importLoaders: 1,
+        },
+        postcssLoaderOptions: {
+          // When using postCSS 8
+          implementation: require('postcss'),
+          // postcssOptions: {
+          //   config: require('path').resolve(
+          //     __dirname,
+          //     '../packages/postcss.config.cjs',
+          //   ),
+          // },
+        },
+      },
+    },
   ],
-  staticDirs: ['../node_modules/@fontsource/montserrat'],
-  framework: {
-    name: '@storybook/html-vite',
-    options: {},
-  },
-  docs: {
-    autodocs: true,
-  },
+  framework: '@storybook/html',
 };
