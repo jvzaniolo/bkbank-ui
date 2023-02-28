@@ -1,22 +1,37 @@
 import clsx from 'clsx';
 
 export type AvatarProps = {
-  base: 'avatar';
-  size?: 'avatar-md' | 'avatar-lg';
-  color?: 'avatar-primary' | 'avatar-high';
-  state?: 'avatar-active';
+  size: 'small' | 'medium' | 'large';
+  color?: 'primary' | 'high' | 'unstyled';
+  isActive?: boolean;
   content?: 'icon' | 'text' | 'image';
 };
 
+const sizes = {
+  small: '',
+  medium: 'avatar-md',
+  large: 'avatar-lg',
+};
+
+const colors = {
+  unstyled: '',
+  primary: 'avatar-primary',
+  high: 'avatar-high',
+};
+
 export function createAvatar({
-  base,
-  size,
-  color,
-  state,
+  size = 'small',
+  color = 'unstyled',
+  isActive = false,
   content = 'text',
 }: AvatarProps) {
   return `
-    <div class="${clsx(base, size, color, state)}">
+    <div class="${clsx(
+      'avatar',
+      sizes[size],
+      colors[color],
+      isActive && 'avatar-active',
+    )}">
       ${
         content === 'icon'
           ? `<i data-feather="circle"></i>`

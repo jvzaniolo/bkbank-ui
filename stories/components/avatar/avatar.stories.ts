@@ -2,9 +2,8 @@ import type { Meta, StoryObj } from '@storybook/html';
 import type { AvatarProps } from './Avatar';
 import { createAvatar } from './Avatar';
 
-const meta = {
+const meta: Meta<AvatarProps> = {
   title: 'Components/Avatar',
-  render: createAvatar,
   parameters: {
     docs: {
       description: {
@@ -13,54 +12,62 @@ const meta = {
       },
     },
   },
-  args: {
-    base: 'avatar',
-    size: undefined,
-    color: undefined,
-    state: undefined,
-    content: 'text',
-  },
   argTypes: {
-    base: {
-      description: 'Base class for the avatar component.',
-      table: { defaultValue: { summary: 'avatar' } },
-      control: { type: '' },
-    },
-    color: {
-      description: 'Available colors for the avatar component.',
-      table: { defaultValue: { summary: 'unstyled' } },
-      options: [undefined, 'avatar-high', 'avatar-primary'],
-      control: { type: 'radio', labels: { undefined: 'unstyled' } },
-    },
     size: {
-      description: 'Available sizes for the avatar component',
-      table: { defaultValue: { summary: 'unstyled' } },
-      options: [undefined, 'avatar-md', 'avatar-lg'],
-      control: { type: 'radio', labels: { undefined: 'unstyled' } },
-    },
-    state: {
-      description: 'Possible states for the avatar component.',
-      table: { defaultValue: { summary: 'unstyled' } },
-      options: [undefined, 'avatar-active'],
-      control: { type: 'radio', labels: { undefined: 'unstyled' } },
-    },
-    content: {
-      description:
-        'Possible content for the avatar component.<br>This is just for demonstration purposes.',
-      options: ['text', 'icon', 'image'],
+      description: 'Change the size of the avatar',
+      table: {
+        defaultValue: { summary: 'small' },
+        type: {
+          summary: 'avatar-{md|lg}',
+          detail: '- small: @default\n- medium: avatar-md\n- large: avatar-lg',
+        },
+      },
+      options: ['small', 'medium', 'large'],
       control: { type: 'radio' },
     },
+    color: {
+      description: 'Change the color of the avatar',
+      table: {
+        defaultValue: { summary: 'unstyled' },
+        type: {
+          summary: 'avatar-{primary|high}',
+          detail:
+            '- unstyled: @default\n- high: avatar-high\n- primary: avatar-primary',
+        },
+      },
+      options: ['unstyled', 'primary', 'high'],
+      control: { type: 'radio' },
+    },
+    isActive: {
+      description: 'Add an active state to the avatar',
+      table: {
+        defaultValue: { summary: false },
+        type: { summary: 'avatar-active' },
+      },
+    },
+    content: {
+      description: 'Change the content of the avatar',
+      options: ['text', 'icon', 'image'],
+      control: { type: 'radio' },
+      table: {
+        type: {
+          summary: 'content',
+          detail: '- text: any string\n- icon: <svg> or <i>\n- image: <img>',
+        },
+      },
+    },
   },
-} satisfies Meta<AvatarProps>;
-
-type Story = StoryObj<AvatarProps>;
+};
 
 export default meta;
+type Story = StoryObj<AvatarProps>;
 
 export const Default: Story = {
+  render: args => createAvatar(args),
   args: {
-    base: 'avatar',
+    size: 'medium',
+    color: 'primary',
+    isActive: false,
     content: 'text',
-    color: 'avatar-primary',
   },
 };
