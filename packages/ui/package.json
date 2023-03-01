@@ -11,9 +11,9 @@
   "scripts": {
     "dev": "run-p \"build:** --watch\"",
     "build": "run-p build:**",
-    "build:all": "postcss styles/all.css --dir dist",
-    "build:base": "postcss styles/base.css --dir dist",
-    "build:components": "postcss styles/components.css --dir dist"
+    "build:all": "postcss src/all.css --dir dist",
+    "build:base": "postcss src/base.css --dir dist",
+    "build:components": "postcss src/components.css --dir dist"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
