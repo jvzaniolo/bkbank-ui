@@ -2,7 +2,7 @@
 module.exports = {
   content: ['./stories/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   theme: {
-    extend: {},
+    extend: { ...require('@bkbank/ui/theme.cjs') },
   },
-  plugins: [require('@bkbank/ui')],
+  plugins: [require('@tailwindcss/forms')],
 };
