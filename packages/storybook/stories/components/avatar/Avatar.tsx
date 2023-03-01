@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { UserIcon } from '@heroicons/react/24/outline';
 
-export type AvatarProps = {
+type AvatarProps = {
   size?: 'small' | 'large';
   color?: 'primary';
   isActive?: boolean;
