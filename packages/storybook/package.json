@@ -2,7 +2,6 @@
   "name": "@bkbank/storybook",
   "version": "1.2.0-beta.7",
   "description": "Storybook for BKBank",
-  "private": true,
   "license": "ISC",
   "scripts": {
     "storybook": "start-storybook -p 6006",

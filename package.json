@@ -4,11 +4,12 @@
   "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
   "private": true,
   "workspaces": [
-    "docs/*",
-    "packages/*",
-    "storybook/*"
+    "packages/*"
   ],
   "scripts": {
+    "build": "run-s build:**",
+    "build:ui": "yarn workspace @bkbank/ui build",
+    "build:storybook": "yarn workspace @bkbank/storybook build-storybook",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -26,5 +27,8 @@
     "url": "https://github.com/jvzaniolo/bkbank-ui/issues"
   },
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }
