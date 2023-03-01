@@ -8,7 +8,6 @@
   ],
   "scripts": {
     "build:ui": "yarn workspace @bkbank/ui build",
-    "build:storybook": "yarn workspace @bkbank/storybook build-storybook",
     "semantic-release": "semantic-release"
   },
   "repository": {
