@@ -7,7 +7,7 @@ function objectifyFile(file) {
   return require('postcss-js').objectify(root);
 }
 
-const plugin = require('tailwindcss/plugin')(
+module.exports = require('tailwindcss/plugin')(
   function ({ addBase, addComponents }) {
     addBase(objectifyFile('./dist/base.css'));
     addComponents(objectifyFile('./dist/components.css'));
@@ -22,5 +22,3 @@ const plugin = require('tailwindcss/plugin')(
     // plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
   },
 );
-
-module.exports = plugin;
