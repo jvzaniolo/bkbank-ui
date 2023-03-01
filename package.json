@@ -7,7 +7,9 @@
     "packages/*"
   ],
   "scripts": {
-    "storybook": "yarn workspace @bkbank/storybook storybook"
+    "build:ui": "yarn workspace @bkbank/ui build",
+    "storybook": "yarn workspace @bkbank/storybook storybook",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,12 @@
     "url": "https://github.com/jvzaniolo/bkbank-ui/issues"
   },
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "dependencies": {
+    "semantic-release": "^20.1.1",
+    "semantic-release-monorepo": "^7.0.5"
+  },
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1"
+  }
 }
