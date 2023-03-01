@@ -13,7 +13,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Build Project
-        run: yarn build
+        run: yarn build:ci
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
