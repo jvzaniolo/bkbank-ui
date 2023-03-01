@@ -4,5 +4,5 @@ module.exports = {
   theme: {
     extend: { ...require('@bkbank/ui/theme.cjs') },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
 };
