@@ -1,0 +1,91 @@
+import detent from 'ts-dedent';
+import { Meta, Source } from '@storybook/addon-docs';
+import { Checkbox } from './Checkbox';
+
+<Meta title="Components/Checkbox" />
+
+# Checkbox
+
+## Default
+
+<div className="pt-4">
+  <input type="checkbox" class="checkbox" />
+</div>
+
+<Source
+  format
+  language="html"
+  code={detent`<input type="checkbox" class="checkbox" />`}
+/>
+
+## Label
+
+Targets the immediate `<span>`, `<label>` or `.checkbox-label` element after the `input.checkbox` to apply the label styling.
+
+<div className="pt-4">
+  <Checkbox id="label" />
+</div>
+
+<Source
+  format
+  language="html"
+  code={detent`
+    <label for="checkbox" class="inline-flex items-center">
+      <input id="checkbox" type="checkbox" class="checkbox" />
+      <span>Checkbox</span>
+    </label>
+
+    <!-- or -->
+
+    <div class="inline-flex items-center">
+      <input id="checkbox" type="checkbox" class="checkbox" />
+      <label for="checkbox">Checkbox</label>
+    </div>
+
+    <!-- or -->
+
+    <label for="checkbox" class="inline-flex items-center">
+      <input id="checkbox" type="checkbox" class="checkbox" />
+      <p class="checkbox-label">Checkbox</p>
+    </label>
+
+`}
+/>
+
+## Invalid
+
+Targets the `:invalid` attribute or the `.checkbox-invalid` class to apply the stylings.
+
+<div className="pt-4">
+  <Checkbox id="invalid" isInvalid />
+</div>
+
+<Source
+  format
+  language="html"
+  code={detent`
+    <label class="inline-flex items-center">
+      <input type="checkbox" class="checkbox checkbox-invalid" />
+      <span>Checkbox</span>
+    </label>
+  `}
+/>
+
+## Disabled
+
+Targets the `:disabled` attribute to apply the stylings.
+
+<div className="pt-4">
+  <Checkbox id="disabled" isDisabled />
+</div>
+
+<Source
+  format
+  language="html"
+  code={detent`
+    <label class="inline-flex items-center">
+      <input type="checkbox" class="checkbox" disabled />
+      <span>Checkbox</span>
+    </label>
+  `}
+/>
