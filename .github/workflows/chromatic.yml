@@ -13,9 +13,10 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Build Core Package
-        run: yarn build:ui
+        run: yarn workspace @bkbank/ui build
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           workingDir: 'packages/storybook'
+          onlyChanged: true

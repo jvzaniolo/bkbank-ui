@@ -7,7 +7,6 @@
     "packages/*"
   ],
   "scripts": {
-    "build:ui": "yarn workspace @bkbank/ui build",
     "semantic-release": "semantic-release"
   },
   "repository": {
