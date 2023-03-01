@@ -1,48 +1,25 @@
 import React from 'react';
-import clsx from 'clsx';
+import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 type ButtonProps = {
-  size?: 'medium' | 'large';
-  variant?: 'outline' | 'ghost';
-  color?: 'primary' | 'secondary';
+  className: string;
   label: React.ReactNode;
   isDisabled?: boolean;
-};
-
-const sizes = {
-  medium: 'btn-md',
-  large: 'btn-lg',
-};
-
-const variants = {
-  outline: 'btn-outline',
-  ghost: 'btn-ghost',
-};
-
-const colors = {
-  primary: 'btn-primary',
-  secondary: 'btn-secondary',
+  withIcon?: boolean;
+  onlyIcon?: boolean;
 };
 
 export function Button({
-  size,
-  color,
-  variant,
   label,
-  isDisabled,
+  className,
+  isDisabled = false,
+  withIcon = false,
+  onlyIcon = false,
 }: ButtonProps) {
   return (
-    <button
-      type="button"
-      className={clsx(
-        'btn',
-        size ? sizes[size] : '',
-        color ? colors[color] : '',
-        variant ? variants[variant] : '',
-      )}
-      disabled={isDisabled}
-    >
-      {label}
+    <button type="button" className={className} disabled={isDisabled}>
+      {withIcon && <ShoppingBagIcon />}
+      {!onlyIcon && label}
     </button>
   );
 }

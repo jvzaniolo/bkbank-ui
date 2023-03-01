@@ -1,7 +1,6 @@
 import detent from 'ts-dedent';
 import { Meta, Source } from '@storybook/addon-docs';
 import { Button } from './Button';
-import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 
 <Meta title="Components/Button" />
 
@@ -10,7 +9,7 @@ import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 ## Default
 
 <div className="pt-4">
-  <Button label="Button" />
+  <Button className="btn" label="Button" />
 </div>
 
 <Source
@@ -23,9 +22,9 @@ import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 ## Sizes
 
 <div className="flex items-start gap-3 pt-4">
-  <Button label="Small" />
-  <Button size="medium" label="Medium" />
-  <Button size="large" label="Large" />
+  <Button className="btn" label="Small" />
+  <Button className="btn btn-md" label="Medium" />
+  <Button className="btn btn-lg" label="Large" />
 </div>
 
 <Source
@@ -40,9 +39,9 @@ import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 ## Colors
 
 <div className="flex items-start gap-3 pt-4">
-  <Button label="Base" />
-  <Button color="primary" label="Primary" />
-  <Button color="secondary" label="Secondary" />
+  <Button className="btn" label="Base" />
+  <Button className="btn btn-primary" label="Primary" />
+  <Button className="btn btn-secondary" label="Secondary" />
 </div>
 
 <Source
@@ -57,9 +56,9 @@ import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 ## Variants
 
 <div className="flex items-start gap-3 pt-4">
-  <Button color="primary" label="Solid" />
-  <Button color="primary" variant="outline" label="Outline" />
-  <Button color="primary" variant="ghost" label="Ghost" />
+  <Button className="btn btn-primary" label="Solid" />
+  <Button className="btn btn-outline btn-primary" label="Outline" />
+  <Button className="btn btn-ghost btn-primary" label="Ghost" />
 </div>
 
 <Source
@@ -74,9 +73,9 @@ import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 ## Disabled
 
 <div className="flex items-start gap-3 pt-4">
-  <Button color="primary" label="Solid" isDisabled />
-  <Button color="primary" variant="outline" label="Outline" isDisabled />
-  <Button color="primary" variant="ghost" label="Ghost" isDisabled />
+  <Button className="btn btn-primary" label="Solid" isDisabled />
+  <Button className="btn btn-outline btn-primary" label="Outline" isDisabled />
+  <Button className="btn btn-ghost btn-primary" label="Ghost" isDisabled />
 </div>
 
 <Source
@@ -85,5 +84,78 @@ import { ShoppingBagIcon } from '@heroicons/react/24/outline';
     <button type="button" class="btn btn-primary" disabled>Solid</button>
     <button type="button" class="btn btn-outline btn-primary" disabled>Outline</button>
     <button type="button" class="btn btn-ghost btn-primary" disabled>Ghost</button>
+  `}
+/>
+
+## With Icon
+
+<div className="flex items-start gap-3 pt-4">
+  <Button className="btn btn-primary" label="Solid" withIcon />
+  <Button className="btn btn-outline btn-primary" label="Outline" withIcon />
+  <Button className="btn btn-ghost btn-primary" label="Ghost" withIcon />
+</div>
+
+<Source
+  language="html"
+  code={detent`
+    <button type="button" class="btn btn-primary">
+      <svg>...</svg>
+      Solid
+    </button>
+    <button type="button" class="btn btn-outline btn-primary">
+      <svg>...</svg>
+      Outline
+    </button>
+    <button type="button" class="btn btn-ghost btn-primary">
+      <svg>...</svg>
+      Ghost
+    </button>
+  `}
+/>
+
+## Icon Button
+
+<div className="flex items-start gap-3 pt-4">
+  <Button className="btn btn-icon" label="Solid" withIcon onlyIcon />
+  <Button
+    className="btn btn-icon btn-md btn-outline btn-primary"
+    label="Outline"
+    withIcon
+    onlyIcon
+  />
+  <Button
+    className="btn btn-icon btn-lg btn-ghost btn-secondary"
+    label="Ghost"
+    withIcon
+    onlyIcon
+  />
+</div>
+
+<Source
+  language="html"
+  code={detent`
+    <button type="button" class="btn btn-icon"><svg>...</svg></button>
+    <button type="button" class="btn btn-icon btn-md btn-outline btn-primary"><svg>...</svg></button>
+    <button type="button" class="btn btn-icon btn-lg btn-ghost btn-secondary"><svg>...</svg></button>
+  `}
+/>
+
+## Rounded Button
+
+<div className="flex items-start gap-3 pt-4">
+  <Button className="btn btn-primary rounded-full" label="Rounded" />
+  <Button
+    className="btn btn-outline btn-primary rounded-full"
+    label="Rounded"
+  />
+  <Button className="btn btn-ghost btn-primary rounded-full" label="Rounded" />
+</div>
+
+<Source
+  language="html"
+  code={detent`
+    <button type="button" class="btn btn-primary rounded-full">Rounded</button>
+    <button type="button" class="btn btn-outline btn-primary rounded-full">Rounded</button>
+    <button type="button" class="btn btn-ghost btn-primary rounded-full">Rounded</button>
   `}
 />
