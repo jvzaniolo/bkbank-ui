@@ -1,0 +1,73 @@
+.input {
+  @apply form-input w-full rounded border-low-light px-4 text-sm font-medium leading-none text-black placeholder:text-low-medium focus:border-primary-light focus:ring-2 focus:ring-primary-light disabled:border-high-dark disabled:text-high-dark disabled:placeholder:text-high-dark;
+
+  &:invalid:not(:disabled),
+  &.input-invalid:not(:disabled) {
+    @apply border-error-pure ring-2 ring-error-pure;
+  }
+
+  &-md {
+    @apply py-4;
+  }
+  &-lg {
+    @apply py-5;
+  }
+}
+
+.input ~ .input-label,
+.input ~ label,
+.input ~ span {
+  @apply pointer-events-none absolute top-0 left-3.5 z-10 origin-[0] -translate-y-2 scale-75 bg-white px-1 text-sm font-medium leading-none text-low-dark transition-transform duration-300 ease-out;
+}
+
+.input:placeholder-shown ~ .input-label,
+.input:placeholder-shown ~ label,
+.input:placeholder-shown ~ span {
+  @apply translate-y-2.5 scale-100;
+}
+
+.input:focus ~ .input-label,
+.input:focus ~ label,
+.input:focus ~ span {
+  @apply top-0 -translate-y-2 scale-75 px-1;
+}
+
+.input:disabled ~ .input-label,
+.input:disabled ~ label,
+.input:disabled ~ span {
+  @apply text-high-dark;
+}
+
+.input.input-md ~ span,
+.input.input-md ~ label,
+.input.input-md ~ .input-label {
+  @apply -translate-y-2;
+}
+.input.input-md:placeholder-shown ~ .input-label,
+.input.input-md:placeholder-shown ~ label,
+.input.input-md:placeholder-shown ~ span {
+  @apply translate-y-[1.15rem];
+}
+/* The :focus selector must have priority over the :placeholder-shown */
+.input.input-md:focus ~ span,
+.input.input-md:focus ~ label,
+.input.input-md:focus ~ .input-label {
+  @apply -translate-y-2;
+}
+
+.input.input-lg ~ .input-label,
+.input.input-lg ~ label,
+.input.input-lg ~ span {
+  @apply -translate-y-2;
+}
+.input-lg:placeholder-shown ~ .input-label,
+.input-lg:placeholder-shown ~ label,
+.input-lg:placeholder-shown ~ span {
+  @apply translate-y-[1.4rem];
+}
+/* The :focus selector must have priority over the :placeholder-shown */
+.input.input-lg:focus ~ span,
+.input.input-lg:focus ~ label,
+.input.input-lg:focus ~ .input-label {
+  @apply -translate-y-2;
+}
