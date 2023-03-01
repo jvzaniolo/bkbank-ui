@@ -22,5 +22,11 @@ module.exports = {
   features: {
     previewMdx2: true,
   },
+  builder: {
+    name: 'webpack5',
+    options: {
+      lazyCompilation: true,
+    },
+  },
   framework: '@storybook/react',
 };
