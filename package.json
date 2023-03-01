@@ -1,37 +1,15 @@
 {
   "name": "@bkbank/root",
-  "version": "1.2.0-beta.8",
-  "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "build:ui": "yarn workspace @bkbank/ui build",
-    "storybook": "yarn workspace @bkbank/storybook storybook",
-    "semantic-release": "semantic-release"
+    "storybook": "yarn workspace @bkbank/storybook storybook"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jvzaniolo/bkbank-ui.git"
-  },
-  "keywords": [
-    "tailwindcss",
-    "plugin",
-    "design-system"
-  ],
-  "author": "joao.zaniolo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jvzaniolo/bkbank-ui/issues"
-  },
-  "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
   "packageManager": "yarn@1.22.19",
-  "dependencies": {
-    "semantic-release": "^20.1.1",
-    "semantic-release-monorepo": "^7.0.5"
-  },
-  "devDependencies": {
-    "@semantic-release/git": "^10.0.1"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
