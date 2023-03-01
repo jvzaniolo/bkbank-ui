@@ -1,0 +1,22 @@
+# .github/workflows/release.yml
+
+# Workflow name
+name: 'Release'
+
+on:
+  push:
+    branches: [beta]
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn
+      - name: Build package
+        run: yarn build:ui
+      - name: Publish package
+        run: yarn publish packages/ui --access public --prepatch --tag beta
+        with:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
