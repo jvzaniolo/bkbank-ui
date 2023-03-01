@@ -16,7 +16,7 @@ module.exports = require('tailwindcss/plugin')(
   },
   {
     theme: {
-      extend: { ...require('./theme.cjs') },
+      extend: { ...require('../theme') },
     },
     // Only include the plugins if we want to expose their classes
     // plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],

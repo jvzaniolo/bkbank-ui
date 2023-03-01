@@ -1,5 +1,5 @@
 @import 'tailwindcss/base';
-@import '@bkbank/ui/src/base.css';
+@import '../../packages/ui/base.css';
 @import 'tailwindcss/components';
-@import '@bkbank/ui/src/components.css';
+@import '../../packages/ui/components.css';
 @import 'tailwindcss/utilities';
