@@ -25,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/jvzaniolo/bkbank-ui/issues"
   },
-  "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme"
+  "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
+  "packageManager": "yarn@1.22.19"
 }

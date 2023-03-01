@@ -1,0 +1,89 @@
+import detent from 'ts-dedent';
+import { Meta, Source } from '@storybook/addon-docs';
+import { Button } from './Button';
+import { ShoppingBagIcon } from '@heroicons/react/24/outline';
+
+<Meta title="Components/Button" />
+
+# Button
+
+## Default
+
+<div className="pt-4">
+  <Button label="Button" />
+</div>
+
+<Source
+  language="html"
+  code={detent`
+    <button type="button" class="btn">Button</button>
+  `}
+/>
+
+## Sizes
+
+<div className="flex items-start gap-3 pt-4">
+  <Button label="Small" />
+  <Button size="medium" label="Medium" />
+  <Button size="large" label="Large" />
+</div>
+
+<Source
+  language="html"
+  code={detent`
+    <button type="button" class="btn">Small</button>
+    <button type="button" class="btn btn-md">Medium</button>
+    <button type="button" class="btn btn-lg">Large</button>
+  `}
+/>
+
+## Colors
+
+<div className="flex items-start gap-3 pt-4">
+  <Button label="Base" />
+  <Button color="primary" label="Primary" />
+  <Button color="secondary" label="Secondary" />
+</div>
+
+<Source
+  language="html"
+  code={detent`
+    <button type="button" class="btn">Base</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+  `}
+/>
+
+## Variants
+
+<div className="flex items-start gap-3 pt-4">
+  <Button color="primary" label="Solid" />
+  <Button color="primary" variant="outline" label="Outline" />
+  <Button color="primary" variant="ghost" label="Ghost" />
+</div>
+
+<Source
+  language="html"
+  code={detent`
+    <button type="button" class="btn btn-primary">Solid</button>
+    <button type="button" class="btn btn-outline btn-primary">Outline</button>
+    <button type="button" class="btn btn-ghost btn-primary">Ghost</button>
+  `}
+/>
+
+## Disabled
+
+<div className="flex items-start gap-3 pt-4">
+  <Button color="primary" label="Solid" isDisabled />
+  <Button color="primary" variant="outline" label="Outline" isDisabled />
+  <Button color="primary" variant="ghost" label="Ghost" isDisabled />
+</div>
+
+<Source
+  language="html"
+  code={detent`
+    <button type="button" class="btn btn-primary" disabled>Solid</button>
+    <button type="button" class="btn btn-outline btn-primary" disabled>Outline</button>
+    <button type="button" class="btn btn-ghost btn-primary" disabled>Ghost</button>
+  `}
+/>
