@@ -8,10 +8,10 @@
   ],
   "scripts": {
     "build": "run-s build:**",
-    "build:ci": "run-s build:ui build:ci:storybook",
+    "build:ci": "run-s build:ui build:storybook:ci",
     "build:ui": "yarn workspace @bkbank/ui build",
     "build:storybook": "yarn workspace @bkbank/storybook build-storybook",
-    "build:ci:storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider yarn workspace @bkbank/storybook build-storybook",
+    "build:storybook:ci": "cross-env NODE_OPTIONS=--openssl-legacy-provider yarn workspace @bkbank/storybook build-storybook",
     "semantic-release": "semantic-release"
   },
   "repository": {
