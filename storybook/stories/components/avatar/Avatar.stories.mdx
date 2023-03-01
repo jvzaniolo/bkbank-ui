@@ -1,0 +1,85 @@
+import dedent from 'ts-dedent';
+import { Meta, Story, Source } from '@storybook/addon-docs';
+import { Avatar } from './Avatar';
+
+<Meta title="Components/Avatar" component={Avatar} />
+
+export const Template = args => <Avatar {...args} />;
+
+# Avatar
+
+## Default
+
+<div className="pt-3">
+  <Avatar />
+</div>
+
+<Source language="html" format code={dedent`<div class="avatar">RM</div>`} />
+
+## Colors
+
+<div className="flex items-center gap-3 pt-3">
+  <Avatar />
+  <Avatar color="primary" />
+</div>
+
+<Source
+  language="html"
+  format
+  code={dedent`
+    <div class="avatar">RM</div>
+    <div class="avatar avatar-primary">RM</div>
+  `}
+/>
+
+## Sizes
+
+<div className="flex items-start gap-3 pt-3">
+  <Avatar size="small" />
+  <Avatar />
+  <Avatar size="large" />
+</div>
+
+<Source
+  language="html"
+  format
+  code={dedent`
+    <div class="avatar avatar-sm">RM</div>
+    <div class="avatar">RM</div>
+    <div class="avatar avatar-lg">RM</div>
+  `}
+/>
+
+## Active State
+
+<div className="flex items-start gap-3 pt-3">
+  <Avatar isActive />
+  <Avatar isActive color="primary" />
+</div>
+
+<Source
+  language="html"
+  format
+  code={dedent`
+    <div class="avatar avatar-active">RM</div>
+    <div class="avatar avatar-primary avatar-active">RM</div>
+  `}
+/>
+
+## Content Types
+
+<div className="flex items-start gap-3 pt-3">
+  <Avatar content="text" />
+  <Avatar content="icon" />
+  <Avatar content="image" />
+</div>
+
+<Source
+  language="html"
+  format
+  code={dedent`
+    <div class="avatar">RM</div>
+    <div class="avatar"><svg>...</svg></div>
+    <div class="avatar"><img src="..." /></div>
+  `}
+/>

@@ -1,20 +1,14 @@
 {
-  "name": "@bkbank/ui",
+  "name": "@bkbank/root",
   "version": "1.2.0-beta.7",
   "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
-  "main": "dist/index.js",
-  "files": [
-    "dist/**/*",
-    "theme.cjs"
+  "private": true,
+  "workspaces": [
+    "docs/*",
+    "packages/*",
+    "storybook/*"
   ],
   "scripts": {
-    "build": "npm-run-all tsc --parallel build:**",
-    "tsc": "tsc",
-    "build:all": "postcss --config packages packages/core/all.css --dir dist --base packages",
-    "build:base": "postcss --config packages packages/core/base.css --dir dist --base packages",
-    "build:components": "postcss --config packages packages/core/components.css --dir dist --base packages",
-    "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
-    "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -31,54 +25,5 @@
   "bugs": {
     "url": "https://github.com/jvzaniolo/bkbank-ui/issues"
   },
-  "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
-  "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@semantic-release/git": "^10.0.1",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/builder-webpack4": "^6.5.16",
-    "@storybook/html": "^6.5.16",
-    "@storybook/manager-webpack4": "^6.5.16",
-    "@storybook/react": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
-    "@tailwindcss/forms": "^0.5.3",
-    "@types/postcss-js": "^4.0.0",
-    "@types/react": "^18.0.28",
-    "@typescript-eslint/eslint-plugin": "^5.53.0",
-    "@typescript-eslint/parser": "^5.53.0",
-    "autoprefixer": "^10.4.13",
-    "babel-loader": "^8.3.0",
-    "clsx": "^1.2.1",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-storybook": "^0.6.11",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.3",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "semantic-release": "^20.1.0",
-    "typescript": "^4.9.5",
-    "webpack": "5.0.0"
-  },
-  "dependencies": {
-    "@fontsource/montserrat": "^4.5.14",
-    "@heroicons/react": "^2.0.16",
-    "postcss-js": "^4.0.1",
-    "tailwindcss": "^3.2.7"
-  },
-  "peerDependencies": {
-    "@types/react": "^18.0.28",
-    "react": "17.0.0",
-    "react-dom": "17.0.0",
-    "webpack": "5.0.0"
-  }
+  "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme"
 }
