@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./stories/**/*.@(js|jsx|ts|tsx|mdx)'],
+  content: ['./storybook/stories/**/*.@(js|jsx|ts|tsx|mdx)'],
   theme: {
-    extend: { ...require('@bkbank/ui/theme.cjs') },
+    extend: { ...require('./packages/ui/theme') },
   },
   plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
 };
