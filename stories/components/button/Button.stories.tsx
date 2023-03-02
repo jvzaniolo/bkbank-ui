@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import mdx from './Button.mdx';
 
-const meta = {
+export default {
   title: 'Components/Button',
   parameters: {
     docs: {
@@ -17,8 +17,6 @@ const meta = {
     },
   },
 } satisfies Meta;
-
-export default meta;
 
 export const Default: StoryObj = {
   render: () => <button className="btn">Default</button>,
