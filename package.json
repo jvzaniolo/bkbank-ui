@@ -1,6 +1,6 @@
 {
   "name": "@bkbank/ui",
-  "version": "1.2.0-beta.9",
+  "version": "1.2.0-beta.10",
   "description": "BK Bank's Design System as a TailwindCSS plugin.",
   "main": "index.cjs",
   "license": "ISC",
