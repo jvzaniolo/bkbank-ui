@@ -1,4 +1,4 @@
-import '../storybook/styles/index.css';
+import '../stories/tailwind.css';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

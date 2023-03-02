@@ -1,16 +1,7 @@
-function objectifyFile(file) {
-  const css = require('fs').readFileSync(
-    require('path').resolve(__dirname, file),
-    'utf8',
-  );
-  const root = require('postcss').parse(css);
-  return require('postcss-js').objectify(root);
-}
-
 module.exports = require('tailwindcss/plugin')(
   function ({ addBase, addComponents }) {
-    addBase(objectifyFile('./dist/base.css'));
-    addComponents(objectifyFile('./dist/components.css'));
+    addBase(require('./lib/css-to-js')('./dist/base.css'));
+    addComponents(require('./lib/css-to-js')('./dist/components.css'));
     // addUtilities();
     // addVariant();
   },
