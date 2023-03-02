@@ -15,6 +15,9 @@ module.exports = {
         },
         postcssLoaderOptions: {
           implementation: require('postcss'),
+          postcssOptions: {
+            config: './stories/postcss.config.js',
+          },
         },
       },
     },

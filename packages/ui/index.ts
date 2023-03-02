@@ -12,8 +12,8 @@ function cssToJs(filePath: string) {
 
 module.exports = plugin(
   function ({ addBase, addComponents }) {
-    addBase(cssToJs('./dist/base.css'));
-    addComponents(cssToJs('./dist/components.css'));
+    addBase(cssToJs('./base.css'));
+    addComponents(cssToJs('./components.css'));
     // addUtilities();
     // addVariant();
   },

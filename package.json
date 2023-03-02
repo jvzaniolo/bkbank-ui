@@ -2,10 +2,13 @@
   "name": "@bkbank/ui",
   "version": "1.2.0-beta.11",
   "description": "BK Bank's Design System as a TailwindCSS plugin.",
-  "main": "dist/index.js",
+  "main": "index.js",
   "license": "ISC",
   "files": [
-    "dist/**/*"
+    "*.js",
+    "*.d.ts",
+    "*.d.ts.map",
+    "*.css"
   ],
   "repository": {
     "type": "git",
@@ -24,9 +27,9 @@
   "scripts": {
     "tsc": "tsc",
     "build": "npm-run-all tsc --parallel build:**",
-    "build:all": "postcss packages/ui/all.css --dir dist",
-    "build:base": "postcss packages/ui/base.css --dir dist",
-    "build:components": "postcss packages/ui/components.css --dir dist",
+    "build:all": "postcss --config packages/ui packages/ui/all.css --dir .",
+    "build:base": "postcss --config packages/ui packages/ui/base.css --dir .",
+    "build:components": "postcss --config packages/ui packages/ui/components.css --dir .",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook"
   },
