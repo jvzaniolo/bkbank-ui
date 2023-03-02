@@ -2,20 +2,14 @@
   /* uses _base-form.css */
   @apply form-checkbox rounded;
 
-  & ~ span,
-  & ~ label,
   & ~ .checkbox-label {
-    @apply text-low-dark ml-3;
+    @apply text-low-dark ml-3 text-sm font-medium leading-normal;
   }
 
-  &:checked ~ span,
-  &:checked ~ label,
   &:checked ~ .checkbox-label {
     @apply text-black;
   }
 
-  &:disabled ~ span,
-  &:disabled ~ label,
   &:disabled ~ .checkbox-label {
     @apply text-high-dark;
   }
@@ -23,8 +17,6 @@
   &.checkbox-invalid:not(:disabled) {
     @apply border-error-pure text-error-pure checked:active:bg-error-pure;
 
-    & ~ span,
-    & ~ label,
     & ~ .checkbox-label {
       @apply text-error-pure;
     }

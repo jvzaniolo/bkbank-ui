@@ -14,20 +14,14 @@
     @apply bg-high-dark;
   }
 
-  & ~ label,
-  & ~ span,
   & ~ .switch-label {
-    @apply text-low-dark text-sm font-medium leading-normal;
+    @apply text-low-dark ml-3 text-sm font-medium leading-normal;
   }
 
-  &:checked ~ label,
-  &:checked ~ span,
   &:checked ~ .switch-label {
     @apply text-black;
   }
 
-  &:disabled ~ label,
-  &:disabled ~ span,
   &:disabled ~ .switch-label {
     @apply text-high-dark select-none;
   }
@@ -37,10 +31,8 @@
   }
 
   &.switch-invalid:not(:disabled) {
-    @apply border-error-pure text-error-pure;
+    @apply border-error-pure text-error-pure checked:bg-error-pure;
 
-    & ~ span,
-    & ~ label,
     & ~ .switch-label {
       @apply text-error-pure;
     }

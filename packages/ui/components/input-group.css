@@ -10,55 +10,41 @@
   }
 
   .input-group-icon {
-    @apply text-low-dark flex items-center;
+    @apply text-low-dark flex h-[1em] w-[1em] items-center;
   }
 
-  .input ~ label,
-  .input ~ span,
   .input ~ .input-label {
     @apply left-0;
   }
 
-  &-md {
+  &.input-md {
     @apply text-base;
     .input {
       @apply py-4;
     }
-    .input ~ label,
-    .input ~ span,
     .input ~ .input-label {
       @apply -translate-y-2.5;
     }
-    .input:placeholder-shown ~ label,
-    .input:placeholder-shown ~ span,
     .input:placeholder-shown ~ .input-label {
       @apply translate-y-[1.125rem];
     }
     /* The :focus selector must have priority over :placeholder-shown */
-    .input:focus ~ label,
-    .input:focus ~ span,
     .input:focus ~ .input-label {
       @apply -translate-y-2.5;
     }
   }
-  &-lg {
+  &.input-lg {
     @apply text-lg;
     .input {
       @apply py-5;
     }
-    .input ~ label,
-    .input ~ span,
     .input ~ .input-label {
       @apply -translate-y-2.5;
     }
-    .input:placeholder-shown ~ label,
-    .input:placeholder-shown ~ span,
     .input:placeholder-shown ~ .input-label {
       @apply translate-y-[1.4rem];
     }
     /* The :focus selector must have priority over :placeholder-shown */
-    .input:focus ~ label,
-    .input:focus ~ span,
     .input:focus ~ .input-label {
       @apply -translate-y-2.5;
     }
@@ -66,10 +52,6 @@
 
   &.input-group-invalid:not(.input-group-disabled) {
     @apply border-error-pure ring-error-pure ring-2;
-
-    .input-group-icon.inherit-color {
-      @apply fill-error-pure text-error-pure;
-    }
   }
 
   &.input-group-disabled {
@@ -85,10 +67,10 @@
   }
 }
 .input-group.input-group-invalid:not(.input-group-disabled)
-  + .input-group-alt.input-group-alt {
+  ~ .input-group-alt.input-group-alt {
   @apply text-error-pure;
 }
-.input-group.input-group-disabled + .input-group-alt {
+.input-group.input-group-disabled ~ .input-group-alt {
   @apply text-high-dark;
 }
 .input-group-alt {

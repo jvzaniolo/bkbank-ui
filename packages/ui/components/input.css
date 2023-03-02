@@ -6,68 +6,48 @@
     @apply border-error-pure ring-error-pure ring-2;
   }
 
-  &-md {
+  &.input-md {
     @apply py-4;
   }
-  &-lg {
+  &.input-lg {
     @apply py-5;
   }
 }
 
-.input ~ .input-label,
-.input ~ label,
-.input ~ span {
+.input ~ .input-label {
   @apply text-low-dark pointer-events-none absolute top-0 left-3.5 z-10 origin-[0] -translate-y-2 scale-75 bg-white px-1 text-sm font-medium leading-none transition-transform duration-300 ease-out;
 }
 
-.input:placeholder-shown ~ .input-label,
-.input:placeholder-shown ~ label,
-.input:placeholder-shown ~ span {
+.input:placeholder-shown ~ .input-label {
   @apply translate-y-2.5 scale-100;
 }
 
-.input:focus ~ .input-label,
-.input:focus ~ label,
-.input:focus ~ span {
+.input:focus ~ .input-label {
   @apply top-0 -translate-y-2 scale-75 px-1;
 }
 
-.input:disabled ~ .input-label,
-.input:disabled ~ label,
-.input:disabled ~ span {
+.input:disabled ~ .input-label {
   @apply text-high-dark;
 }
 
-.input.input-md ~ span,
-.input.input-md ~ label,
 .input.input-md ~ .input-label {
   @apply -translate-y-2;
 }
-.input.input-md:placeholder-shown ~ .input-label,
-.input.input-md:placeholder-shown ~ label,
-.input.input-md:placeholder-shown ~ span {
+.input.input-md:placeholder-shown ~ .input-label {
   @apply translate-y-[1.15rem];
 }
 /* The :focus selector must have priority over the :placeholder-shown */
-.input.input-md:focus ~ span,
-.input.input-md:focus ~ label,
 .input.input-md:focus ~ .input-label {
   @apply -translate-y-2;
 }
 
-.input.input-lg ~ .input-label,
-.input.input-lg ~ label,
-.input.input-lg ~ span {
+.input.input-lg ~ .input-label {
   @apply -translate-y-2;
 }
-.input-lg:placeholder-shown ~ .input-label,
-.input-lg:placeholder-shown ~ label,
-.input-lg:placeholder-shown ~ span {
+.input-lg:placeholder-shown ~ .input-label {
   @apply translate-y-[1.4rem];
 }
 /* The :focus selector must have priority over the :placeholder-shown */
-.input.input-lg:focus ~ span,
-.input.input-lg:focus ~ label,
 .input.input-lg:focus ~ .input-label {
   @apply -translate-y-2;
 }

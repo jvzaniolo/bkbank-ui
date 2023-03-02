@@ -2,29 +2,21 @@
   /* uses _base-form.css */
   @apply form-radio;
 
-  & + span,
-  & + label,
-  & + .radio-label {
-    @apply text-low-dark ml-3;
+  & ~ .radio-label {
+    @apply text-low-dark ml-3 text-sm font-medium leading-normal;
   }
 
-  &:checked + span,
-  &:checked + label,
-  &:checked + .radio-label {
+  &:checked ~ .radio-label {
     @apply text-black;
   }
 
-  &:disabled + span,
-  &:disabled + label,
-  &:disabled + .radio-label {
+  &:disabled ~ .radio-label {
     @apply text-high-dark;
   }
 
   &.radio-invalid:not(:disabled) {
     @apply border-error-pure text-error-pure;
 
-    & ~ span,
-    & ~ label,
     & ~ .radio-label {
       @apply text-error-pure;
     }
