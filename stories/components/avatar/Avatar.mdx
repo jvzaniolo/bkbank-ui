@@ -3,15 +3,9 @@ import {
   ArgsTable,
   Canvas,
   Description,
-  Meta,
   Story,
   Source,
 } from '@storybook/addon-docs';
-import { Avatar } from './Avatar';
-
-<Meta title="Components/Avatar" component={Avatar} />
-
-export const Template = (args) => <Avatar {...args} />;
 
 # Avatar
 
@@ -27,52 +21,18 @@ export const Template = (args) => <Avatar {...args} />;
 `}
 />
 
-## Playground
-
-<Canvas>
-  <Story
-    name="Playground"
-    args={{
-      className: 'avatar',
-      content: 'text',
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-<ArgsTable story="Playground" />
-
 ## Default
 
 <Canvas withSource="none">
-  <Avatar className="avatar" />
+  <Story id="components-avatar--default" />
 </Canvas>
 
 <Source language="html" format code={dedent`<div class="avatar">RM</div>`} />
 
-## Colors
-
-<Canvas withSource="none">
-  <Avatar className="avatar" />
-  <Avatar className="avatar avatar-primary" />
-</Canvas>
-
-<Source
-  language="html"
-  format
-  code={dedent`
-    <div class="avatar">RM</div>
-    <div class="avatar avatar-primary">RM</div>
-  `}
-/>
-
 ## Sizes
 
-<Canvas>
-  <Avatar className="avatar avatar-sm" />
-  <Avatar className="avatar" />
-  <Avatar className="avatar avatar-lg" />
+<Canvas withSource="none">
+  <Story id="components-avatar--sizes" />
 </Canvas>
 
 <Source
@@ -85,11 +45,25 @@ export const Template = (args) => <Avatar {...args} />;
   `}
 />
 
-## Active State
+## Colors
 
 <Canvas withSource="none">
-  <Avatar className="avatar" />
-  <Avatar className="avatar avatar-active" />
+  <Story id="components-avatar--colors" />
+</Canvas>
+
+<Source
+  language="html"
+  format
+  code={dedent`
+    <div class="avatar">RM</div>
+    <div class="avatar avatar-primary">RM</div>
+  `}
+/>
+
+## States
+
+<Canvas withSource="none">
+  <Story id="components-avatar--states" />
 </Canvas>
 
 <Source
@@ -104,9 +78,7 @@ export const Template = (args) => <Avatar {...args} />;
 ## Content Types
 
 <Canvas withSource="none">
-  <Avatar className="avatar" content="text" />
-  <Avatar className="avatar" content="icon" />
-  <Avatar className="avatar" content="image" />
+  <Story id="components-avatar--content-types" />
 </Canvas>
 
 <Source
