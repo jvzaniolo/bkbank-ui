@@ -1,11 +1,5 @@
 import dedent from 'ts-dedent';
-import {
-  ArgsTable,
-  Canvas,
-  Description,
-  Story,
-  Source,
-} from '@storybook/addon-docs';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
 
 # Avatar
 
@@ -23,70 +17,30 @@ import {
 
 ## Default
 
-<Canvas withSource="none">
+<Canvas>
   <Story id="components-avatar--default" />
 </Canvas>
 
-<Source language="html" format code={dedent`<div class="avatar">RM</div>`} />
-
 ## Sizes
 
-<Canvas withSource="none">
+<Canvas>
   <Story id="components-avatar--sizes" />
 </Canvas>
 
-<Source
-  language="html"
-  format
-  code={dedent`
-    <div class="avatar avatar-sm">RM</div>
-    <div class="avatar">RM</div>
-    <div class="avatar avatar-lg">RM</div>
-  `}
-/>
-
 ## Colors
 
-<Canvas withSource="none">
+<Canvas>
   <Story id="components-avatar--colors" />
 </Canvas>
 
-<Source
-  language="html"
-  format
-  code={dedent`
-    <div class="avatar">RM</div>
-    <div class="avatar avatar-primary">RM</div>
-  `}
-/>
-
 ## States
 
-<Canvas withSource="none">
+<Canvas>
   <Story id="components-avatar--states" />
 </Canvas>
 
-<Source
-  language="html"
-  format
-  code={dedent`
-    <div class="avatar avatar-active">RM</div>
-    <div class="avatar avatar-primary avatar-active">RM</div>
-  `}
-/>
-
 ## Content Types
 
-<Canvas withSource="none">
+<Canvas>
   <Story id="components-avatar--content-types" />
 </Canvas>
-
-<Source
-  language="html"
-  format
-  code={dedent`
-    <div class="avatar">RM</div>
-    <div class="avatar"><svg>...</svg></div>
-    <div class="avatar"><img src="..." /></div>
-  `}
-/>

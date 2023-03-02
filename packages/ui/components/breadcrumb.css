@@ -1,15 +1,15 @@
-nav[aria-label='breadcrumb'] ol {
+nav.breadcrumb ol {
   @apply flex gap-2;
 
-  li a {
+  a {
     @apply text-primary-pure hover:text-primary-medium focus:ring-primary-lighter active:text-primary-medium rounded text-sm font-medium leading-normal ring-offset-2 hover:underline focus:outline-none focus:ring-2;
   }
 
-  li a[aria-current='page'] {
+  [aria-current='page'] {
     @apply text-low-medium pointer-events-none cursor-default;
   }
 
-  li + li {
-    @apply before:text-low-medium before:mr-2 before:content-['/'];
+  li + li::before {
+    @apply text-low-medium mr-2 content-['/'];
   }
 }

@@ -1,59 +1,119 @@
 import React from 'react';
+import dedent from 'ts-dedent';
+import { UserIcon } from '@heroicons/react/24/outline';
 import { Meta, StoryObj } from '@storybook/react';
-import { Avatar } from './Avatar';
 import mdx from './Avatar.mdx';
 
-const meta = {
+export default {
   title: 'Components/Avatar',
   parameters: {
     docs: {
       page: mdx,
+      source: {
+        format: true,
+        type: 'code',
+        language: 'html',
+      },
     },
   },
-  component: Avatar,
-} satisfies Meta<typeof Avatar>;
+} satisfies Meta;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  render: () => <Avatar className="avatar" />,
+export const Default: StoryObj = {
+  render: () => <div className="avatar">RM</div>,
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`<div class="avatar">RM</div>`,
+      },
+    },
+  },
 };
 
-export const Sizes: Story = {
+export const Sizes: StoryObj = {
   render: () => (
     <div className="flex items-start gap-5">
-      <Avatar className="avatar avatar-sm" />
-      <Avatar className="avatar" />
-      <Avatar className="avatar avatar-lg" />
+      <div className="avatar avatar-sm">RM</div>
+      <div className="avatar">RM</div>
+      <div className="avatar avatar-lg">RM</div>
     </div>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`
+          <div class="avatar avatar-sm">RM</div>
+          <div class="avatar">RM</div>
+          <div class="avatar avatar-lg">RM</div>
+        `,
+      },
+    },
+  },
 };
 
-export const Colors: Story = {
+export const Colors: StoryObj = {
   render: () => (
     <div className="flex items-start gap-5">
-      <Avatar className="avatar" />
-      <Avatar className="avatar avatar-primary" />
+      <div className="avatar">RM</div>
+      <div className="avatar avatar-primary">RM</div>
     </div>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`
+          <div class="avatar">RM</div>
+          <div class="avatar avatar-primary">RM</div>
+        `,
+      },
+    },
+  },
 };
 
-export const States: Story = {
+export const States: StoryObj = {
   render: () => (
     <div className="flex items-start gap-5">
-      <Avatar className="avatar" />
-      <Avatar className="avatar avatar-active" />
+      <div className="avatar">RM</div>
+      <div className="avatar avatar-active">RM</div>
     </div>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`
+          <div class="avatar">RM</div>
+          <div class="avatar avatar-active">RM</div>
+        `,
+      },
+    },
+  },
 };
 
-export const ContentTypes: Story = {
+export const ContentTypes: StoryObj = {
   render: () => (
     <div className="flex items-start gap-5">
-      <Avatar className="avatar" content="text" />
-      <Avatar className="avatar" content="icon" />
-      <Avatar className="avatar" content="image" />
+      <div className="avatar">RM</div>
+      <div className="avatar">
+        <UserIcon />
+      </div>
+      <div className="avatar">
+        <img
+          alt="John Doe"
+          src="https://randomuser.me/api/portraits/med/men/86.jpg"
+        />
+      </div>
     </div>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`
+          <div class="avatar">RM</div>
+          <div class="avatar"><svg>...</svg></div>
+          <div class="avatar">
+            <img alt="John Doe" src="..." />
+          </div>
+        `,
+      },
+    },
+  },
 };
