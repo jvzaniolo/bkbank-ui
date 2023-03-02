@@ -5,7 +5,7 @@
   & ~ span,
   & ~ label,
   & ~ .checkbox-label {
-    @apply ml-3 text-low-dark;
+    @apply text-low-dark ml-3;
   }
 
   &:checked ~ span,

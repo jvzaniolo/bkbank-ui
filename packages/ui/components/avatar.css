@@ -1,5 +1,5 @@
 .avatar {
-  @apply relative flex h-10 w-10 text-xs items-center justify-center rounded-full font-medium leading-normal bg-high-light text-primary-pure;
+  @apply bg-high-light text-primary-pure relative flex h-10 w-10 items-center justify-center rounded-full text-xs font-medium leading-normal;
 
   svg,
   .avatar-icon {
@@ -14,11 +14,11 @@
   }
 
   &.avatar-active {
-    @apply border border-highlight-pure after:absolute after:right-0 after:bottom-0 after:h-3 after:w-3 after:rounded-full after:bg-highlight-pure;
+    @apply border-highlight-pure after:bg-highlight-pure border after:absolute after:right-0 after:bottom-0 after:h-3 after:w-3 after:rounded-full;
   }
 
   &.avatar-sm {
-    @apply h-6 w-6 text-2xs;
+    @apply text-2xs h-6 w-6;
 
     svg,
     .avatar-icon {

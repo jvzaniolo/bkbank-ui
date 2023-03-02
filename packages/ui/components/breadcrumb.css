@@ -2,14 +2,14 @@ nav[aria-label='breadcrumb'] ol {
   @apply flex gap-2;
 
   li a {
-    @apply rounded text-sm font-medium leading-normal text-primary-pure ring-offset-2 hover:text-primary-medium hover:underline focus:outline-none focus:ring-2 focus:ring-primary-lighter active:text-primary-medium;
+    @apply text-primary-pure hover:text-primary-medium focus:ring-primary-lighter active:text-primary-medium rounded text-sm font-medium leading-normal ring-offset-2 hover:underline focus:outline-none focus:ring-2;
   }
 
   li a[aria-current='page'] {
-    @apply pointer-events-none cursor-default text-low-medium;
+    @apply text-low-medium pointer-events-none cursor-default;
   }
 
   li + li {
-    @apply before:mr-2 before:text-low-medium before:content-['/'];
+    @apply before:text-low-medium before:mr-2 before:content-['/'];
   }
 }

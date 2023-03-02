@@ -1,5 +1,5 @@
 .btn {
-  @apply flex items-center gap-2 rounded py-2 px-6 text-sm font-medium leading-none bg-high-light text-primary-pure;
+  @apply bg-high-light text-primary-pure flex items-center gap-2 rounded py-2 px-6 text-sm font-medium leading-none;
 
   svg,
   i {
@@ -47,20 +47,20 @@
   }
 
   &.btn-primary {
-    @apply bg-primary-pure text-white hover:bg-primary-medium focus:outline-none focus:ring-2 focus:ring-primary-lighter active:bg-primary-dark disabled:bg-high-medium disabled:text-high-dark;
+    @apply bg-primary-pure hover:bg-primary-medium focus:ring-primary-lighter active:bg-primary-dark disabled:bg-high-medium disabled:text-high-dark text-white focus:outline-none focus:ring-2;
   }
   &.btn-secondary {
-    @apply bg-secondary-pure text-white hover:bg-secondary-medium focus:outline-none focus:ring-2 focus:ring-secondary-light active:bg-secondary-dark disabled:bg-high-medium disabled:text-high-dark;
+    @apply bg-secondary-pure hover:bg-secondary-medium focus:ring-secondary-light active:bg-secondary-dark disabled:bg-high-medium disabled:text-high-dark text-white focus:outline-none focus:ring-2;
   }
 
   &.btn-outline {
-    @apply bg-transparent border focus:outline-none focus:ring-2;
+    @apply border bg-transparent focus:outline-none focus:ring-2;
 
     &.btn-primary {
-      @apply border-primary-pure hover:text-white text-primary-pure hover:bg-primary-medium focus:ring-primary-lighter active:bg-primary-dark disabled:border-high-dark disabled:bg-transparent disabled:text-high-dark;
+      @apply border-primary-pure text-primary-pure hover:bg-primary-medium focus:ring-primary-lighter active:bg-primary-dark disabled:border-high-dark disabled:text-high-dark hover:text-white disabled:bg-transparent;
     }
     &.btn-secondary {
-      @apply border-secondary-pure hover:text-white text-secondary-pure hover:bg-secondary-medium focus:ring-secondary-light active:bg-secondary-dark disabled:border-high-dark disabled:bg-transparent disabled:text-high-dark;
+      @apply border-secondary-pure text-secondary-pure hover:bg-secondary-medium focus:ring-secondary-light active:bg-secondary-dark disabled:border-high-dark disabled:text-high-dark hover:text-white disabled:bg-transparent;
     }
   }
 
@@ -68,10 +68,10 @@
     @apply bg-transparent focus:outline-none focus:ring-2;
 
     &.btn-primary {
-      @apply text-primary-pure hover:bg-high-light focus:ring-primary-lighter active:bg-high-dark disabled:bg-transparent disabled:text-high-dark;
+      @apply text-primary-pure hover:bg-high-light focus:ring-primary-lighter active:bg-high-dark disabled:text-high-dark disabled:bg-transparent;
     }
     &.btn-secondary {
-      @apply text-secondary-pure hover:bg-high-light focus:ring-secondary-light active:bg-high-dark disabled:bg-transparent disabled:text-high-dark;
+      @apply text-secondary-pure hover:bg-high-light focus:ring-secondary-light active:bg-high-dark disabled:text-high-dark disabled:bg-transparent;
     }
   }
 }

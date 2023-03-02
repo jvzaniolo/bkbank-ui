@@ -1,5 +1,5 @@
 .input-group {
-  @apply relative flex items-center gap-2 rounded border border-low-light px-4 text-sm font-medium leading-none text-black placeholder:text-low-medium focus-within:border-primary-light focus-within:ring-2 focus-within:ring-primary-light;
+  @apply border-low-light placeholder:text-low-medium focus-within:border-primary-light focus-within:ring-primary-light relative flex items-center gap-2 rounded border px-4 text-sm font-medium leading-none text-black focus-within:ring-2;
 
   .input {
     @apply border-none px-0 focus:ring-0;
@@ -10,7 +10,7 @@
   }
 
   .input-group-icon {
-    @apply flex items-center text-low-dark;
+    @apply text-low-dark flex items-center;
   }
 
   .input ~ label,
@@ -65,7 +65,7 @@
   }
 
   &.input-group-invalid:not(.input-group-disabled) {
-    @apply border-error-pure ring-2 ring-error-pure;
+    @apply border-error-pure ring-error-pure ring-2;
 
     .input-group-icon.inherit-color {
       @apply fill-error-pure text-error-pure;
@@ -92,5 +92,5 @@
   @apply text-high-dark;
 }
 .input-group-alt {
-  @apply ml-4 mt-1 block text-2xs font-medium leading-normal;
+  @apply text-2xs ml-4 mt-1 block font-medium leading-normal;
 }

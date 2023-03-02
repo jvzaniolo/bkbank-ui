@@ -1,5 +1,5 @@
 .badge {
-  @apply flex h-4 w-fit min-w-[1rem] items-center justify-center rounded-full p-1 text-2xs font-medium leading-none bg-high-light text-primary-pure;
+  @apply text-2xs bg-high-light text-primary-pure flex h-4 w-fit min-w-[1rem] items-center justify-center rounded-full p-1 font-medium leading-none;
 
   &.badge-highlight {
     @apply bg-highlight-pure text-white;
