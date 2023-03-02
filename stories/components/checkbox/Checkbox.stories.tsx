@@ -22,7 +22,7 @@ export const Default: StoryObj = {
   parameters: {
     docs: {
       source: {
-        code: dedent`<input type="checkbox" class='checkbox' />`,
+        code: dedent`<input type="checkbox" class="checkbox" />`,
       },
     },
   },
@@ -84,7 +84,9 @@ export const Disabled: StoryObj = {
   render: () => (
     <div className="inline-flex items-center">
       <input id="disabled" type="checkbox" className="checkbox" disabled />
-      <label htmlFor="disabled">Disabled</label>
+      <label htmlFor="disabled" className="checkbox-label">
+        Disabled
+      </label>
     </div>
   ),
   parameters: {
