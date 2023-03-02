@@ -3,24 +3,26 @@ import clsx from 'clsx';
 import { UserIcon } from '@heroicons/react/24/outline';
 
 type AvatarProps = {
-  size?: 'small' | 'large';
-  color?: 'primary';
+  size?: 'small' | 'default' | 'large';
+  color?: 'default' | 'primary';
   isActive?: boolean;
   content?: 'icon' | 'text' | 'image';
 };
 
 const sizes = {
+  medium: '',
   small: 'avatar-sm',
   large: 'avatar-lg',
 };
 
 const colors = {
+  unstyled: '',
   primary: 'avatar-primary',
 };
 
 export function Avatar({
-  size,
-  color,
+  size = 'default',
+  color = 'default',
   isActive = false,
   content = 'text',
 }: AvatarProps) {

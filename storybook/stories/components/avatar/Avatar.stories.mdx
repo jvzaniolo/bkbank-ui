@@ -1,5 +1,5 @@
 import dedent from 'ts-dedent';
-import { Meta, Story, Source } from '@storybook/addon-docs';
+import { Canvas, Meta, Story, Source } from '@storybook/addon-docs';
 import { Avatar } from './Avatar';
 
 <Meta title="Components/Avatar" component={Avatar} />
@@ -10,18 +10,20 @@ export const Template = args => <Avatar {...args} />;
 
 ## Default
 
-<div className="pt-4">
-  <Avatar />
-</div>
+<Canvas withSource="none">
+  <Story name="Default" args={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
 
 <Source language="html" format code={dedent`<div class="avatar">RM</div>`} />
 
 ## Colors
 
-<div className="flex items-center gap-3 pt-4">
+<Canvas withSource="none">
   <Avatar />
   <Avatar color="primary" />
-</div>
+</Canvas>
 
 <Source
   language="html"
@@ -34,11 +36,11 @@ export const Template = args => <Avatar {...args} />;
 
 ## Sizes
 
-<div className="flex items-start gap-3 pt-4">
+<Canvas withSource="none">
   <Avatar size="small" />
   <Avatar />
   <Avatar size="large" />
-</div>
+</Canvas>
 
 <Source
   language="html"
@@ -52,10 +54,10 @@ export const Template = args => <Avatar {...args} />;
 
 ## Active State
 
-<div className="flex items-start gap-3 pt-4">
+<Canvas withSource="none">
   <Avatar isActive />
   <Avatar isActive color="primary" />
-</div>
+</Canvas>
 
 <Source
   language="html"
@@ -68,11 +70,11 @@ export const Template = args => <Avatar {...args} />;
 
 ## Content Types
 
-<div className="flex items-start gap-3 pt-4">
+<Canvas withSource="none">
   <Avatar content="text" />
   <Avatar content="icon" />
   <Avatar content="image" />
-</div>
+</Canvas>
 
 <Source
   language="html"
