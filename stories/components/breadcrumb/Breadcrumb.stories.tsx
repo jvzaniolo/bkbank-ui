@@ -1,6 +1,6 @@
 import React from 'react';
 import dedent from 'ts-dedent';
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import mdx from './Breadcrumb.mdx';
 
 export default {

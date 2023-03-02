@@ -1,0 +1,45 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
+
+# Radio
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.radio\` | - | Base class |
+    | \`.radio-label\` | - | Base class for the label |
+    | \`:invalid\`\\|\`.radio-invalid\` | State | Changes to state to invalid |
+    | \`:disabled\` | State | Changes to state to disabled |
+  `}
+/>
+
+## Default
+
+<Canvas>
+  <Story id="components-radio--default" />
+</Canvas>
+
+## With label
+
+Targets the immediate `.radio-label` element after the `input.radio` to apply the label styling.
+
+<Canvas>
+  <Story id="components-radio--with-label" />
+</Canvas>
+
+## Invalid
+
+Targets the `:invalid` attribute or the `.radio-invalid` class to apply the stylings.
+
+<Canvas>
+  <Story id="components-radio--invalid" />
+</Canvas>
+
+## Disabled
+
+Targets the `:disabled` attribute to apply the stylings.
+
+<Canvas>
+  <Story id="components-radio--disabled" />
+</Canvas>

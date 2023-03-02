@@ -1,0 +1,48 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
+
+# Switch
+
+<Description
+  markdown={dedent`
+  | Selector | Type | Description |
+  | --- | --- | --- |
+  | \`.switch\` | - | Base class |
+  | \`.switch-label\` | - | Base class for the label |
+  | \`.switch-md\` | Size | Changes the size to medium |
+  | \`:invalid\`\\|\`.switch-invalid\` | State | Changes to state to invalid |
+  | \`:disabled\` | State | Changes to state to disabled |
+`}
+/>
+
+## Default
+
+<Canvas>
+  <Story id="components-switch--default" />
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story id="components-switch--sizes" />
+</Canvas>
+
+## With label
+
+Targets the immediate `.switch-label` element after the `input.switch` to apply the label styling.
+
+<Canvas>
+  <Story id="components-switch--with-label" />
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story id="components-switch--invalid" />
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story id="components-switch--disabled" />
+</Canvas>

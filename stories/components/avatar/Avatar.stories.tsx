@@ -1,7 +1,7 @@
 import React from 'react';
 import dedent from 'ts-dedent';
+import type { Meta, StoryObj } from '@storybook/react';
 import { UserIcon } from '@heroicons/react/24/outline';
-import { Meta, StoryObj } from '@storybook/react';
 import mdx from './Avatar.mdx';
 
 export default {

@@ -1,6 +1,6 @@
 import React from 'react';
 import dedent from 'ts-dedent';
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import mdx from './Checkbox.mdx';
 
 export default {
@@ -32,7 +32,7 @@ export const WithLabel: StoryObj = {
   render: () => (
     <label className="inline-flex items-center">
       <input type="checkbox" className="checkbox" />
-      <span>Checkbox</span>
+      <span className="checkbox-label">Checkbox</span>
     </label>
   ),
   parameters: {
@@ -40,8 +40,8 @@ export const WithLabel: StoryObj = {
       source: {
         code: dedent`
           <label class="inline-flex items-center">
-            <input type="checkbox" className="checkbox" />
-            <span>Checkbox</span>
+            <input type="checkbox" class="checkbox" />
+            <span class="checkbox-label">Checkbox</span>
           </label>
         `,
       },
@@ -57,20 +57,22 @@ export const Invalid: StoryObj = {
         type="checkbox"
         className="checkbox checkbox-invalid"
       />
-      <label htmlFor="invalid">Invalid</label>
+      <label htmlFor="invalid" className="checkbox-label">
+        Invalid
+      </label>
     </div>
   ),
   parameters: {
     docs: {
       source: {
         code: dedent`
-          <div className="inline-flex items-center">
+          <div class="inline-flex items-center">
             <input
               id="invalid"
               type="checkbox"
-              className="checkbox checkbox-invalid"
+              class="checkbox checkbox-invalid"
             />
-            <label htmlFor="invalid">Invalid</label>
+            <label htmlFor="invalid" class="checkbox-label">Invalid</label>
           </div>
         `,
       },
@@ -91,7 +93,7 @@ export const Disabled: StoryObj = {
         code: dedent`
           <div class="inline-flex items-center">
             <input id="disabled" type="checkbox" class="checkbox" disabled />
-            <label htmlFor="disabled">Disabled</label>
+            <label htmlFor="disabled" class="checkbox-label">Disabled</label>
           </div>
         `,
       },
