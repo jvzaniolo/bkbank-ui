@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   stories: [
     '../stories/**/*.stories.mdx',
     '../stories/**/*.stories.@(js|jsx|ts|tsx)',
@@ -16,7 +16,7 @@ module.exports = {
         postcssLoaderOptions: {
           implementation: require('postcss'),
           postcssOptions: {
-            config: './stories/postcss.config.js',
+            config: './stories/postcss.config.cjs',
           },
         },
       },
@@ -33,3 +33,5 @@ module.exports = {
   },
   framework: '@storybook/react',
 };
+
+module.exports = config;
