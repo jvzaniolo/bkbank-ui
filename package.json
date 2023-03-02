@@ -1,6 +1,6 @@
 {
   "name": "@bkbank/ui",
-  "version": "1.2.1",
+  "version": "0.0.1-beta.10",
   "description": "BK Bank's Design System as a TailwindCSS plugin.",
   "main": "index.cjs",
   "license": "ISC",
@@ -33,10 +33,12 @@
   "packageManager": "yarn@1.22.19",
   "dependencies": {
     "@heroicons/react": "^2.0.16",
+    "@semantic-release/git": "^10.0.1",
     "cross-env": "^7.0.3",
     "postcss-js": "^4.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "semantic-release": "^20.1.1",
     "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
