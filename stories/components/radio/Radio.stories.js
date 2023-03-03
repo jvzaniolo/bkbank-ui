@@ -1,6 +1,4 @@
-import React from 'react';
 import dedent from 'ts-dedent';
-import type { Meta, StoryObj } from '@storybook/react';
 import mdx from './Radio.mdx';
 
 export default {
@@ -15,9 +13,9 @@ export default {
       },
     },
   },
-} satisfies Meta;
+};
 
-export const Default: StoryObj = {
+export const Default = {
   render: () => <input type="checkbox" className="radio" />,
   parameters: {
     docs: {
@@ -28,7 +26,7 @@ export const Default: StoryObj = {
   },
 };
 
-export const WithLabel: StoryObj = {
+export const WithLabel = {
   render: () => (
     <label className="inline-flex items-center">
       <input type="checkbox" className="radio" />
@@ -49,7 +47,7 @@ export const WithLabel: StoryObj = {
   },
 };
 
-export const Invalid: StoryObj = {
+export const Invalid = {
   render: () => (
     <label className="inline-flex items-center">
       <input type="checkbox" className="radio radio-invalid" />
@@ -70,7 +68,7 @@ export const Invalid: StoryObj = {
   },
 };
 
-export const Disabled: StoryObj = {
+export const Disabled = {
   render: () => (
     <label className="inline-flex items-center">
       <input type="checkbox" className="radio" disabled />

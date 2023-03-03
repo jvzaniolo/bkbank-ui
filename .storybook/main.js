@@ -22,6 +22,7 @@ module.exports = {
       },
     },
   ],
+  staticDirs: ['../packages/ui/scripts/components'],
   features: {
     previewMdx2: true,
   },

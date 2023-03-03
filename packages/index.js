@@ -1,8 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import postcss from 'postcss';
-import postcssJs from 'postcss-js';
-import plugin from 'tailwindcss/plugin';
+const fs = require('fs');
+const path = require('path');
+const postcss = require('postcss');
+const postcssJs = require('postcss-js');
+const plugin = require('tailwindcss/plugin');
 
 function cssToJs(filePath) {
   const css = fs.readFileSync(path.resolve(__dirname, filePath), 'utf8');
@@ -12,11 +12,11 @@ function cssToJs(filePath) {
 
 module.exports = plugin(
   function ({ addComponents }) {
-    addComponents(cssToJs('./components.css'));
+    addComponents(cssToJs('./ui/components.css'));
   },
   {
     theme: {
-      extend: { ...require('../theme') },
+      extend: { ...require('./theme') },
     },
   },
 );

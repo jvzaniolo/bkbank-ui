@@ -1,6 +1,4 @@
-import React from 'react';
 import dedent from 'ts-dedent';
-import type { Meta, StoryObj } from '@storybook/react';
 import mdx from './Badge.mdx';
 
 export default {
@@ -15,9 +13,9 @@ export default {
       },
     },
   },
-} satisfies Meta;
+};
 
-export const Default: StoryObj = {
+export const Default = {
   render: () => <span className="badge">32</span>,
   parameters: {
     docs: {
@@ -28,7 +26,7 @@ export const Default: StoryObj = {
   },
 };
 
-export const Colors: StoryObj = {
+export const Colors = {
   render: () => (
     <div className="flex gap-5">
       <span className="badge">32</span>

@@ -1,6 +1,4 @@
-import React from 'react';
 import dedent from 'ts-dedent';
-import type { Meta, StoryObj } from '@storybook/react';
 import mdx from './Switch.mdx';
 
 export default {
@@ -15,9 +13,9 @@ export default {
       },
     },
   },
-} satisfies Meta;
+};
 
-export const Default: StoryObj = {
+export const Default = {
   render: () => <input type="checkbox" className="switch" />,
   parameters: {
     docs: {
@@ -28,7 +26,7 @@ export const Default: StoryObj = {
   },
 };
 
-export const Sizes: StoryObj = {
+export const Sizes = {
   render: () => (
     <div className="flex items-start gap-5">
       <input type="checkbox" className="switch" />
@@ -47,7 +45,7 @@ export const Sizes: StoryObj = {
   },
 };
 
-export const WithLabel: StoryObj = {
+export const WithLabel = {
   render: () => (
     <label className="inline-flex items-center">
       <input type="checkbox" className="switch" />
@@ -68,7 +66,7 @@ export const WithLabel: StoryObj = {
   },
 };
 
-export const Invalid: StoryObj = {
+export const Invalid = {
   render: () => (
     <label className="inline-flex items-center">
       <input type="checkbox" className="switch switch-invalid" />
@@ -89,7 +87,7 @@ export const Invalid: StoryObj = {
   },
 };
 
-export const Disabled: StoryObj = {
+export const Disabled = {
   render: () => (
     <label className="inline-flex items-center">
       <input type="checkbox" className="switch" disabled />

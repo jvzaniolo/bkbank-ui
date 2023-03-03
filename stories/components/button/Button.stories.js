@@ -1,6 +1,4 @@
-import React from 'react';
 import dedent from 'ts-dedent';
-import type { Meta, StoryObj } from '@storybook/react';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import mdx from './Button.mdx';
 
@@ -16,9 +14,9 @@ export default {
       },
     },
   },
-} satisfies Meta;
+};
 
-export const Default: StoryObj = {
+export const Default = {
   render: () => <button className="btn">Default</button>,
   parameters: {
     docs: {
@@ -29,7 +27,7 @@ export const Default: StoryObj = {
   },
 };
 
-export const Sizes: StoryObj = {
+export const Sizes = {
   render: () => (
     <div className="flex items-start gap-5">
       <button className="btn">Small</button>
@@ -50,7 +48,7 @@ export const Sizes: StoryObj = {
   },
 };
 
-export const Colors: StoryObj = {
+export const Colors = {
   render: () => (
     <div className="flex items-start gap-5">
       <button className="btn">Base</button>
@@ -71,7 +69,7 @@ export const Colors: StoryObj = {
   },
 };
 
-export const Variants: StoryObj = {
+export const Variants = {
   render: () => (
     <div className="flex items-start gap-5">
       <button className="btn btn-primary">Solid</button>
@@ -92,7 +90,7 @@ export const Variants: StoryObj = {
   },
 };
 
-export const Disabled: StoryObj = {
+export const Disabled = {
   render: () => (
     <div className="flex items-start gap-5">
       <button className="btn btn-primary" disabled>
@@ -125,7 +123,7 @@ export const Disabled: StoryObj = {
   },
 };
 
-export const WithIcon: StoryObj = {
+export const WithIcon = {
   render: () => (
     <div className="flex items-start gap-5">
       <button className="btn btn-primary">
@@ -164,7 +162,7 @@ export const WithIcon: StoryObj = {
   },
 };
 
-export const IconButton: StoryObj = {
+export const IconButton = {
   render: () => (
     <div className="flex items-start gap-5">
       <button className="btn btn-icon btn-primary">

@@ -1,6 +1,4 @@
-import React from 'react';
 import dedent from 'ts-dedent';
-import type { Meta, StoryObj } from '@storybook/react';
 import mdx from './Input.mdx';
 
 export default {
@@ -15,9 +13,9 @@ export default {
       },
     },
   },
-} satisfies Meta;
+};
 
-export const Default: StoryObj = {
+export const Default = {
   render: () => (
     <input type="text" className="input" placeholder="Placeholder" />
   ),
@@ -32,7 +30,7 @@ export const Default: StoryObj = {
   },
 };
 
-export const Sizes: StoryObj = {
+export const Sizes = {
   render: () => (
     <div className="flex items-start gap-5">
       <input type="text" className="input" placeholder="Placeholder" />
@@ -51,7 +49,7 @@ export const Sizes: StoryObj = {
   },
 };
 
-export const WithLabel: StoryObj = {
+export const WithLabel = {
   render: () => (
     <label>
       <span className="mb-1 text-sm">With Label</span>
@@ -72,7 +70,7 @@ export const WithLabel: StoryObj = {
   },
 };
 
-export const FloatingLabel: StoryObj = {
+export const FloatingLabel = {
   render: () => (
     <label className="relative block">
       <input type="text" className="input" placeholder=" " />
@@ -93,7 +91,7 @@ export const FloatingLabel: StoryObj = {
   },
 };
 
-export const Invalid: StoryObj = {
+export const Invalid = {
   render: () => (
     <label className="relative block">
       <input type="email" className="input input-invalid" placeholder=" " />
@@ -114,7 +112,7 @@ export const Invalid: StoryObj = {
   },
 };
 
-export const Disabled: StoryObj = {
+export const Disabled = {
   render: () => (
     <label className="relative block">
       <input type="email" className="input" placeholder=" " disabled />
