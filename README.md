@@ -24,6 +24,51 @@ module.exports {
 
 See [Tailwind CSS Plugins](https://tailwindcss.com/docs/plugins) for more information.
 
+### Interactive components
+
+Some components require JavaScript to work properly.
+
+For example, the `tabs` component requires the `tabs.js` file to be included in your project.
+
+```html
+<script src="../path/to/@bkbank/ui/scripts/components/tabs.min.js"></script>
+```
+
+Or you can import all components at once.
+
+```html
+<script src="../path/to/@bkbank/ui/scripts/components.min.js"></script>
+```
+
+## Usage
+
+After installing the design system, the components and utilities will be available in your project as Tailwind classes.
+
+All available components and utilities are listed in the Storybook.
+
+```html
+<button type="button" class="btn btn-primary">Primary button</button>
+```
+
+## Configuration
+
+The design system follows the Tailwind CSS configuration options.
+
+For example, if you want to add a prefix to all Tailwind classes so they don't conflict with your existing CSS, you can add the `prefix` option to your `tailwind.config.js` file.
+
+```js
+// tailwind.config.js
+module.exports {
+  /** ... */
+  prefix: "tw-",
+  plugins: [require("@bkbank/ui")],
+}
+```
+
+```html
+<button type="button" class="tw-btn tw-btn-primary">Primary button</button>
+```
+
 ## Development
 
 To develop the design system, clone the repository and install the dependencies:
