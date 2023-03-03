@@ -2,7 +2,7 @@
   "name": "@bkbank/ui",
   "version": "1.2.0-beta.12",
   "description": "BK Bank's Design System as a TailwindCSS plugin.",
-  "main": "index.js",
+  "main": "packages/index.js",
   "license": "ISC",
   "files": [
     "*.js",
@@ -25,10 +25,9 @@
   },
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
   "scripts": {
-    "tsc": "tsc",
-    "build": "npm-run-all tsc --parallel build:**",
-    "build:esbuild": "esbuild --bundle dist/*.js --outdir=dist --minify --sourcemap --out-extension:.js=.min.js --target=es2017",
-    "build:components": "postcss --config packages/ui packages/ui/styles/components.css --dir .",
+    "build": "npm-run-all --parallel build:**",
+    "minify": "esbuild --bundle dist/*.js --outdir=dist --minify --sourcemap --out-extension:.js=.min.js --target=es2017",
+    "build:components": "postcss --config packages/ui packages/ui/src/styles/components.css --dir packages/ui",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook"
   },
@@ -54,8 +53,6 @@
     "@storybook/testing-library": "^0.0.13",
     "@tailwindcss/forms": "^0.5.3",
     "@types/react": "^18.0.28",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
     "esbuild": "^0.17.10",

@@ -1,0 +1,19 @@
+.tabs .tab-list {
+  @apply flex;
+}
+
+.tabs .tab {
+  @apply border-high-medium text-low-medium hover:border-high-dark hover:text-low-dark hover:bg-high-light active:bg-high-medium active:border-high-dark focus:ring-primary-lighter disabled:text-high-dark disabled:border-high-dark border-b-2 px-12 py-2 text-sm font-medium leading-normal focus:z-10 focus:outline-none focus:ring-2 active:text-black disabled:cursor-not-allowed disabled:hover:bg-transparent;
+}
+
+.tabs .tab.tab-active {
+  @apply text-primary-pure border-primary-medium;
+}
+
+.tabs .tab-content {
+  @apply hidden p-3;
+}
+
+.tabs .tab-content.tab-content-active {
+  @apply block;
+}

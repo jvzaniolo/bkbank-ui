@@ -1,6 +1,4 @@
-import React from 'react';
 import dedent from 'ts-dedent';
-import type { Meta, StoryObj } from '@storybook/react';
 import mdx from './Breadcrumb.mdx';
 
 export default {
@@ -15,9 +13,9 @@ export default {
       },
     },
   },
-} satisfies Meta;
+};
 
-export const Default: StoryObj = {
+export const Default = {
   render: () => (
     <nav aria-label="Breadcrumb" className="breadcrumb">
       <ol>

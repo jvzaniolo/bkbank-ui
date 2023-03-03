@@ -1,6 +1,4 @@
-import React from 'react';
 import dedent from 'ts-dedent';
-import type { Meta, StoryObj } from '@storybook/react';
 import { UserIcon } from '@heroicons/react/24/outline';
 import mdx from './Avatar.mdx';
 
@@ -16,9 +14,9 @@ export default {
       },
     },
   },
-} satisfies Meta;
+};
 
-export const Default: StoryObj = {
+export const Default = {
   render: () => <div className="avatar">RM</div>,
   parameters: {
     docs: {
@@ -29,7 +27,7 @@ export const Default: StoryObj = {
   },
 };
 
-export const Sizes: StoryObj = {
+export const Sizes = {
   render: () => (
     <div className="flex items-start gap-5">
       <div className="avatar avatar-sm">RM</div>
@@ -50,7 +48,7 @@ export const Sizes: StoryObj = {
   },
 };
 
-export const Colors: StoryObj = {
+export const Colors = {
   render: () => (
     <div className="flex items-start gap-5">
       <div className="avatar">RM</div>
@@ -69,7 +67,7 @@ export const Colors: StoryObj = {
   },
 };
 
-export const States: StoryObj = {
+export const States = {
   render: () => (
     <div className="flex items-start gap-5">
       <div className="avatar">RM</div>
@@ -88,7 +86,7 @@ export const States: StoryObj = {
   },
 };
 
-export const ContentTypes: StoryObj = {
+export const ContentTypes = {
   render: () => (
     <div className="flex items-start gap-5">
       <div className="avatar">RM</div>
