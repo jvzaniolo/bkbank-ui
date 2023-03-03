@@ -25,7 +25,7 @@
   "scripts": {
     "build": "npm-run-all --parallel build:**",
     "minify": "esbuild --bundle dist/*.js --outdir=dist --minify --sourcemap --out-extension:.js=.min.js --target=es2017",
-    "build:components": "postcss --config packages/ui packages/ui/src/styles/components.css --dir packages/ui",
+    "build:components": "postcss src/styles/components.css --dir .",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook"
   },
