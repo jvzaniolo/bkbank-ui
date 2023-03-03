@@ -6,7 +6,8 @@
   "license": "ISC",
   "files": [
     "*.js",
-    "*.css"
+    "*.css",
+    "src/scripts/**/*"
   ],
   "repository": {
     "type": "git",
