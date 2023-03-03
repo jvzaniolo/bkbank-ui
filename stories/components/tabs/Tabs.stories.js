@@ -1,3 +1,4 @@
+import dedent from 'ts-dedent';
 import mdx from './Tabs.mdx';
 
 export default {
@@ -12,7 +13,54 @@ export default {
 export const Default = {
   render: () => (
     <div className="tabs">
-      <ul id="tabs-example-1" className="tab-list" role="tablist">
+      <div className="tab-list">
+        <button className="tab tab-active" data-target="#home">
+          Home
+        </button>
+        <button className="tab" data-target="#settings">
+          Settings
+        </button>
+      </div>
+
+      <div id="home" className="tab-content !block">
+        Home tab
+      </div>
+      <div id="settings" className="tab-content">
+        Settings tab
+      </div>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`
+          <div class="tabs">
+            <div class="tab-list">
+              <button class="tab tab-active" data-target="#home">
+                Home
+              </button>
+              <button class="tab" data-target="#settings">
+                Settings
+              </button>
+            </div>
+
+            <div id="home" class="tab-content">
+              Home tab
+            </div>
+            <div id="settings" class="tab-content">
+              Settings tab
+            </div>
+          </div>
+        `,
+      },
+    },
+  },
+};
+
+export const Accessibility = {
+  render: () => (
+    <div className="tabs">
+      <ul className="tab-list" role="tablist">
         <li role="presentation">
           <button
             id="home-tab"
@@ -39,25 +87,12 @@ export const Default = {
             Settings
           </button>
         </li>
-        <li role="presentation">
-          <button
-            id="about-tab"
-            type="button"
-            role="tab"
-            className="tab"
-            data-target="#about"
-            aria-controls="about"
-            aria-selected="false"
-          >
-            About
-          </button>
-        </li>
       </ul>
 
       <div>
         <div
           id="home"
-          className="tab-content tab-content-active"
+          className="tab-content !block"
           role="tabpanel"
           aria-labelledby="home-tab"
           tabIndex={0}
@@ -73,16 +108,66 @@ export const Default = {
         >
           Settings tab
         </div>
-        <div
-          id="about"
-          className="tab-content"
-          role="tabpanel"
-          aria-labelledby="about-tab"
-          tabIndex={0}
-        >
-          About tab
-        </div>
       </div>
     </div>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`
+          <div class="tabs">
+            <ul class="tab-list" role="tablist">
+              <li role="presentation">
+                <button
+                  id="home-tab"
+                  type="button"
+                  role="tab"
+                  class="tab tab-active"
+                  data-target="#home"
+                  aria-controls="home"
+                  aria-selected="true"
+                >
+                  Home
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  id="settings-tab"
+                  type="button"
+                  role="tab"
+                  class="tab"
+                  data-target="#settings"
+                  aria-controls="settings"
+                  aria-selected="false"
+                >
+                  Settings
+                </button>
+              </li>
+            </ul>
+
+            <div>
+              <div
+                id="home"
+                class="tab-content tab-content-active"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+                tabindex="0"
+              >
+                Home tab
+              </div>
+              <div
+                id="settings"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="settings-tab"
+                tabindex="0"
+              >
+                Settings tab
+              </div>
+            </div>
+          </div>
+        `,
+      },
+    },
+  },
 };

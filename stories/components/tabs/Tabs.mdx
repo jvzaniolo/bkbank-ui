@@ -1,9 +1,32 @@
-import { Canvas, Story } from '@storybook/addon-docs';
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
 
 # Tabs
 
-## Default
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.tabs\` | Component | Container of tab-list and tab-content items |
+    | \`.tab-list\` | Component | Container of tab items |
+    | \`.tab[data-target="#tab-content-id"]\` | Component | A tab item |
+    | \`.tab-active\` | Modifier | Set the active tab and displays the corresponding tab-content item |
+    | \`#tab-content-id.tab-content\` | Component | A tab-content item |
+  `}
+/>
+
+## Default - Not accessible
+
+This example is for reference only. It shows the bare minimum markup required to use the tabs component. It does not include any accessibility features.
 
 <Canvas>
   <Story id="components-tabs--default" />
+</Canvas>
+
+## Accessibility
+
+Follow this example to ensure your tabs are accessible.
+
+<Canvas>
+  <Story id="components-tabs--accessibility" />
 </Canvas>
