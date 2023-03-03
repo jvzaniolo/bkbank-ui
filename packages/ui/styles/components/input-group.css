@@ -1,0 +1,78 @@
+.input-group {
+  @apply border-low-light placeholder:text-low-medium focus-within:border-primary-light focus-within:ring-primary-light relative flex items-center gap-2 rounded border px-4 text-sm font-medium leading-none text-black focus-within:ring-2;
+
+  .input {
+    @apply border-none px-0 focus:ring-0;
+  }
+  .input:invalid,
+  .input.input-invalid {
+    @apply ring-0;
+  }
+
+  .input-group-icon {
+    @apply text-low-dark flex h-[1em] w-[1em] items-center;
+  }
+
+  .input ~ .input-label {
+    @apply left-0;
+  }
+
+  &.input-md {
+    @apply text-base;
+    .input {
+      @apply py-4;
+    }
+    .input ~ .input-label {
+      @apply -translate-y-2.5;
+    }
+    .input:placeholder-shown ~ .input-label {
+      @apply translate-y-[1.125rem];
+    }
+    /* The :focus selector must have priority over :placeholder-shown */
+    .input:focus ~ .input-label {
+      @apply -translate-y-2.5;
+    }
+  }
+  &.input-lg {
+    @apply text-lg;
+    .input {
+      @apply py-5;
+    }
+    .input ~ .input-label {
+      @apply -translate-y-2.5;
+    }
+    .input:placeholder-shown ~ .input-label {
+      @apply translate-y-[1.4rem];
+    }
+    /* The :focus selector must have priority over :placeholder-shown */
+    .input:focus ~ .input-label {
+      @apply -translate-y-2.5;
+    }
+  }
+
+  &.input-group-invalid:not(.input-group-disabled) {
+    @apply border-error-pure ring-error-pure ring-2;
+  }
+
+  &.input-group-disabled {
+    @apply border-high-dark text-high-dark;
+
+    .input {
+      @apply placeholder:text-high-dark;
+    }
+
+    .input-group-icon {
+      @apply fill-high-dark text-high-dark;
+    }
+  }
+}
+.input-group.input-group-invalid:not(.input-group-disabled)
+  ~ .input-group-alt.input-group-alt {
+  @apply text-error-pure;
+}
+.input-group.input-group-disabled ~ .input-group-alt {
+  @apply text-high-dark;
+}
+.input-group-alt {
+  @apply text-2xs ml-4 mt-1 block font-medium leading-normal;
+}

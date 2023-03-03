@@ -1,0 +1,22 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
+
+# Breadcrumb
+
+Breadcrumb is a navigation component that shows the current page's location within a navigational hierarchy.
+
+See the [W3C documentation](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/) for information on accessibility.
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`nav.breadcrumb\` | - | Base class |
+  `}
+/>
+
+## Default
+
+<Canvas>
+  <Story id="components-breadcrumb--default" />
+</Canvas>

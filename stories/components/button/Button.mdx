@@ -1,0 +1,61 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
+
+# Button
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.btn\`\\|\`.btn.btn-icon\` | - | Base class |
+    | \`.btn-md\` | Size | Changes the size to medium |
+    | \`.btn-lg\` | Size | Changes the size to large |
+    | \`.btn-outline\` | Variant | Changes the variant to outline |
+    | \`.btn-ghost\` | Variant | Changes the variant to ghost |
+    | \`.btn-primary\` | Color | Changes the color to [primary](?path=/docs/tokens-colors--page) |
+    | \`.btn-secondary\` | Color | Changes the color to [secondary](?path=/docs/tokens-colors--page) |
+    | \`:disabled\` | State | Changes to state to disabled |
+  `}
+/>
+
+## Default
+
+<Canvas>
+  <Story id="components-button--default" />
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story id="components-button--sizes" />
+</Canvas>
+
+## Colors
+
+<Canvas>
+  <Story id="components-button--colors" />
+</Canvas>
+
+## Variants
+
+<Canvas>
+  <Story id="components-button--variants" />
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story id="components-button--disabled" />
+</Canvas>
+
+## With Icon
+
+<Canvas>
+  <Story id="components-button--with-icon" />
+</Canvas>
+
+## Icon Button
+
+<Canvas>
+  <Story id="components-button--icon-button" />
+</Canvas>

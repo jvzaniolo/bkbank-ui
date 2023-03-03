@@ -2,15 +2,23 @@ import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
 
 <Meta title="Tokens/Colors" />
 
-## Color Palettes
+# Color Palettes
 
 Here are all the colors we extended from the Tailwind base theme.
 
 To use them, combine with the proper Tailwind class.
 
-For example, to change the background color to `colors.primary.pure`, apply the `.bg-primary-pure` class.
+## Usage
 
-### Brand Colors
+Tailwind generates a set of utility classes for each color in your `theme.colors` configuration object. These classes can be used to apply color stylings to any element.
+
+```html
+<div class="bg-primary-pure text-high-light">...</div>
+```
+
+For more information about how to use them, please refer to the [Tailwind CSS Colors](https://tailwindcss.com/docs/customizing-colors) page.
+
+## Brand Colors
 
 <ColorPalette>
   <ColorItem
@@ -51,7 +59,7 @@ For example, to change the background color to `colors.primary.pure`, apply the 
   />
 </ColorPalette>
 
-### General Colors
+## General Colors
 
 <ColorPalette>
   <ColorItem
@@ -105,5 +113,3 @@ For example, to change the background color to `colors.primary.pure`, apply the 
     }}
   />
 </ColorPalette>
-
-For more information about colors, please refer to the [Tailwind CSS Colors](https://tailwindcss.com/docs/customizing-colors) page.

@@ -1,0 +1,27 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
+
+# Badge
+
+Badges are used to highlight important information.
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.badge\` | - | Base class |
+    | \`.badge-highlight\` | Color | Changes the color to [highlight](?path=/docs/tokens-colors--page) |
+  `}
+/>
+
+## Default
+
+<Canvas>
+  <Story id="components-badge--default" />
+</Canvas>
+
+## Colors
+
+<Canvas>
+  <Story id="components-badge--colors" />
+</Canvas>

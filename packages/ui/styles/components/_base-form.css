@@ -1,0 +1,5 @@
+.checkbox,
+.radio,
+.switch {
+  @apply border-primary-pure text-primary-pure invalid:border-error-pure invalid:text-error-pure hover:ring-high-light focus:ring-primary-lighter active:bg-high-light active:ring-high-dark disabled:border-high-dark disabled:text-high-dark border hover:ring-4 focus:outline-none focus:ring-2 focus:ring-offset-2 active:ring-4 active:ring-offset-0 disabled:hover:ring-0 disabled:focus:ring-0 disabled:active:bg-transparent disabled:active:ring-0;
+}

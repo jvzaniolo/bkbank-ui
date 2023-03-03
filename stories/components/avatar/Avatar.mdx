@@ -1,0 +1,46 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
+
+# Avatar
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.avatar\` | - | Base class |
+    | \`.avatar-sm\` | Size | Changes the size to small |
+    | \`.avatar-lg\` | Size | Changes the size to large |
+    | \`.avatar-primary\` | Color | Changes the color to [primary](?path=/docs/tokens-colors--page) |
+    | \`.avatar-active\` | State | Defines the active state |
+  `}
+/>
+
+## Default
+
+<Canvas>
+  <Story id="components-avatar--default" />
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story id="components-avatar--sizes" />
+</Canvas>
+
+## Colors
+
+<Canvas>
+  <Story id="components-avatar--colors" />
+</Canvas>
+
+## States
+
+<Canvas>
+  <Story id="components-avatar--states" />
+</Canvas>
+
+## Content Types
+
+<Canvas>
+  <Story id="components-avatar--content-types" />
+</Canvas>

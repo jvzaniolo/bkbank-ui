@@ -1,0 +1,45 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
+
+# Checkbox
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.checkbox\` | - | Base class |
+    | \`.checkbox-label\` | - | Base class for the label |
+    | \`:invalid\`\\|\`.checkbox-invalid\` | State | Changes to state to invalid |
+    | \`:disabled\` | State | Changes to state to disabled |
+  `}
+/>
+
+## Default
+
+<Canvas>
+  <Story id="components-checkbox--default" />
+</Canvas>
+
+## With Label
+
+Targets the immediate `.checkbox-label` element after the `input.checkbox` to apply the label styling.
+
+<Canvas>
+  <Story id="components-checkbox--with-label" />
+</Canvas>
+
+## Invalid
+
+Targets the `:invalid` attribute or the `.checkbox-invalid` class to apply the stylings.
+
+<Canvas>
+  <Story id="components-checkbox--invalid" />
+</Canvas>
+
+## Disabled
+
+Targets the `:disabled` attribute to apply the stylings.
+
+<Canvas>
+  <Story id="components-checkbox--disabled" />
+</Canvas>

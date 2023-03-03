@@ -1,0 +1,36 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Story } from '@storybook/addon-docs';
+
+# Input Group
+
+<Description
+  markdown={dedent`
+  | Selector | Type | Description |
+  | --- | --- | --- |
+  | \`.input-group\` | - | Base class |
+  | \`.input-group-icon\` | - | Base class for the icons |
+  | \`.input\` | - | Base class for the input |
+  | \`.input-label\` | - | Base class for the input label |
+  | \`.input-group-alt\` | - | Base class for the alt text |
+  | \`.input-group-invalid>.input:invalid\` | State | Changes the state to invalid |
+  | \`.input-group-invalid>.input:disabled\` | State | Changes the state to disabled |
+`}
+/>
+
+## Default
+
+<Canvas>
+  <Story id="components-inputgroup--default" />
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story id="components-inputgroup--invalid" />
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story id="components-inputgroup--disabled" />
+</Canvas>
