@@ -29,7 +29,7 @@
     "build:minify:js": "esbuild --bundle ./src/scripts/* --outdir=dist --minify --sourcemap --out-extension:.js=.min.js",
     "build:minify:components": "esbuild --bundle ./src/scripts/components/* --outdir=dist/components --minify --sourcemap --out-extension:.js=.min.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook"
   },
   "packageManager": "yarn@1.22.19",
   "dependencies": {
