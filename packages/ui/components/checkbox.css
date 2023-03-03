@@ -14,7 +14,8 @@
     @apply text-high-dark;
   }
 
-  &.checkbox-invalid:not(:disabled) {
+  &.checkbox-invalid:not(:disabled),
+  &:invalid:not(:disabled) {
     @apply border-error-pure text-error-pure checked:active:bg-error-pure;
 
     & ~ .checkbox-label {

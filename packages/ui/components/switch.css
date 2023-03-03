@@ -30,7 +30,8 @@
     @apply h-6 w-11 before:h-4 before:w-4 before:translate-x-1 checked:before:translate-x-[140%];
   }
 
-  &.switch-invalid:not(:disabled) {
+  &.switch-invalid:not(:disabled),
+  &:invalid:not(:disabled) {
     @apply border-error-pure text-error-pure checked:bg-error-pure;
 
     & ~ .switch-label {

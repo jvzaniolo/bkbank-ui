@@ -14,7 +14,8 @@
     @apply text-high-dark;
   }
 
-  &.radio-invalid:not(:disabled) {
+  &.radio-invalid:not(:disabled),
+  &:invalid:not(:disabled) {
     @apply border-error-pure text-error-pure;
 
     & ~ .radio-label {
