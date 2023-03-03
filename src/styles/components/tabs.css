@@ -3,17 +3,13 @@
 }
 
 .tabs .tab {
-  @apply border-high-medium text-low-medium hover:border-high-dark hover:text-low-dark hover:bg-high-light active:bg-high-medium active:border-high-dark focus:ring-primary-lighter disabled:text-high-dark disabled:border-high-dark border-b-2 px-12 py-2 text-sm font-medium leading-normal focus:z-10 focus:outline-none focus:ring-2 active:text-black disabled:cursor-not-allowed disabled:hover:bg-transparent;
+  @apply border-b-2 border-high-medium px-12 py-2 text-sm font-medium leading-normal text-low-medium hover:border-high-dark hover:bg-high-light hover:text-low-dark focus:z-10 focus:outline-none focus:ring-2 focus:ring-primary-lighter active:border-high-dark active:bg-high-medium active:text-black disabled:cursor-not-allowed disabled:border-high-dark disabled:text-high-dark disabled:hover:bg-transparent;
 }
 
 .tabs .tab.tab-active {
-  @apply text-primary-pure border-primary-medium;
+  @apply border-primary-medium text-primary-pure;
 }
 
 .tabs .tab-content {
   @apply hidden p-3;
-}
-
-.tabs .tab-content.tab-content-active {
-  @apply block;
 }
