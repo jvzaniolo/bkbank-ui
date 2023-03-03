@@ -15,14 +15,10 @@ module.exports = {
         },
         postcssLoaderOptions: {
           implementation: require('postcss'),
-          postcssOptions: {
-            config: './stories/postcss.config.js',
-          },
         },
       },
     },
   ],
-  staticDirs: ['../packages/ui/scripts/components'],
   features: {
     previewMdx2: true,
   },
