@@ -1,19 +1,24 @@
 import dedent from 'ts-dedent';
 import { Canvas, Description, Story } from '@storybook/addon-docs';
 
-# Tabs
+# Tabs - Requires JS
 
 <Description
   markdown={dedent`
     | Selector | Type | Description |
     | --- | --- | --- |
     | \`.tabs\` | Component | Container of tab-list and tab-content items |
-    | \`.tab-list\` | Component | Container of tab items |
-    | \`.tab[data-target="#tab-content-id"]\` | Component | A tab item |
+    | \`.tabs-md\` | Modifier | Changes the size of the tab item to medium |
+    | \`.tab-list\` | Sub Component | Container of tab items |
+    | \`.tab\` | Sub Component | A tab item. Requires a \`data-target\` attribute that matches the id of the corresponding tab-content item |
     | \`.tab-active\` | Modifier | Set the active tab and displays the corresponding tab-content item |
-    | \`#tab-content-id.tab-content\` | Component | A tab-content item |
+    | \`.tab-content\` | Sub Component | A tab-content item. Requires an \`id\` that matches the data-target attribute of the corresponding tab item |
   `}
 />
+
+```html
+<script src="../path/to/@bkbank/ui/dist/components/tabs.js"></script>
+```
 
 ## Default - Not accessible
 
@@ -29,4 +34,10 @@ Follow this example to ensure your tabs are accessible.
 
 <Canvas>
   <Story id="components-tabs--accessibility" />
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story id="components-tabs--sizes" />
 </Canvas>

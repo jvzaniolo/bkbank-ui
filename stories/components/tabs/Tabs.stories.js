@@ -1,5 +1,6 @@
 import dedent from 'ts-dedent';
 import mdx from './Tabs.mdx';
+import { PlusIcon } from '@heroicons/react/24/outline';
 
 export default {
   title: 'Components/Tabs',
@@ -15,6 +16,7 @@ export const Default = {
     <div className="tabs">
       <div className="tab-list">
         <button className="tab tab-active" data-target="#home">
+          <PlusIcon className="h-4 w-4" />
           Home
         </button>
         <button className="tab" data-target="#settings">
@@ -37,6 +39,7 @@ export const Default = {
           <div class="tabs">
             <div class="tab-list">
               <button class="tab tab-active" data-target="#home">
+                <svg class="w-4 h-4">...</svg>
                 Home
               </button>
               <button class="tab" data-target="#settings">
@@ -71,6 +74,7 @@ export const Accessibility = {
             aria-controls="home"
             aria-selected="true"
           >
+            <PlusIcon className="h-4 w-4" />
             Home
           </button>
         </li>
@@ -127,6 +131,7 @@ export const Accessibility = {
                   aria-controls="home"
                   aria-selected="true"
                 >
+                  <svg class="w-4 h-4">...</svg>
                   Home
                 </button>
               </li>
@@ -165,6 +170,63 @@ export const Accessibility = {
                 Settings tab
               </div>
             </div>
+          </div>
+        `,
+      },
+    },
+  },
+};
+
+export const Sizes = {
+  render: () => (
+    <div className="flex items-start gap-5">
+      <div className="tabs">
+        <div className="tab-list">
+          <button className="tab tab-active flex" data-target="#home">
+            <PlusIcon className="h-4 w-4" />
+            Home
+          </button>
+          <button className="tab" data-target="#settings">
+            Settings
+          </button>
+        </div>
+
+        <div id="home" className="tab-content !block">
+          Home tab
+        </div>
+        <div id="settings" className="tab-content">
+          Settings tab
+        </div>
+      </div>
+      <div className="tabs tabs-md">
+        <div className="tab-list">
+          <button className="tab tab-active flex" data-target="#home">
+            <PlusIcon className="h-4 w-4" />
+            Home
+          </button>
+          <button className="tab" data-target="#settings">
+            Settings
+          </button>
+        </div>
+
+        <div id="home" className="tab-content !block">
+          Home tab
+        </div>
+        <div id="settings" className="tab-content">
+          Settings tab
+        </div>
+      </div>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`
+          <div class="tabs">
+            ...
+          </div>
+          <div class="tabs tabs-md">
+            ...
           </div>
         `,
       },
