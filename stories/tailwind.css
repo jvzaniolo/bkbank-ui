@@ -1,9 +1,4 @@
 @import 'tailwindcss/base';
-@import '../packages/ui/base.css';
 @import 'tailwindcss/components';
-@import '../packages/ui/components.css';
+@import '../packages/ui/styles/components.css';
 @import 'tailwindcss/utilities';
-
-.innerZoomElementWrapper {
-  @apply flex;
-}

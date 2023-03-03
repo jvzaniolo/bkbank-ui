@@ -3,7 +3,7 @@ module.exports = {
     'postcss-import': {},
     'tailwindcss/nesting': {},
     tailwindcss: {
-      config: './packages/ui/tailwind.config.cjs',
+      config: './stories/tailwind.config.js',
     },
     autoprefixer: {},
   },

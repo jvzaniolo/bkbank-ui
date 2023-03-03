@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./stories/**/*.@(js|jsx|ts|tsx|mdx)'],
+  content: [{ raw: '' }],
   theme: {
-    extend: { ...require('../packages/ui/theme.ts') },
+    extend: { ...require('../../theme') },
   },
   plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
 };
