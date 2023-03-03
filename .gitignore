@@ -1,8 +1,10 @@
+dist
 node_modules
 storybook-static
 
-./*.js
-./*.css
+*.css
+!src/**/*.css
+!stories/**/*.css
 
 .DS_Store
 yarn-error.log

@@ -12,7 +12,7 @@ function cssToJs(filePath) {
 
 module.exports = plugin(
   function ({ addComponents }) {
-    addComponents(cssToJs('./components.css'));
+    addComponents(cssToJs('./dist/components.css'));
   },
   {
     theme: {

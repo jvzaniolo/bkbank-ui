@@ -5,9 +5,9 @@
   "main": "index.js",
   "license": "ISC",
   "files": [
-    "*.js",
-    "*.css",
-    "src/scripts/**/*"
+    "index.js",
+    "theme.js",
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -25,10 +25,11 @@
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
   "scripts": {
     "build": "npm-run-all --parallel build:**",
-    "minify": "esbuild --bundle dist/*.js --outdir=dist --minify --sourcemap --out-extension:.js=.min.js --target=es2017",
-    "build:components": "postcss src/styles/components.css --dir .",
+    "build:css": "postcss src/styles/*.css --dir dist",
+    "build:minify:js": "esbuild --bundle ./src/scripts/* --outdir=dist --minify --sourcemap --out-extension:.js=.min.js",
+    "build:minify:components": "esbuild --bundle ./src/scripts/components/* --outdir=dist/components --minify --sourcemap --out-extension:.js=.min.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook"
+    "build-storybook": "build-storybook"
   },
   "packageManager": "yarn@1.22.19",
   "dependencies": {
@@ -54,6 +55,7 @@
     "@types/react": "^18.0.28",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
+    "cssnano": "^5.1.15",
     "esbuild": "^0.17.10",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
