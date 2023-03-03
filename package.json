@@ -5,10 +5,7 @@
   "main": "packages/index.js",
   "license": "ISC",
   "files": [
-    "*.js",
-    "*.d.ts",
-    "*.d.ts.map",
-    "*.css"
+    "packages/**/*"
   ],
   "repository": {
     "type": "git",
