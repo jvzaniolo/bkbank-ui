@@ -22,6 +22,9 @@ module.exports = {
   features: {
     previewMdx2: true,
   },
+  core: {
+    builder: 'webpack5',
+  },
   builder: {
     name: 'webpack5',
     options: {
