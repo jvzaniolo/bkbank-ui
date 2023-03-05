@@ -1,5 +1,8 @@
 import dedent from 'ts-dedent';
-import { Canvas, Description, Story } from '@storybook/addon-docs';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as BadgeStories from './Badge.stories';
+
+<Meta of={BadgeStories} />
 
 # Badge
 
@@ -9,19 +12,15 @@ Badges are used to highlight important information.
   markdown={dedent`
     | Selector | Type | Description |
     | --- | --- | --- |
-    | \`.badge\` | - | Base class |
-    | \`.badge-highlight\` | Color | Changes the color to [highlight](?path=/docs/tokens-colors--page) |
+    | \`.badge\` | Component | Base class |
+    | \`.badge-highlight\` | Modifier | Changes the color to [highlight](?path=/docs/tokens-colors--page) |
   `}
 />
 
 ## Default
 
-<Canvas>
-  <Story id="components-badge--default" />
-</Canvas>
+<Canvas of={BadgeStories.Default} />
 
 ## Colors
 
-<Canvas>
-  <Story id="components-badge--colors" />
-</Canvas>
+<Canvas of={BadgeStories.Colors} />

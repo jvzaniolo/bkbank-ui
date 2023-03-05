@@ -1,12 +1,10 @@
 import dedent from 'ts-dedent';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
-import mdx from './Button.mdx';
 
 export default {
   title: 'Components/Button',
   parameters: {
     docs: {
-      page: mdx,
       source: {
         format: true,
         type: 'code',

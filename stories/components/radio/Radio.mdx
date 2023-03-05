@@ -1,5 +1,8 @@
 import dedent from 'ts-dedent';
-import { Canvas, Description, Story } from '@storybook/addon-docs';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as RadioStories from './Radio.stories';
+
+<Meta of={RadioStories} />
 
 # Radio
 
@@ -7,39 +10,31 @@ import { Canvas, Description, Story } from '@storybook/addon-docs';
   markdown={dedent`
     | Selector | Type | Description |
     | --- | --- | --- |
-    | \`.radio\` | - | Base class |
-    | \`.radio-label\` | - | Base class for the label |
-    | \`:invalid\`\\|\`.radio-invalid\` | State | Changes to state to invalid |
-    | \`:disabled\` | State | Changes to state to disabled |
+    | \`.radio\` | Component | The radio component |
+    | \`.radio-label\` | Component | The label for the radio component |
+    | \`:invalid\`\\|\`.radio-invalid\` | Modifier | Changes to state to invalid |
+    | \`:disabled\` | Modifier | Changes to state to disabled |
   `}
 />
 
 ## Default
 
-<Canvas>
-  <Story id="components-radio--default" />
-</Canvas>
+<Canvas of={RadioStories.Default} />
 
 ## With label
 
 Targets the immediate `.radio-label` element after the `input.radio` to apply the label styling.
 
-<Canvas>
-  <Story id="components-radio--with-label" />
-</Canvas>
+<Canvas of={RadioStories.WithLabel} />
 
 ## Invalid
 
 Targets the `:invalid` attribute or the `.radio-invalid` class to apply the stylings.
 
-<Canvas>
-  <Story id="components-radio--invalid" />
-</Canvas>
+<Canvas of={RadioStories.Invalid} />
 
 ## Disabled
 
 Targets the `:disabled` attribute to apply the stylings.
 
-<Canvas>
-  <Story id="components-radio--disabled" />
-</Canvas>
+<Canvas of={RadioStories.Disabled} />

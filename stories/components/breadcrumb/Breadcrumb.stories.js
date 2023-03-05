@@ -1,11 +1,9 @@
 import dedent from 'ts-dedent';
-import mdx from './Breadcrumb.mdx';
 
 export default {
   title: 'Components/Breadcrumb',
   parameters: {
     docs: {
-      page: mdx,
       source: {
         format: true,
         type: 'code',

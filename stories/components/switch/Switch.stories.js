@@ -1,11 +1,9 @@
 import dedent from 'ts-dedent';
-import mdx from './Switch.mdx';
 
 export default {
   title: 'Components/Switch',
   parameters: {
     docs: {
-      page: mdx,
       source: {
         format: true,
         type: 'code',

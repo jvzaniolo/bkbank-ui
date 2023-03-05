@@ -1,11 +1,9 @@
 import dedent from 'ts-dedent';
-import mdx from './Checkbox.mdx';
 
 export default {
   title: 'Components/Checkbox',
   parameters: {
     docs: {
-      page: mdx,
       source: {
         format: true,
         type: 'code',
@@ -51,11 +49,11 @@ export const Invalid = {
   render: () => (
     <div className="inline-flex items-center">
       <input
-        id="invalid"
+        id="invalid-1"
         type="checkbox"
         className="checkbox checkbox-invalid"
       />
-      <label htmlFor="invalid" className="checkbox-label">
+      <label htmlFor="invalid-1" className="checkbox-label">
         Invalid
       </label>
     </div>

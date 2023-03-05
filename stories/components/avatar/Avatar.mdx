@@ -1,5 +1,8 @@
 import dedent from 'ts-dedent';
-import { Canvas, Description, Story } from '@storybook/addon-docs';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
 
 # Avatar
 
@@ -7,40 +10,30 @@ import { Canvas, Description, Story } from '@storybook/addon-docs';
   markdown={dedent`
     | Selector | Type | Description |
     | --- | --- | --- |
-    | \`.avatar\` | - | Base class |
-    | \`.avatar-sm\` | Size | Changes the size to small |
-    | \`.avatar-lg\` | Size | Changes the size to large |
-    | \`.avatar-primary\` | Color | Changes the color to [primary](?path=/docs/tokens-colors--page) |
-    | \`.avatar-active\` | State | Defines the active state |
+    | \`.avatar\` | Component | Base class |
+    | \`.avatar-sm\` | Modifier | Changes the size to small |
+    | \`.avatar-lg\` | Modifier | Changes the size to large |
+    | \`.avatar-primary\` | Modifier | Changes the color to [primary](?path=/docs/tokens-colors--page) |
+    | \`.avatar-active\` | Modifier | Defines the active state |
   `}
 />
 
 ## Default
 
-<Canvas>
-  <Story id="components-avatar--default" />
-</Canvas>
+<Canvas of={AvatarStories.Default} />
 
 ## Sizes
 
-<Canvas>
-  <Story id="components-avatar--sizes" />
-</Canvas>
+<Canvas of={AvatarStories.Sizes} />
 
 ## Colors
 
-<Canvas>
-  <Story id="components-avatar--colors" />
-</Canvas>
+<Canvas of={AvatarStories.Colors} />
 
 ## States
 
-<Canvas>
-  <Story id="components-avatar--states" />
-</Canvas>
+<Canvas of={AvatarStories.States} />
 
 ## Content Types
 
-<Canvas>
-  <Story id="components-avatar--content-types" />
-</Canvas>
+<Canvas of={AvatarStories.ContentTypes} />

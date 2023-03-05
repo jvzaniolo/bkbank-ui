@@ -1,11 +1,9 @@
 import dedent from 'ts-dedent';
-import mdx from './Input.mdx';
 
 export default {
   title: 'Components/Input',
   parameters: {
     docs: {
-      page: mdx,
       source: {
         format: true,
         type: 'code',

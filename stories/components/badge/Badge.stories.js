@@ -1,11 +1,9 @@
 import dedent from 'ts-dedent';
-import mdx from './Badge.mdx';
 
 export default {
   title: 'Components/Badge',
   parameters: {
     docs: {
-      page: mdx,
       source: {
         format: true,
         type: 'code',

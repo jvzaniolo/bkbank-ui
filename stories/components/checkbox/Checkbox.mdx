@@ -1,5 +1,8 @@
 import dedent from 'ts-dedent';
-import { Canvas, Description, Story } from '@storybook/addon-docs';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as CheckboxStories from './Checkbox.stories';
+
+<Meta of={CheckboxStories} />
 
 # Checkbox
 
@@ -7,39 +10,31 @@ import { Canvas, Description, Story } from '@storybook/addon-docs';
   markdown={dedent`
     | Selector | Type | Description |
     | --- | --- | --- |
-    | \`.checkbox\` | - | Base class |
-    | \`.checkbox-label\` | - | Base class for the label |
-    | \`:invalid\`\\|\`.checkbox-invalid\` | State | Changes to state to invalid |
-    | \`:disabled\` | State | Changes to state to disabled |
+    | \`.checkbox\` | Component | The checkbox component |
+    | \`.checkbox-label\` | Component | The checkbox label component |
+    | \`:invalid\`\\|\`.checkbox-invalid\` | Modifier | Changes to state to invalid |
+    | \`:disabled\` | Modifier | Changes to state to disabled |
   `}
 />
 
 ## Default
 
-<Canvas>
-  <Story id="components-checkbox--default" />
-</Canvas>
+<Canvas of={CheckboxStories.Default} />
 
 ## With Label
 
 Targets the immediate `.checkbox-label` element after the `input.checkbox` to apply the label styling.
 
-<Canvas>
-  <Story id="components-checkbox--with-label" />
-</Canvas>
+<Canvas of={CheckboxStories.WithLabel} />
 
 ## Invalid
 
 Targets the `:invalid` attribute or the `.checkbox-invalid` class to apply the stylings.
 
-<Canvas>
-  <Story id="components-checkbox--invalid" />
-</Canvas>
+<Canvas of={CheckboxStories.Invalid} />
 
 ## Disabled
 
 Targets the `:disabled` attribute to apply the stylings.
 
-<Canvas>
-  <Story id="components-checkbox--disabled" />
-</Canvas>
+<Canvas of={CheckboxStories.Disabled} />

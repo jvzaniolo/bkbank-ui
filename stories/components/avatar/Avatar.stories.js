@@ -1,12 +1,10 @@
 import dedent from 'ts-dedent';
 import { UserIcon } from '@heroicons/react/24/outline';
-import mdx from './Avatar.mdx';
 
 export default {
   title: 'Components/Avatar',
   parameters: {
     docs: {
-      page: mdx,
       source: {
         format: true,
         type: 'code',

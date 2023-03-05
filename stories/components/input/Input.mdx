@@ -1,5 +1,8 @@
 import dedent from 'ts-dedent';
-import { Canvas, Description, Story } from '@storybook/addon-docs';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as InputStories from './Input.stories';
+
+<Meta of={InputStories} />
 
 # Input
 
@@ -7,49 +10,37 @@ import { Canvas, Description, Story } from '@storybook/addon-docs';
   markdown={dedent`
   | Selector | Type | Description |
   | --- | --- | --- |
-  | \`.input\` | - | Base class |
-  | \`.input-label\` | - | Base class for the label |
-  | \`.input-md\` | Size | Changes the size to medium |
-  | \`.input-lg\` | Size | Changes the size to large |
-  | \`:invalid\`\\|\`.input-invalid\` | State | Changes to state to invalid |
-  | \`:disabled\` | State | Changes to state to disabled |
+  | \`.input\` | Component | The input component |
+  | \`.input-label\` | Component | The input label component |
+  | \`.input-md\` | Modifier | Changes the size to medium |
+  | \`.input-lg\` | Modifier | Changes the size to large |
+  | \`:invalid\`\\|\`.input-invalid\` | Modifier | Changes to state to invalid |
+  | \`:disabled\` | Modifier | Changes to state to disabled |
 `}
 />
 
 ## Default
 
-<Canvas>
-  <Story id="components-input--default" />
-</Canvas>
+<Canvas of={InputStories.Default} />
 
 ## Sizes
 
-<Canvas>
-  <Story id="components-input--sizes" />
-</Canvas>
+<Canvas of={InputStories.Sizes} />
 
 ## With Label
 
-<Canvas>
-  <Story id="components-input--with-label" />
-</Canvas>
+<Canvas of={InputStories.WithLabel} />
 
 ## Floating Label
 
 **Important:** Make sure to follow the example HTML structure to ensure proper styling and behavior. More specifically, the `.input-label` must come immediately after the `input` and the `placeholder` content must be set to a single space `" "`.
 
-<Canvas>
-  <Story id="components-input--floating-label" />
-</Canvas>
+<Canvas of={InputStories.FloatingLabel} />
 
 ## Invalid
 
-<Canvas>
-  <Story id="components-input--invalid" />
-</Canvas>
+<Canvas of={InputStories.Invalid} />
 
 ## Disabled
 
-<Canvas>
-  <Story id="components-input--disabled" />
-</Canvas>
+<Canvas of={InputStories.Disabled} />

@@ -1,12 +1,15 @@
 import dedent from 'ts-dedent';
-import mdx from './Tabs.mdx';
 import { PlusIcon } from '@heroicons/react/24/outline';
 
 export default {
   title: 'Components/Tabs',
   parameters: {
     docs: {
-      page: mdx,
+      source: {
+        format: true,
+        type: 'code',
+        language: 'html',
+      },
     },
   },
 };
