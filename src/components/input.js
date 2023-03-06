@@ -1,6 +1,4 @@
-const inputs = document.querySelectorAll('.input');
-
-inputs.forEach((input) => {
+document.querySelectorAll('.input').forEach((input) => {
   const parentElement = input.parentElement;
   const label = parentElement.querySelector(
     ":scope > .input-label[data-label='float']",

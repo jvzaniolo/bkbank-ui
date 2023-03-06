@@ -1,8 +1,4 @@
-const tabs = document.querySelectorAll('.tabs');
-
-tabs.forEach((container) => {
-  const tabLinks = container.querySelectorAll('.tab');
-
+document.querySelectorAll('.tabs').forEach((container) => {
   const initialTab = container.querySelector('.tab-active');
 
   if (initialTab) {
@@ -25,7 +21,7 @@ tabs.forEach((container) => {
     initialTabContent.classList.add('!block');
   }
 
-  tabLinks.forEach((tabLink) => {
+  container.querySelectorAll('.tab').forEach((tabLink) => {
     tabLink.addEventListener('click', (e) => {
       const nextTab = e.currentTarget;
       const nextTabTarget = nextTab.getAttribute('data-target');

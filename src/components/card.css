@@ -11,7 +11,7 @@
 }
 
 button.card {
-  @apply cursor-pointer hover:shadow-level-2 focus:outline-2 focus:outline-primary-lighter transition-shadow active:shadow-none disabled:bg-high-light disabled:text-high-dark disabled:shadow-level-1 disabled:cursor-not-allowed;
+  @apply cursor-pointer hover:shadow-level-2 focus:outline-none focus:ring-2 focus:ring-primary-lighter transition-shadow active:shadow-none disabled:bg-high-light disabled:text-high-dark disabled:shadow-level-1 disabled:cursor-not-allowed;
 
   &.card-dragged {
     @apply shadow-level-4;
