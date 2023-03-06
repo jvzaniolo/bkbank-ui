@@ -1,0 +1,49 @@
+import dedent from 'ts-dedent';
+import { Canvas, Meta } from '@storybook/blocks';
+
+<Meta title="Tokens/Shadows" />
+
+# Shadows
+
+Here are the shadows used in the design system. They are extended from the [Tailwind CSS shadows](https://tailwindcss.com/docs/box-shadow).
+
+## Usage
+
+```html
+<div class="shadow-level-1"></div>
+```
+
+<Canvas>
+  <div className="flex flex-wrap gap-10">
+    <div className="flex flex-col items-center">
+      <span className="text-sm font-medium mb-3 text-low-medium">
+        shadow-level-1
+      </span>
+      <div className="w-32 h-32 rounded-md shadow-level-1"></div>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-sm font-medium mb-3 text-low-medium">
+        shadow-level-2
+      </span>
+      <div className="w-32 h-32 rounded-md shadow-level-2"></div>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-sm font-medium mb-3 text-low-medium">
+        shadow-level-3
+      </span>
+      <div className="w-32 h-32 rounded-md shadow-level-3"></div>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-sm font-medium mb-3 text-low-medium">
+        shadow-level-4
+      </span>
+      <div className="w-32 h-32 rounded-md shadow-level-4"></div>
+    </div>
+    <div className="flex flex-col items-center">
+      <span className="text-sm font-medium mb-3 text-low-medium">
+        shadow-level-5
+      </span>
+      <div className="w-32 h-32 rounded-md shadow-level-5"></div>
+    </div>
+  </div>
+</Canvas>
