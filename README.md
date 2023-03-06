@@ -28,16 +28,10 @@ See [Tailwind CSS Plugins](https://tailwindcss.com/docs/plugins) for more inform
 
 Some components require JavaScript to work properly.
 
-For example, the `tabs` component requires the `tabs.js` file to be included in your project.
+For example, the `tabs` component requires the `scripts.js` to be included in your project.
 
 ```html
-<script src="../path/to/@bkbank/ui/scripts/components/tabs.min.js"></script>
-```
-
-Or you can import all components at once.
-
-```html
-<script src="../path/to/@bkbank/ui/scripts/components.min.js"></script>
+<script src="../path/to/@bkbank/ui/scripts.min.js"></script>
 ```
 
 ## Usage

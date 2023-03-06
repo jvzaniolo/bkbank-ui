@@ -24,16 +24,15 @@
   },
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
   "scripts": {
-    "build": "npm-run-all --parallel build:**",
-    "build:css": "postcss src/styles/*.css --dir dist",
-    "build:minify:js": "esbuild --bundle ./src/scripts/* --outdir=dist --minify --sourcemap --out-extension:.js=.min.js",
-    "build:minify:components": "esbuild --bundle ./src/scripts/components/* --outdir=dist/components --minify --sourcemap --out-extension:.js=.min.js",
+    "build": "npm-run-all build:css build:css-to-js --parallel build:**",
+    "build:css": "postcss src/*.css --dir dist",
+    "build:css-to-js": "node ./scripts/objectify.js",
+    "build:minify:js": "esbuild --bundle ./src --outdir=dist --minify --sourcemap --out-extension:.js=.min.js",
+    "build:minify:components": "esbuild --bundle ./src/components --outdir=dist/components --minify --sourcemap --out-extension:.js=.min.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
-    "postcss-js": "^4.0.1",
     "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
@@ -61,12 +60,15 @@
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
+    "postcss-js": "^4.0.1",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "semantic-release": "^20.1.1",
     "storybook": "7.0.0-beta.61",
-    "typescript": "^4.9.5"
+    "ts-dedent": "^2.2.0",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0"
   }
 }
