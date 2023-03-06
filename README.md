@@ -26,12 +26,12 @@ See [Tailwind CSS Plugins](https://tailwindcss.com/docs/plugins) for more inform
 
 ### Interactive components
 
-Some components require JavaScript to work properly.
+Some components require JavaScript to work properly. They are listed in the Storybook with the `Requires JS` title.
 
-For example, the `tabs` component requires the `scripts.js` to be included in your project.
+To use them, you need to import the JavaScript file in your project.
 
 ```html
-<script src="../path/to/@bkbank/ui/scripts.min.js"></script>
+<script src="../path/to/@bkbank/ui/dist/scripts.min.js"></script>
 ```
 
 ## Usage
@@ -68,37 +68,25 @@ module.exports {
 To develop the design system, clone the repository and install the dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 Then, run the Storybook server:
 
 ```bash
-npm run storybook
+pnpm storybook
 ```
 
 Write your CSS with Tailwind `@apply` syntax in `packages/core/{base|components|utilities}`.
 
-Add them to the `index.js` file in their respective functions.
-
-Then, create a build command to transform the CSS with Tailwind into pure CSS.
-
-For example,
-
-```json
-{
-  "scripts": {
-    "build:utilities": "postcss --config packages/core packages/core/utilities/index.css -o dist/utilities.css"
-  }
-}
-```
+Then, add them to the `index.js` file in their respective functions.
 
 ## Building
 
 To build the design system, run the following command:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 That will run the build commands for each package.

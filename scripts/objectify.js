@@ -12,7 +12,7 @@ function objectify(filePath) {
 const files = fs.readdirSync(path.resolve(__dirname, '../dist'));
 
 const jsFiles = files
-  .filter((file) => file.includes('.css'))
+  .filter((file) => file.endsWith('.css'))
   .map((file) => ({
     name: file.concat('.js'),
     content: objectify(`../dist/${file}`),

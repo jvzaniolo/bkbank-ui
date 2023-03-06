@@ -24,11 +24,10 @@
   },
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
   "scripts": {
-    "build": "npm-run-all build:css build:css-to-js --parallel build:**",
+    "build": "run-s build:**",
     "build:css": "postcss src/*.css --dir dist",
     "build:css-to-js": "node ./scripts/objectify.js",
-    "build:minify:js": "esbuild --bundle ./src --outdir=dist --minify --sourcemap --out-extension:.js=.min.js",
-    "build:minify:components": "esbuild --bundle ./src/components --outdir=dist/components --minify --sourcemap --out-extension:.js=.min.js",
+    "build:minify:js": "esbuild --bundle ./src/*.js --outdir=dist --minify --sourcemap --out-extension:.js=.min.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
