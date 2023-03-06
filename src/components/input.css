@@ -16,12 +16,12 @@
 
 .input-label {
   @apply text-sm font-medium leading-none text-low-dark;
-}
 
-.input-label[data-label='float'] {
-  @apply pointer-events-none px-1 bg-white origin-[0] transition-all absolute flex items-center translate-x-3.5 top-1/2 -translate-y-1/2 duration-300 ease-out;
+  &[data-label='float'] {
+    @apply pointer-events-none px-1 bg-white origin-[0] transition-all absolute flex items-center translate-x-3.5 top-1/2 -translate-y-1/2 duration-300 ease-out;
 
-  &.input-label--float {
-    @apply text-2xs -top-0.5 -translate-y-1/2;
+    &.input-label--float {
+      @apply text-2xs -top-0.5 -translate-y-1/2;
+    }
   }
 }

@@ -15,7 +15,7 @@ export default {
 
 export const Default = {
   render: () => (
-    <nav aria-label="Breadcrumb" className="breadcrumb">
+    <nav aria-label="Breadcrumb" className="tw-breadcrumb">
       <ol>
         <li>
           <a href="">Home</a>

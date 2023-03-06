@@ -8,5 +8,23 @@
     <link rel="stylesheet" href="./tailwind.css" />
     <script type="module" src="../scripts.js"></script>
   </head>
-  <body class="flex flex-col gap-5 p-10"></body>
+  <body class="p-10 space-y-5">
+    <label class="relative block">
+      <span class="textarea-label">Label</span>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        class="textarea"
+        placeholder="Placeholder"
+        disabled
+      ></textarea>
+      <span class="textarea-alt">Alt text</span>
+    </label>
+    <label class="relative block">
+      <input type="text" class="input" placeholder="Placeholder" />
+      <span class="input-label" data-label="float">Label</span>
+    </label>
+  </body>
 </html>

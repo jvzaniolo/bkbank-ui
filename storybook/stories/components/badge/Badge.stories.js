@@ -14,7 +14,7 @@ export default {
 };
 
 export const Default = {
-  render: () => <span className="badge">32</span>,
+  render: () => <span className="tw-badge">32</span>,
   parameters: {
     docs: {
       source: {
@@ -26,9 +26,9 @@ export const Default = {
 
 export const Colors = {
   render: () => (
-    <div className="flex gap-5">
-      <span className="badge">32</span>
-      <span className="badge badge-highlight">32</span>
+    <div className="tw-flex tw-gap-5">
+      <span className="tw-badge">32</span>
+      <span className="tw-badge tw-badge-highlight">32</span>
     </div>
   ),
   parameters: {

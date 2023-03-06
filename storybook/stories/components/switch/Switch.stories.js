@@ -14,7 +14,7 @@ export default {
 };
 
 export const Default = {
-  render: () => <input type="checkbox" className="switch" />,
+  render: () => <input type="checkbox" className="tw-switch" />,
   parameters: {
     docs: {
       source: {
@@ -26,9 +26,9 @@ export const Default = {
 
 export const Sizes = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <input type="checkbox" className="switch" />
-      <input type="checkbox" className="switch switch-md" />
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <input type="checkbox" className="tw-switch" />
+      <input type="checkbox" className="tw-switch tw-switch-md" />
     </div>
   ),
   parameters: {
@@ -45,9 +45,9 @@ export const Sizes = {
 
 export const WithLabel = {
   render: () => (
-    <label className="inline-flex items-center">
-      <input type="checkbox" className="switch" />
-      <span className="switch-label">With Label</span>
+    <label className="tw-inline-flex tw-items-center">
+      <input type="checkbox" className="tw-switch" />
+      <span className="tw-switch-label">With Label</span>
     </label>
   ),
   parameters: {
@@ -66,9 +66,9 @@ export const WithLabel = {
 
 export const Invalid = {
   render: () => (
-    <label className="inline-flex items-center">
-      <input type="checkbox" className="switch switch-invalid" />
-      <span className="switch-label">With Label</span>
+    <label className="tw-inline-flex tw-items-center">
+      <input type="checkbox" className="tw-switch tw-switch-invalid" />
+      <span className="tw-switch-label">With Label</span>
     </label>
   ),
   parameters: {
@@ -87,9 +87,9 @@ export const Invalid = {
 
 export const Disabled = {
   render: () => (
-    <label className="inline-flex items-center">
-      <input type="checkbox" className="switch" disabled />
-      <span className="switch-label">With Label</span>
+    <label className="tw-inline-flex tw-items-center">
+      <input type="checkbox" className="tw-switch" disabled />
+      <span className="tw-switch-label">With Label</span>
     </label>
   ),
   parameters: {

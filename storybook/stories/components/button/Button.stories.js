@@ -15,7 +15,7 @@ export default {
 };
 
 export const Default = {
-  render: () => <button className="btn">Default</button>,
+  render: () => <button className="tw-btn">Default</button>,
   parameters: {
     docs: {
       source: {
@@ -27,10 +27,10 @@ export const Default = {
 
 export const Sizes = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <button className="btn">Small</button>
-      <button className="btn btn-md">Medium</button>
-      <button className="btn btn-lg">Large</button>
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <button className="tw-btn">Small</button>
+      <button className="tw-btn tw-btn-md">Medium</button>
+      <button className="tw-btn tw-btn-lg">Large</button>
     </div>
   ),
   parameters: {
@@ -48,10 +48,10 @@ export const Sizes = {
 
 export const Colors = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <button className="btn">Base</button>
-      <button className="btn btn-primary">Primary</button>
-      <button className="btn btn-secondary">Secondary</button>
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <button className="tw-btn">Base</button>
+      <button className="tw-btn tw-btn-primary">Primary</button>
+      <button className="tw-btn tw-btn-secondary">Secondary</button>
     </div>
   ),
   parameters: {
@@ -69,10 +69,10 @@ export const Colors = {
 
 export const Variants = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <button className="btn btn-primary">Solid</button>
-      <button className="btn btn-primary btn-outline">Outline</button>
-      <button className="btn btn-primary btn-ghost">Ghost</button>
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <button className="tw-btn tw-btn-primary">Solid</button>
+      <button className="tw-btn tw-btn-primary tw-btn-outline">Outline</button>
+      <button className="tw-btn tw-btn-primary tw-btn-ghost">Ghost</button>
     </div>
   ),
   parameters: {
@@ -90,14 +90,14 @@ export const Variants = {
 
 export const Disabled = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <button className="btn btn-primary" disabled>
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <button className="tw-btn tw-btn-primary" disabled>
         Solid
       </button>
-      <button className="btn btn-primary btn-outline" disabled>
+      <button className="tw-btn tw-btn-primary tw-btn-outline" disabled>
         Outline
       </button>
-      <button className="btn btn-primary btn-ghost" disabled>
+      <button className="tw-btn tw-btn-primary tw-btn-ghost" disabled>
         Ghost
       </button>
     </div>
@@ -123,16 +123,16 @@ export const Disabled = {
 
 export const WithIcon = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <button className="btn btn-primary">
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <button className="tw-btn tw-btn-primary">
         <ShoppingBagIcon />
         Solid
       </button>
-      <button className="btn btn-primary btn-outline">
+      <button className="tw-btn tw-btn-primary tw-btn-outline">
         <ShoppingBagIcon />
         Outline
       </button>
-      <button className="btn btn-primary btn-ghost">
+      <button className="tw-btn tw-btn-primary tw-btn-ghost">
         <ShoppingBagIcon />
         Ghost
       </button>
@@ -162,14 +162,14 @@ export const WithIcon = {
 
 export const IconButton = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <button className="btn btn-icon btn-primary">
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <button className="tw-btn tw-btn-icon tw-btn-primary">
         <ShoppingBagIcon />
       </button>
-      <button className="btn btn-icon btn-primary btn-outline">
+      <button className="tw-btn tw-btn-icon tw-btn-primary tw-btn-outline">
         <ShoppingBagIcon />
       </button>
-      <button className="btn btn-icon btn-primary btn-ghost">
+      <button className="tw-btn tw-btn-icon tw-btn-primary tw-btn-ghost">
         <ShoppingBagIcon />
       </button>
     </div>

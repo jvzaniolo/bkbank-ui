@@ -1,8 +1,8 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
   stories: [
-    '../src/stories/**/*.mdx',
-    '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../storybook/**/*.mdx',
+    '../storybook/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-links',
@@ -16,6 +16,9 @@ const config = {
         },
         postcssLoaderOptions: {
           implementation: require('postcss'),
+          postcssOptions: {
+            config: './storybook/postcss.config.js',
+          },
         },
       },
     },

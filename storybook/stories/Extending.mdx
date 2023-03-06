@@ -11,7 +11,10 @@ Every component styles can be extended with other Tailwind utility classes.
 ### Circular Icon Button
 
 <Canvas>
-  <button type="button" class="btn btn-icon btn-solid btn-primary rounded-full">
+  <button
+    type="button"
+    class="tw-btn tw-btn-icon tw-btn-solid tw-btn-primary tw-rounded-full"
+  >
     <svg
       fill="none"
       stroke="currentColor"
@@ -31,7 +34,9 @@ Every component styles can be extended with other Tailwind utility classes.
 ### Square Button
 
 <Canvas>
-  <button class="btn btn-solid btn-primary rounded-none">Rounded</button>
+  <button class="tw-btn tw-btn-solid tw-btn-primary tw-rounded-none">
+    Rounded
+  </button>
 </Canvas>
 
 ## Colors
@@ -41,8 +46,8 @@ If you need a different color for any component, you can extend its base class w
 
 ### Indigo Avatar
 
-<Canvas withControls="true">
-  <div class="avatar avatar-md bg-indigo-500 text-white">JV</div>
+<Canvas>
+  <div class="tw-avatar tw-avatar-md tw-bg-indigo-500 tw-text-white">JV</div>
 </Canvas>
 
 ### Cancel Ghost Button
@@ -50,7 +55,7 @@ If you need a different color for any component, you can extend its base class w
 <Canvas>
   <button
     type="button"
-    class="btn hover:bg-high-light active:bg-high-dark text-red-500 focus:outline-none focus:ring-2 focus:ring-red-200"
+    class="tw-btn hover:tw-bg-high-light active:tw-bg-high-dark tw-text-red-500 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-red-200"
   >
     Cancel
   </button>
@@ -61,7 +66,7 @@ If you need a different color for any component, you can extend its base class w
 <Canvas>
   <button
     type="button"
-    class="btn bg-emerald-500 text-white hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-300 active:bg-emerald-700"
+    class="tw-btn tw-bg-emerald-500 tw-text-white hover:tw-bg-emerald-600 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-emerald-300 active:tw-bg-emerald-700"
   >
     Purchase
   </button>

@@ -30,8 +30,8 @@
     "build:css": "postcss src/*.css --dir dist",
     "build:css-to-js": "node ./scripts/objectify.js",
     "build:minify:js": "esbuild --bundle ./src/*.js --outdir=dist --minify --sourcemap --out-extension:.js=.min.js",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "pnpm build && storybook dev -p 6006",
+    "build-storybook": "pnpm build && storybook build"
   },
   "dependencies": {
     "tailwindcss": "^3.2.7"

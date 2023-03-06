@@ -1,0 +1,44 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as TextareaStories from './Textarea.stories';
+
+<Meta of={TextareaStories} />
+
+# Textarea
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.textarea\` | Component | The textarea component |
+    | \`.textarea-label\` | Component | The textarea label component |
+    | \`.textarea-label[data-label="float"]\` | Modifier | Changes the label to floating mode |
+    | \`.textarea-alt\` | Component | A helper text to the textarea component |
+    | \`:invalid\`\\|\`.textarea-invalid\` | Modifier | Changes to state to invalid |
+    | \`:disabled\` | Modifier | Changes to state to disabled |
+  `}
+/>
+
+## Default
+
+<Canvas of={TextareaStories.Default} />
+
+## Sizes
+
+<Canvas of={TextareaStories.Sizes} />
+
+## With Label
+
+<Canvas of={TextareaStories.WithLabel} />
+
+## Invalid
+
+<Canvas of={TextareaStories.Invalid} />
+
+## Disabled
+
+<Canvas of={TextareaStories.Disabled} />
+
+## Floating Label
+
+<Canvas of={TextareaStories.FloatingLabel} />

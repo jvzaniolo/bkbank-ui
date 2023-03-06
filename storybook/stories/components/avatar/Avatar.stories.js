@@ -15,7 +15,7 @@ export default {
 };
 
 export const Default = {
-  render: () => <div className="avatar">RM</div>,
+  render: () => <div className="tw-avatar">RM</div>,
   parameters: {
     docs: {
       source: {
@@ -27,10 +27,10 @@ export const Default = {
 
 export const Sizes = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <div className="avatar avatar-sm">RM</div>
-      <div className="avatar">RM</div>
-      <div className="avatar avatar-lg">RM</div>
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <div className="tw-avatar tw-avatar-sm">RM</div>
+      <div className="tw-avatar">RM</div>
+      <div className="tw-avatar tw-avatar-lg">RM</div>
     </div>
   ),
   parameters: {
@@ -48,9 +48,9 @@ export const Sizes = {
 
 export const Colors = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <div className="avatar">RM</div>
-      <div className="avatar avatar-primary">RM</div>
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <div className="tw-avatar">RM</div>
+      <div className="tw-avatar tw-avatar-primary">RM</div>
     </div>
   ),
   parameters: {
@@ -67,9 +67,9 @@ export const Colors = {
 
 export const States = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <div className="avatar">RM</div>
-      <div className="avatar avatar-active">RM</div>
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <div className="tw-avatar">RM</div>
+      <div className="tw-avatar tw-avatar-active">RM</div>
     </div>
   ),
   parameters: {
@@ -86,12 +86,12 @@ export const States = {
 
 export const ContentTypes = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <div className="avatar">RM</div>
-      <div className="avatar">
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <div className="tw-avatar">RM</div>
+      <div className="tw-avatar">
         <UserIcon />
       </div>
-      <div className="avatar">
+      <div className="tw-avatar">
         <img
           alt="John Doe"
           src="https://randomuser.me/api/portraits/med/men/86.jpg"

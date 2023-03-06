@@ -16,21 +16,21 @@ export default {
 
 export const Default = {
   render: () => (
-    <div className="tabs">
-      <div className="tab-list">
-        <button className="tab tab-active" data-target="#home">
-          <PlusIcon className="h-4 w-4" />
+    <div className="tw-tabs">
+      <div className="tw-tab-list">
+        <button className="tw-tab tw-tab-active" data-target="#home">
+          <PlusIcon className="tw-h-4 tw-w-4" />
           Home
         </button>
-        <button className="tab" data-target="#settings">
+        <button className="tw-tab" data-target="#settings">
           Settings
         </button>
       </div>
 
-      <div id="home" className="tab-content !block">
+      <div id="home" className="tw-tab-content !tw-block">
         Home tab
       </div>
-      <div id="settings" className="tab-content">
+      <div id="settings" className="tw-tab-content">
         Settings tab
       </div>
     </div>
@@ -65,19 +65,19 @@ export const Default = {
 
 export const Accessibility = {
   render: () => (
-    <div className="tabs">
-      <ul className="tab-list" role="tablist">
+    <div className="tw-tabs">
+      <ul className="tw-tab-list" role="tablist">
         <li role="presentation">
           <button
             id="home-tab"
             type="button"
             role="tab"
-            className="tab tab-active"
+            className="tw-tab tw-tab-active"
             data-target="#home"
             aria-controls="home"
             aria-selected="true"
           >
-            <PlusIcon className="h-4 w-4" />
+            <PlusIcon className="tw-h-4 tw-w-4" />
             Home
           </button>
         </li>
@@ -86,7 +86,7 @@ export const Accessibility = {
             id="settings-tab"
             type="button"
             role="tab"
-            className="tab"
+            className="tw-tab"
             data-target="#settings"
             aria-controls="settings"
             aria-selected="false"
@@ -99,7 +99,7 @@ export const Accessibility = {
       <div>
         <div
           id="home"
-          className="tab-content !block"
+          className="tw-tab-content !tw-block"
           role="tabpanel"
           aria-labelledby="home-tab"
           tabIndex={0}
@@ -108,7 +108,7 @@ export const Accessibility = {
         </div>
         <div
           id="settings"
-          className="tab-content"
+          className="tw-tab-content"
           role="tabpanel"
           aria-labelledby="settings-tab"
           tabIndex={0}
@@ -182,40 +182,40 @@ export const Accessibility = {
 
 export const Sizes = {
   render: () => (
-    <div className="flex items-start gap-5">
-      <div className="tabs">
-        <div className="tab-list">
-          <button className="tab tab-active flex" data-target="#home">
-            <PlusIcon className="h-4 w-4" />
+    <div className="tw-flex tw-items-start tw-gap-5">
+      <div className="tw-tabs">
+        <div className="tw-tab-list">
+          <button className="tw-tab tw-tab-active tw-flex" data-target="#home">
+            <PlusIcon className="tw-h-4 tw-w-4" />
             Home
           </button>
-          <button className="tab" data-target="#settings">
+          <button className="tw-tab" data-target="#settings">
             Settings
           </button>
         </div>
 
-        <div id="home" className="tab-content !block">
+        <div id="home" className="tw-tab-content !tw-block">
           Home tab
         </div>
-        <div id="settings" className="tab-content">
+        <div id="settings" className="tw-tab-content">
           Settings tab
         </div>
       </div>
-      <div className="tabs tabs-md">
-        <div className="tab-list">
-          <button className="tab tab-active flex" data-target="#home">
-            <PlusIcon className="h-4 w-4" />
+      <div className="tw-tabs tw-tabs-md">
+        <div className="tw-tab-list">
+          <button className="tw-tab tw-tab-active tw-flex" data-target="#home">
+            <PlusIcon className="tw-h-4 tw-w-4" />
             Home
           </button>
-          <button className="tab" data-target="#settings">
+          <button className="tw-tab" data-target="#settings">
             Settings
           </button>
         </div>
 
-        <div id="home" className="tab-content !block">
+        <div id="home" className="tw-tab-content !tw-block">
           Home tab
         </div>
-        <div id="settings" className="tab-content">
+        <div id="settings" className="tw-tab-content">
           Settings tab
         </div>
       </div>

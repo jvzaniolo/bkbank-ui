@@ -1,0 +1,29 @@
+.textarea {
+  @apply form-input border-low-light placeholder:text-low-medium focus:border-primary-light focus:ring-primary-light disabled:border-high-dark disabled:text-high-dark disabled:placeholder:text-high-dark w-full rounded px-4 text-sm font-medium leading-none text-black focus:ring-2 disabled:cursor-not-allowed;
+
+  &:invalid:not(:disabled),
+  &.textarea-invalid:not(:disabled) {
+    @apply border-error-pure ring-error-pure ring-2;
+  }
+}
+
+.textarea:disabled ~ .textarea-label[data-label='float'],
+.textarea:disabled ~ .textarea-alt {
+  @apply text-high-dark;
+}
+
+.textarea-label {
+  @apply text-sm font-medium leading-none text-low-dark;
+
+  &[data-label='float'] {
+    @apply pointer-events-none px-1 bg-white origin-[0] transition-all absolute flex items-center translate-x-3.5 top-4 -translate-y-1/2 duration-300 ease-out;
+
+    &.textarea-label--float {
+      @apply text-2xs -top-0.5 -translate-y-1/2;
+    }
+  }
+}
+
+.textarea-alt {
+  @apply text-2xs ml-4 mt-1 block font-medium leading-normal;
+}

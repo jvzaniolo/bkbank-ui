@@ -14,7 +14,7 @@ export default {
 };
 
 export const Default = {
-  render: () => <input type="checkbox" className="radio" />,
+  render: () => <input type="checkbox" className="tw-radio" />,
   parameters: {
     docs: {
       source: {
@@ -26,9 +26,9 @@ export const Default = {
 
 export const WithLabel = {
   render: () => (
-    <label className="inline-flex items-center">
-      <input type="checkbox" className="radio" />
-      <span className="radio-label">With Label</span>
+    <label className="tw-inline-flex tw-items-center">
+      <input type="checkbox" className="tw-radio" />
+      <span className="tw-radio-label">With Label</span>
     </label>
   ),
   parameters: {
@@ -47,9 +47,9 @@ export const WithLabel = {
 
 export const Invalid = {
   render: () => (
-    <label className="inline-flex items-center">
-      <input type="checkbox" className="radio radio-invalid" />
-      <span className="radio-label">With Label</span>
+    <label className="tw-inline-flex tw-items-center">
+      <input type="checkbox" className="tw-radio tw-radio-invalid" />
+      <span className="tw-radio-label">With Label</span>
     </label>
   ),
   parameters: {
@@ -68,9 +68,9 @@ export const Invalid = {
 
 export const Disabled = {
   render: () => (
-    <label className="inline-flex items-center">
-      <input type="checkbox" className="radio" disabled />
-      <span className="radio-label">With Label</span>
+    <label className="tw-inline-flex tw-items-center">
+      <input type="checkbox" className="tw-radio" disabled />
+      <span className="tw-radio-label">With Label</span>
     </label>
   ),
   parameters: {

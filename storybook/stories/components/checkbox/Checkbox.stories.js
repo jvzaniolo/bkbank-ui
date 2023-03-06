@@ -14,7 +14,7 @@ export default {
 };
 
 export const Default = {
-  render: () => <input type="checkbox" className="checkbox" />,
+  render: () => <input type="checkbox" className="tw-checkbox" />,
   parameters: {
     docs: {
       source: {
@@ -26,9 +26,9 @@ export const Default = {
 
 export const WithLabel = {
   render: () => (
-    <label className="inline-flex items-center">
-      <input type="checkbox" className="checkbox" />
-      <span className="checkbox-label">Checkbox</span>
+    <label className="tw-inline-flex tw-items-center">
+      <input type="checkbox" className="tw-checkbox" />
+      <span className="tw-checkbox-label">Checkbox</span>
     </label>
   ),
   parameters: {
@@ -47,13 +47,13 @@ export const WithLabel = {
 
 export const Invalid = {
   render: () => (
-    <div className="inline-flex items-center">
+    <div className="tw-inline-flex tw-items-center">
       <input
         id="invalid-1"
         type="checkbox"
-        className="checkbox checkbox-invalid"
+        className="tw-checkbox tw-checkbox-invalid"
       />
-      <label htmlFor="invalid-1" className="checkbox-label">
+      <label htmlFor="invalid-1" className="tw-checkbox-label">
         Invalid
       </label>
     </div>
@@ -78,9 +78,9 @@ export const Invalid = {
 
 export const Disabled = {
   render: () => (
-    <div className="inline-flex items-center">
-      <input id="disabled" type="checkbox" className="checkbox" disabled />
-      <label htmlFor="disabled" className="checkbox-label">
+    <div className="tw-inline-flex tw-items-center">
+      <input id="disabled" type="checkbox" className="tw-checkbox" disabled />
+      <label htmlFor="disabled" className="tw-checkbox-label">
         Disabled
       </label>
     </div>

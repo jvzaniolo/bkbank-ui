@@ -14,7 +14,9 @@ document.querySelectorAll('.input').forEach((input) => {
     input.placeholder = placeholder;
   };
   input.onblur = () => {
-    label.classList.remove('input-label--float');
-    input.placeholder = '';
+    if (input.value === '') {
+      label.classList.remove('input-label--float');
+      input.placeholder = '';
+    }
   };
 });
