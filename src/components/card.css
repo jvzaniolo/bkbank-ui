@@ -1,0 +1,31 @@
+.card {
+  @apply rounded-lg shadow-level-1 p-4;
+
+  &.card-outline {
+    @apply shadow-none border border-high-medium;
+  }
+
+  &.card-filled {
+    @apply shadow-none bg-secondary-pure text-white;
+  }
+}
+
+button.card {
+  @apply cursor-pointer hover:shadow-level-2 focus:outline-2 focus:outline-primary-lighter transition-shadow active:shadow-none disabled:bg-high-light disabled:text-high-dark disabled:shadow-level-1 disabled:cursor-not-allowed;
+
+  &.card-dragged {
+    @apply shadow-level-4;
+  }
+
+  &.card-outline {
+    @apply hover:shadow-level-1 active:bg-high-medium transition-all disabled:shadow-none;
+  }
+
+  &.card-filled {
+    @apply hover:bg-secondary-medium transition-all hover:shadow-level-1 active:bg-secondary-dark disabled:bg-high-medium disabled:text-low-light;
+
+    &.card-dragged {
+      @apply shadow-level-5;
+    }
+  }
+}

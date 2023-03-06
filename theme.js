@@ -1,9 +1,17 @@
+/** @type {import('tailwindcss').Config['theme']} */
 module.exports = {
   fontFamily: {
     montserrat: ['Montserrat', 'sans-serif'],
   },
   fontSize: {
     '2xs': '0.625rem',
+  },
+  boxShadow: {
+    'level-1': '0px 2px 4px rgba(0, 0, 0, 0.16)',
+    'level-2': '0px 4px 8px rgba(0, 0, 0, 0.08)',
+    'level-3': '0px 8px 24px rgba(0, 0, 0, 0.16)',
+    'level-4': '0px 16px 32px rgba(0, 0, 0, 0.16)',
+    'level-5': '0px 16px 48px rgba(0, 0, 0, 0.24)',
   },
   colors: {
     primary: {
