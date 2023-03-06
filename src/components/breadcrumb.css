@@ -1,4 +1,4 @@
-nav.breadcrumb ol {
+.breadcrumb ol {
   @apply flex gap-2;
 
   a {
