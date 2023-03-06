@@ -3,7 +3,7 @@
   "version": "1.2.0-beta.22",
   "description": "BK Bank's Design System as a TailwindCSS plugin.",
   "main": "index.js",
-  "source": "app/index.html",
+  "source": "src/app/index.html",
   "license": "ISC",
   "files": [
     "index.js",
