@@ -14,40 +14,14 @@
   }
 }
 
-.input ~ .input-label {
-  @apply text-low-dark pointer-events-none absolute top-0 left-3.5 z-10 origin-[0] -translate-y-2 scale-75 bg-white px-1 text-sm font-medium leading-none transition-transform duration-300 ease-out;
+.input-label {
+  @apply text-sm font-medium leading-none text-low-dark;
 }
 
-.input:placeholder-shown ~ .input-label {
-  @apply translate-y-2.5 scale-100;
-}
+.input-label[data-label='float'] {
+  @apply pointer-events-none px-1 bg-white origin-[0] transition-all absolute flex items-center translate-x-3.5 top-1/2 -translate-y-1/2 duration-300 ease-out;
 
-.input:focus ~ .input-label {
-  @apply top-0 -translate-y-2 scale-75 px-1;
-}
-
-.input:disabled ~ .input-label {
-  @apply text-high-dark;
-}
-
-.input.input-md ~ .input-label {
-  @apply -translate-y-2;
-}
-.input.input-md:placeholder-shown ~ .input-label {
-  @apply translate-y-[1.15rem];
-}
-/* The :focus selector must have priority over the :placeholder-shown */
-.input.input-md:focus ~ .input-label {
-  @apply -translate-y-2;
-}
-
-.input.input-lg ~ .input-label {
-  @apply -translate-y-2;
-}
-.input-lg:placeholder-shown ~ .input-label {
-  @apply translate-y-[1.4rem];
-}
-/* The :focus selector must have priority over the :placeholder-shown */
-.input.input-lg:focus ~ .input-label {
-  @apply -translate-y-2;
+  &.input-label--float {
+    @apply text-2xs -top-0.5 -translate-y-1/2;
+  }
 }

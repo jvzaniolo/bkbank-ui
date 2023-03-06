@@ -50,7 +50,7 @@ export const Sizes = {
 export const WithLabel = {
   render: () => (
     <label>
-      <span className="mb-1 text-sm">With Label</span>
+      <span className="input-label">With Label</span>
       <input type="text" className="input" placeholder="Placeholder" />
     </label>
   ),
@@ -59,29 +59,8 @@ export const WithLabel = {
       source: {
         code: dedent`
           <label>
-            <span class="mb-1 text-sm">With Label</span>
+            <span class="input-label">With Label</span>
             <input type="text" class="input" placeholder="Placeholder" />
-          </label>
-        `,
-      },
-    },
-  },
-};
-
-export const FloatingLabel = {
-  render: () => (
-    <label className="relative block">
-      <input type="text" className="input" placeholder=" " />
-      <span className="input-label">Floating label</span>
-    </label>
-  ),
-  parameters: {
-    docs: {
-      source: {
-        code: dedent`
-          <label class="relative block">
-            <input type="text" class="input" placeholder=" " />
-            <span class="input-label">Floating label</span>
           </label>
         `,
       },
@@ -91,18 +70,22 @@ export const FloatingLabel = {
 
 export const Invalid = {
   render: () => (
-    <label className="relative block">
-      <input type="email" className="input input-invalid" placeholder=" " />
+    <label>
       <span className="input-label">E-mail</span>
+      <input
+        type="email"
+        className="input input-invalid"
+        placeholder="john.doe@gmail.com"
+      />
     </label>
   ),
   parameters: {
     docs: {
       source: {
         code: dedent`
-          <label class="relative block">
-            <input type="text" class="input input-invalid" placeholder=" " />
+          <label>
             <span class="input-label">E-mail</span>
+            <input type="email" class="input input-invalid" placeholder="john.doe@gmail.com" />
           </label>
         `,
       },
@@ -112,18 +95,55 @@ export const Invalid = {
 
 export const Disabled = {
   render: () => (
-    <label className="relative block">
-      <input type="email" className="input" placeholder=" " disabled />
+    <label>
       <span className="input-label">E-mail</span>
+      <input
+        type="email"
+        className="input"
+        placeholder="john.doe@gmail.com"
+        disabled
+      />
     </label>
   ),
   parameters: {
     docs: {
       source: {
         code: dedent`
-          <label class="relative block">
-            <input type="text" class="input" placeholder=" " disabled />
+          <label>
             <span class="input-label">E-mail</span>
+            <input type="email" class="input" placeholder="john.doe@gmail.com" disabled />
+          </label>
+        `,
+      },
+    },
+  },
+};
+
+export const FloatingLabel = {
+  render: () => (
+    <div className="flex gap-5">
+      <label className="relative block">
+        <input type="text" className="input" />
+        <span className="input-label" data-label="float">
+          Floating label
+        </span>
+      </label>
+
+      <label className="relative block">
+        <input type="text" className="input" placeholder="Some placeholder" />
+        <span className="input-label input-label--float" data-label="float">
+          Floating label
+        </span>
+      </label>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      source: {
+        code: dedent`
+          <label class="relative block">
+            <input type="text" class="input" placeholder="Some placeholder" />
+            <span class="input-label" data-label="float">Floating label</span>
           </label>
         `,
       },
