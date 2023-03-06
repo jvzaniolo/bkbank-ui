@@ -12,7 +12,13 @@ Then, install the design system as a dev dependency:
 npm install -D @bkbank/ui
 ```
 
-In your `tailwind.config.js` file, import the design system plugin.
+In your `index.html` file, import the design system scripts:
+
+```html
+<script src="../path/to/@bkbank/ui/dist/scripts.min.js"></script>
+```
+
+In your `tailwind.config.js` file, import the design system plugin:
 
 ```js
 // tailwind.config.js
@@ -24,21 +30,11 @@ module.exports {
 
 See [Tailwind CSS Plugins](https://tailwindcss.com/docs/plugins) for more information.
 
-### Interactive components
-
-Some components require JavaScript to work properly. They are listed in the Storybook with the `Requires JS` title.
-
-To use them, you need to import the JavaScript file in your project.
-
-```html
-<script src="../path/to/@bkbank/ui/dist/scripts.min.js"></script>
-```
-
 ## Usage
 
-After installing the design system, the components and utilities will be available in your project as Tailwind classes.
+After installing the design system, the components will be available in your project as Tailwind classes.
 
-All available components and utilities are listed in the Storybook.
+All available components are listed in the Storybook.
 
 ```html
 <button type="button" class="btn btn-primary">Primary button</button>
