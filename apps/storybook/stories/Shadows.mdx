@@ -1,0 +1,49 @@
+import dedent from 'ts-dedent';
+import { Canvas, Meta } from '@storybook/blocks';
+
+<Meta title="Tokens/Shadows" />
+
+# Shadows
+
+Here are the shadows used in the design system. They are extended from the [Tailwind CSS shadows](https://tailwindcss.com/docs/box-shadow).
+
+## Usage
+
+```html
+<div class="shadow-level-1"></div>
+```
+
+<Canvas>
+  <div className="tw-flex tw-flex-wrap tw-gap-5">
+    <div className="tw-flex tw-flex-col tw-items-center">
+      <span className="tw-text-sm tw-font-medium tw-mb-3 tw-text-low-medium">
+        shadow-level-1
+      </span>
+      <div className="tw-w-32 tw-h-32 tw-rounded-md tw-shadow-level-1"></div>
+    </div>
+    <div className="tw-flex tw-flex-col tw-items-center">
+      <span className="tw-text-sm tw-font-medium tw-mb-3 tw-text-low-medium">
+        shadow-level-2
+      </span>
+      <div className="tw-w-32 tw-h-32 tw-rounded-md tw-shadow-level-2"></div>
+    </div>
+    <div className="tw-flex tw-flex-col tw-items-center">
+      <span className="tw-text-sm tw-font-medium tw-mb-3 tw-text-low-medium">
+        shadow-level-3
+      </span>
+      <div className="tw-w-32 tw-h-32 tw-rounded-md tw-shadow-level-3"></div>
+    </div>
+    <div className="tw-flex tw-flex-col tw-items-center">
+      <span className="tw-text-sm tw-font-medium tw-mb-3 tw-text-low-medium">
+        shadow-level-4
+      </span>
+      <div className="tw-w-32 tw-h-32 tw-rounded-md tw-shadow-level-4"></div>
+    </div>
+    <div className="tw-flex tw-flex-col tw-items-center">
+      <span className="tw-text-sm tw-font-medium tw-mb-3 tw-text-low-medium">
+        shadow-level-5
+      </span>
+      <div className="tw-w-32 tw-h-32 tw-rounded-md tw-shadow-level-5"></div>
+    </div>
+  </div>
+</Canvas>

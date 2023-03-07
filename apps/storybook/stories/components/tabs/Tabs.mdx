@@ -1,0 +1,36 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as Tabs from './Tabs.stories';
+
+<Meta of={Tabs} />
+
+# Tabs
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.tabs\` | Component | Container of tab-list and tab-content items |
+    | \`.tabs-md\` | Modifier | Changes the size of the tab items to medium |
+    | \`.tab-list\` | Component | Container of tab items |
+    | \`.tab\` | Component | A tab item. Requires a \`data-target\` attribute that matches the id of the corresponding tab-content item |
+    | \`.tab-active\` | Modifier | Set the active tab and displays the corresponding tab-content item |
+    | \`.tab-content\` | Component | A tab-content item. Requires an \`id\` that matches the data-target attribute of the corresponding tab item |
+  `}
+/>
+
+## Default - Not accessible
+
+This example is for reference only. It shows the bare minimum markup required to use the tabs component. It does not include any accessibility features.
+
+<Canvas of={Tabs.Default} />
+
+## Accessibility
+
+Follow this example to ensure your tabs are accessible.
+
+<Canvas of={Tabs.Accessibility} />
+
+## Sizes
+
+<Canvas of={Tabs.Sizes} />

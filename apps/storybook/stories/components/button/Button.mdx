@@ -1,0 +1,51 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.btn\` | Component | The button component |
+    | \`.btn.btn-icon\` | Component | The icon button component |
+    | \`.btn-md\` | Modifier | Changes the size to medium |
+    | \`.btn-lg\` | Modifier | Changes the size to large |
+    | \`.btn-outline\` | Modifier | Changes the variant to outline |
+    | \`.btn-ghost\` | Modifier | Changes the variant to ghost |
+    | \`.btn-primary\` | Modifier | Changes the color to [primary](?path=/docs/tokens-colors--page) |
+    | \`.btn-secondary\` | Modifier | Changes the color to [secondary](?path=/docs/tokens-colors--page) |
+    | \`:disabled\` | Modifier | Changes to state to disabled |
+  `}
+/>
+
+## Default
+
+<Canvas of={ButtonStories.Default} />
+
+## Sizes
+
+<Canvas of={ButtonStories.Sizes} />
+
+## Colors
+
+<Canvas of={ButtonStories.Colors} />
+
+## Variants
+
+<Canvas of={ButtonStories.Variants} />
+
+## Disabled
+
+<Canvas of={ButtonStories.Disabled} />
+
+## With Icon
+
+<Canvas of={ButtonStories.WithIcon} />
+
+## Icon Button
+
+<Canvas of={ButtonStories.IconButton} />

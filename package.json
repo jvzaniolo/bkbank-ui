@@ -1,80 +1,9 @@
 {
-  "name": "@bkbank/ui",
-  "version": "1.2.0-beta.24",
-  "description": "BK Bank's Design System as a TailwindCSS plugin.",
-  "main": "index.js",
-  "source": "src/app/index.html",
-  "license": "ISC",
-  "files": [
-    "index.js",
-    "theme.js",
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jvzaniolo/bkbank-ui.git"
-  },
-  "keywords": [
-    "tailwindcss",
-    "plugin",
-    "design-system"
-  ],
-  "author": "joao.zaniolo",
-  "bugs": {
-    "url": "https://github.com/jvzaniolo/bkbank-ui/issues"
-  },
-  "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
-  "scripts": {
-    "dev": "parcel --dist-dir .parcel-dist",
-    "build": "run-s build:**",
-    "build:css": "postcss src/*.css --dir dist",
-    "build:css-to-js": "node ./scripts/objectify.js",
-    "build:minify:js": "esbuild --bundle ./src/scripts.js --outdir=dist --minify --sourcemap --out-extension:.js=.min.js",
-    "storybook": "pnpm build && storybook dev -p 6006",
-    "build-storybook": "pnpm build && storybook build"
-  },
-  "dependencies": {
-    "tailwindcss": "^3.2.7"
-  },
+  "name": "@bkbank/root",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
   "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6",
-    "@heroicons/react": "^2.0.16",
-    "@semantic-release/git": "^10.0.1",
-    "@storybook/addon-essentials": "7.0.0-beta.62",
-    "@storybook/addon-interactions": "7.0.0-beta.62",
-    "@storybook/addon-links": "7.0.0-beta.62",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/blocks": "7.0.0-beta.62",
-    "@storybook/react": "7.0.0-beta.62",
-    "@storybook/react-webpack5": "7.0.0-beta.62",
-    "@storybook/testing-library": "0.0.14-next.1",
-    "@tailwindcss/forms": "^0.5.3",
-    "autoprefixer": "^10.4.13",
-    "esbuild": "^0.17.11",
-    "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-storybook": "^0.6.11",
-    "npm-run-all": "^4.1.5",
-    "parcel": "^2.8.3",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
-    "postcss-js": "^4.0.1",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.4",
-    "process": "^0.11.10",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "semantic-release": "^20.1.1",
-    "storybook": "7.0.0-beta.62",
-    "ts-dedent": "^2.2.0",
-    "typescript": "^4.9.5",
-    "webpack": "^5.75.0"
-  },
-  "alias": {
-    "process": "process/browser.js"
+    "turbo": "^1.8.3"
   }
 }
