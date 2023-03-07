@@ -1,0 +1,41 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.avatar\` | Component | Base class |
+    | \`.avatar-sm\` | Modifier | Changes the size to small |
+    | \`.avatar-lg\` | Modifier | Changes the size to large |
+    | \`.avatar-primary\` | Modifier | Changes the color to [primary](?path=/docs/tokens-colors--page) |
+    | \`.avatar-active\` | Modifier | Defines the active state |
+    | \`img\` | Content | Styles the image inside the avatar |
+    | \`svg\`\\|\`.avatar-icon\` | Content | Styles the icon inside the avatar |
+  `}
+/>
+
+## Default
+
+<Canvas of={AvatarStories.Default} />
+
+## Sizes
+
+<Canvas of={AvatarStories.Sizes} />
+
+## Colors
+
+<Canvas of={AvatarStories.Colors} />
+
+## States
+
+<Canvas of={AvatarStories.States} />
+
+## Content Types
+
+<Canvas of={AvatarStories.ContentTypes} />

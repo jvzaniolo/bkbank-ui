@@ -1,0 +1,37 @@
+import dedent from 'ts-dedent';
+import { Canvas, Description, Meta, Story } from '@storybook/blocks';
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+# Card
+
+<Description
+  markdown={dedent`
+    | Selector | Type | Description |
+    | --- | --- | --- |
+    | \`.card\` | Component | The card component |
+    | \`.card-outline\` | Modifier | Changes the card to an outline |
+    | \`.card-filled\` | Modifier | Changes the card to a filled |
+  `}
+/>
+
+## Default
+
+<Canvas of={CardStories.Default} />
+
+## Variants
+
+<Canvas of={CardStories.Variants} />
+
+## Clickable
+
+Cards can be clickable by turning them into buttons.
+
+<Canvas of={CardStories.Clickable} />
+
+## Example
+
+This is an example of how you can use the card component with Tailwind CSS utility classes to create a more complex card.
+
+<Canvas of={CardStories.Example} />

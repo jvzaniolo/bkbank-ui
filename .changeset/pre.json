@@ -1,0 +1,14 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@bkbank/storybook": "1.0.0",
+    "eslint-config-custom": "0.0.0",
+    "@bkbank/ui": "1.2.0",
+    "@bkbank/playground": "0.0.0"
+  },
+  "changesets": [
+    "dry-penguins-dance",
+    "healthy-wolves-behave"
+  ]
+}

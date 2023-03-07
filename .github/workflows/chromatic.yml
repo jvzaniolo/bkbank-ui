@@ -12,7 +12,11 @@ jobs:
           version: 7
       - name: Install dependencies
         run: pnpm install
+      - name: Build @bkbank/ui
+        run: pnpm run build --filter @bkbank/ui
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
+          workingDir: apps/storybook
+          buildScriptName: build
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

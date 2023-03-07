@@ -1,8 +1,5 @@
-dist
 node_modules
-.parcel-dist
 .parcel-cache
-storybook-static
+.turbo
 
 .DS_Store
-yarn-error.log
