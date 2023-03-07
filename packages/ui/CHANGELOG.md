@@ -1,5 +1,11 @@
 # @bkbank/ui
 
+## 0.0.0-beta.21
+
+### Major Changes
+
+- 3c2ce3a: First major version
+
 ## 2.0.0-beta.26
 
 ### Major Changes
