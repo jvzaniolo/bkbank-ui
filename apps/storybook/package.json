@@ -5,8 +5,8 @@
   "description": "Storybook for bkbank",
   "license": "MIT",
   "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "docs": "storybook dev -p 6006",
+    "build": "storybook build"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",

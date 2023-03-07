@@ -2,8 +2,21 @@
   "name": "@bkbank/root",
   "version": "0.0.1",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "docs": "turbo run docs",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx}\""
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.4",
     "turbo": "^1.8.3"
-  }
+  },
+  "packageManager": "pnpm@7.29.0"
 }
