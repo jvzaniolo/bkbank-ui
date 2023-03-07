@@ -2,6 +2,7 @@
   "name": "@bkbank/playground",
   "private": true,
   "license": "MIT",
+  "version": "0.0.0",
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel"
