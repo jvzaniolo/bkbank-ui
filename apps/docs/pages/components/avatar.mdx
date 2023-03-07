@@ -1,0 +1,77 @@
+import { UserIcon } from '@heroicons/react/24/outline';
+
+# Avatar
+
+| Selector                | Type      | Description                                                     |
+| ----------------------- | --------- | --------------------------------------------------------------- |
+| `.avatar`               | Component | Base class                                                      |
+| `.avatar-sm`            | Modifier  | Changes the size to small                                       |
+| `.avatar-lg`            | Modifier  | Changes the size to large                                       |
+| `.avatar-primary`       | Modifier  | Changes the color to [primary](?path=/docs/tokens-colors--page) |
+| `.avatar-active`        | Modifier  | Defines the active state                                        |
+| `img`                   | Content   | Styles the image inside the avatar                              |
+| `svg` \| `.avatar-icon` | Content   | Styles the icon inside the avatar                               |
+
+## Default
+
+<div className="avatar mt-6">RM</div>
+
+```html copy
+<div class="avatar">RM</div>
+```
+
+## Sizes
+
+<div className="flex items-start mt-6 gap-5">
+  <div className="avatar avatar-sm">RM</div>
+  <div className="avatar">RM</div>
+  <div className="avatar avatar-lg">RM</div>
+</div>
+
+```html copy
+<div class="avatar avatar-sm">RM</div>
+<div class="avatar">RM</div>
+<div class="avatar avatar-lg">RM</div>
+```
+
+## Colors
+
+<div className="flex items-start mt-6 gap-5">
+  <div className="avatar">RM</div>
+  <div className="avatar avatar-primary">RM</div>
+</div>
+
+```html copy
+<div class="avatar">RM</div>
+<div class="avatar avatar-primary">RM</div>
+```
+
+## State
+
+<div className="flex items-start mt-6 gap-5">
+  <div className="avatar avatar-active">RM</div>
+  <div className="avatar avatar-primary avatar-active">RM</div>
+</div>
+
+```html copy
+<div class="avatar avatar-active">RM</div>
+<div class="avatar avatar-primary avatar-active">RM</div>
+```
+
+## Content
+
+<div className="flex items-start mt-6 gap-5">
+  <div className="avatar">RM</div>
+  <div className="avatar">
+    <UserIcon />
+  </div>
+  <div className="avatar">
+    <img src="https://avatars.githubusercontent.com/u/1178825?v=4" />
+  </div>
+</div>
+
+```html copy
+<div class="avatar">RM</div>
+<div class="avatar"><svg>...</svg></div>
+<div class="avatar"><img src="..." /></div>
+```

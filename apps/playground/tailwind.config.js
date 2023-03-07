@@ -2,7 +2,7 @@
 module.exports = {
   content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: { ...require('@bkbank/ui/theme') },
   },
-  plugins: [require('@bkbank/ui')],
+  plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
 };

@@ -1,4 +1,4 @@
-import './components/tabs';
-import './components/input';
-import './components/tag';
-import './components/textarea';
+require('./components/tabs');
+require('./components/input');
+require('./components/tag');
+require('./components/textarea');

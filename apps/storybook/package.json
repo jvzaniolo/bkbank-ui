@@ -5,7 +5,7 @@
   "description": "Storybook for bkbank",
   "license": "MIT",
   "scripts": {
-    "docs": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
     "build": "storybook build"
   },
   "devDependencies": {
