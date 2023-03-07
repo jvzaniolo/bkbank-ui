@@ -1,6 +1,7 @@
 import { Meta, Canvas } from '@storybook/blocks';
+import * as ExtendingStories from './Extending.stories';
 
-<Meta title="FAQ/Extending Styles" />
+<Meta of={ExtendingStories} />
 
 # Extending Styles
 
@@ -10,34 +11,11 @@ Every component styles can be extended with other Tailwind utility classes.
 
 ### Circular Icon Button
 
-<Canvas>
-  <button
-    type="button"
-    class="tw-btn tw-btn-icon tw-btn-solid tw-btn-primary tw-rounded-full"
-  >
-    <svg
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M4 6h16M4 12h16M4 18h16"
-      ></path>
-    </svg>
-  </button>
-</Canvas>
+<Canvas of={ExtendingStories.CircularIconButton} />
 
 ### Square Button
 
-<Canvas>
-  <button class="tw-btn tw-btn-solid tw-btn-primary tw-rounded-none">
-    Rounded
-  </button>
-</Canvas>
+<Canvas of={ExtendingStories.SquareButton} />
 
 ## Colors
 
@@ -46,28 +24,12 @@ If you need a different color for any component, you can extend its base class w
 
 ### Indigo Avatar
 
-<Canvas>
-  <div class="tw-avatar tw-avatar-md tw-bg-indigo-500 tw-text-white">JV</div>
-</Canvas>
+<Canvas of={ExtendingStories.IndigoAvatar} />
 
 ### Cancel Ghost Button
 
-<Canvas>
-  <button
-    type="button"
-    class="tw-btn hover:tw-bg-high-light active:tw-bg-high-dark tw-text-red-500 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-red-200"
-  >
-    Cancel
-  </button>
-</Canvas>
+<Canvas of={ExtendingStories.CancelGhostButton} />
 
 ### Purchase Solid Button
 
-<Canvas>
-  <button
-    type="button"
-    class="tw-btn tw-bg-emerald-500 tw-text-white hover:tw-bg-emerald-600 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-emerald-300 active:tw-bg-emerald-700"
-  >
-    Purchase
-  </button>
-</Canvas>
+<Canvas of={ExtendingStories.PurchaseSolidButton} />
