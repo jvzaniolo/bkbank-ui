@@ -2,7 +2,7 @@
 module.exports = {
   content: [{ raw: '' }],
   theme: {
-    extend: { ...require('./theme') },
+    extend: { ...require('./src/lib/theme') },
   },
   plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
 };

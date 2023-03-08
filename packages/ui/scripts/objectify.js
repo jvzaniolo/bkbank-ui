@@ -9,18 +9,18 @@ function objectify(filePath) {
   return postcssJs.objectify(root);
 }
 
-const files = fs.readdirSync(path.resolve(__dirname, '../dist'));
+const files = fs.readdirSync(path.resolve(__dirname, '../lib'));
 
 const jsFiles = files
   .filter((file) => file.endsWith('.css'))
   .map((file) => ({
     name: file.concat('.js'),
-    content: objectify(`../dist/${file}`),
+    content: objectify(`../lib/${file}`),
   }));
 
 jsFiles.forEach((file) =>
   fs.writeFileSync(
-    path.resolve(__dirname, `../dist/${file.name}`),
+    path.resolve(__dirname, `../lib/${file.name}`),
     `module.exports = ${JSON.stringify(file.content, null, 2)}`,
   ),
 );

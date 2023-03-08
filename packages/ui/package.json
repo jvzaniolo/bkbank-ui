@@ -3,11 +3,12 @@
   "version": "0.0.0-beta.21",
   "description": "BK Bank's Design System as a TailwindCSS plugin.",
   "main": "index.js",
+  "source": "src/index.html",
   "license": "ISC",
   "files": [
     "index.js",
     "theme.js",
-    "dist"
+    "lib"
   ],
   "repository": {
     "type": "git",
@@ -24,19 +25,23 @@
   },
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
   "scripts": {
+    "dev": "parcel",
     "build": "run-s build:**",
-    "build:css": "postcss src/*.css --dir dist",
+    "build:css": "postcss src/lib/*.css --dir lib",
     "build:css-to-js": "node ./scripts/objectify.js",
-    "build:minify:js": "esbuild --bundle ./src/scripts.js --outdir=dist --minify --sourcemap --out-extension:.js=.min.js"
+    "build:minify:js": "esbuild --bundle ./src/lib/*.js --outdir=lib --minify --sourcemap --out-extension:.js=.min.js",
+    "release": "changeset version && changeset publish"
   },
   "dependencies": {
     "tailwindcss": "^3.2.7"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.13",
     "esbuild": "^0.17.11",
     "npm-run-all": "^4.1.5",
+    "parcel": "^2.8.3",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",

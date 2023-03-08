@@ -5,17 +5,16 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "docs": "turbo run docs",
+    "dev:ui": "turbo run dev --filter @bkbank/ui",
+    "dev:docs": "turbo run dev --filter @bkbank/docs",
+    "dev:react": "turbo run dev --filter @bkbank/react",
     "storybook": "turbo run storybook",
     "lint": "turbo run lint",
-    "release": "turbo run release && changeset publish",
+    "release": "turbo run release",
     "format": "prettier --write \"**/*.{css,js,jsx,ts,tsx,md,mdx}\""
   },
   "engines": {
     "node": ">=14.0.0"
-  },
-  "dependencies": {
-    "@changesets/cli": "^2.26.0"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",

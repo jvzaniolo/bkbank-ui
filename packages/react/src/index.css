@@ -1,4 +1,4 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import '../node_modules/@bkbank/ui/src/components.css';
+@import '@bkbank/ui/src/components';
 @import 'tailwindcss/utilities';
