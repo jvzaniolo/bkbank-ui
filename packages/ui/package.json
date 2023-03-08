@@ -29,7 +29,7 @@
     "build": "run-s build:**",
     "build:css": "postcss src/lib/*.css --dir lib",
     "build:css-to-js": "node ./scripts/objectify.js",
-    "build:minify:js": "esbuild --bundle ./src/lib/*.js --outdir=lib --minify --sourcemap --out-extension:.js=.min.js",
+    "build:minify:js": "esbuild --bundle ./src/lib/scripts.js --outdir=lib --minify --sourcemap --out-extension:.js=.min.js",
     "release": "changeset version && changeset publish"
   },
   "dependencies": {
