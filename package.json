@@ -5,6 +5,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "docs": "turbo run docs",
     "storybook": "turbo run storybook",
     "lint": "turbo run lint",
     "release": "turbo run release && changeset publish",

@@ -9,6 +9,9 @@
     "dev": {
       "cache": false
     },
+    "docs": {
+      "cache": false
+    },
     "storybook": {
       "dependsOn": ["^build"],
       "cache": false
