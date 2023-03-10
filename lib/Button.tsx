@@ -24,7 +24,7 @@ export const StyledButton = twStyled('button', [
         outline:
           'border bg-transparent hover:text-white disabled:bg-high-medium disabled:text-high-dark disabled:border-high-medium',
         ghost:
-          'border-transparent bg-transparent hover:bg-high-light hover:border-transparent active:bg-high-medium disabled:text-high-dark disabled:border-transparent disabled:hover:bg-transparent',
+          'border-transparent bg-transparent hover:bg-high-light hover:border-transparent active:bg-high-medium active:border-transparent disabled:text-high-dark disabled:border-transparent disabled:hover:bg-transparent',
       },
     },
     compoundVariants: [

@@ -1,16 +1,20 @@
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>BK Bank UI</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/jvzaniolo/bkbank-ui/',
   },
+  nextThemes: {
+    defaultTheme: 'light',
+  },
+  darkMode: false,
   chat: {
-    link: 'https://discord.com',
+    // link: 'https://discord.com',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/jvzaniolo/bkbank-ui/',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'BK Bank - Design System Documentation',
   },
 }
 

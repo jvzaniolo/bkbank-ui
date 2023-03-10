@@ -2,6 +2,8 @@ import { Button } from '~/Button'
 
 # Button
 
+The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.
+
 <div className="docs-container">
   <Button>Button</Button>
 </div>
@@ -10,9 +12,7 @@ import { Button } from '~/Button'
 <Button>Button</Button>
 ```
 
-## Sizes
-
-The size of the button. Can be `sm`, `md`, or `lg`. The default is `sm`.
+## Size
 
 <div className="docs-container">
   <Button size="sm">Small</Button>
@@ -26,9 +26,7 @@ The size of the button. Can be `sm`, `md`, or `lg`. The default is `sm`.
 <Button size="lg">Large</Button>
 ```
 
-## Variants
-
-The variant of the button. Can be `solid`, `outline`, or `ghost`. The default is `solid`.
+## Variant
 
 <div className="docs-container">
   <Button variant="solid">Solid</Button>
@@ -42,9 +40,7 @@ The variant of the button. Can be `solid`, `outline`, or `ghost`. The default is
 <Button variant="ghost">Ghost</Button>
 ```
 
-## Colors
-
-The color of the button. Can be `primary`, or `secondary`. The default is `primary`.
+## Color
 
 <div className="docs-container">
   <Button color="primary">Primary</Button>
@@ -58,8 +54,6 @@ The color of the button. Can be `primary`, or `secondary`. The default is `prima
 
 ## Loading
 
-Whether the button is loading or not.
-
 <div className="docs-container">
   <Button isLoading>Button</Button>
 </div>
@@ -70,8 +64,6 @@ Whether the button is loading or not.
 
 ## Disabled
 
-Disables the button.
-
 <div className="docs-container">
   <Button disabled>Button</Button>
 </div>
@@ -80,12 +72,41 @@ Disables the button.
 <Button disabled>Button</Button>
 ```
 
-## Props
+## API
 
-| Name        | Type      | Default   | Description                                                      |
-| ----------- | --------- | --------- | ---------------------------------------------------------------- |
-| `size`      | `string`  | `sm`      | The size of the button. Can be `sm`, `md`, or `lg`               |
-| `variant`   | `string`  | `solid`   | The variant of the button. Can be `solid`, `outline`, or `ghost` |
-| `color`     | `string`  | `primary` | The color of the button. Can be `primary`, or `secondary`        |
-| `isLoading` | `boolean` | `false`   | Whether the button is loading or not                             |
-| `disabled`  | `boolean` | `false`   | Disables the button                                              |
+The Button component accepts the following props:
+
+### `size` (optional)
+
+The size of the button.
+
+- Type: `'sm' | 'md' | 'lg'`
+- Default: `'sm'`
+
+### `variant` (optional)
+
+The variant of the button.
+
+- Type: `'solid' | 'outline' | 'ghost'`
+- Default: `'solid'`
+
+### `color` (optional)
+
+The color of the button.
+
+- Type: `'primary' | 'secondary'`
+- Default: `'primary'`
+
+### `isLoading` (optional)
+
+Whether the button is loading or not.
+
+- Type: `boolean`
+- Default: `false`
+
+### `disabled` (optional)
+
+Disables the button.
+
+- Type: `boolean`
+- Default: `false`
