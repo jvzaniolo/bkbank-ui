@@ -34,29 +34,29 @@ function TabsProvider({ size, children }: { size: VariantProps<typeof tabs>['siz
   return <TabsContext.Provider value={{ classes }}>{children}</TabsContext.Provider>
 }
 
-export const TabsRoot = React.forwardRef<HTMLDivElement, VariantProps<typeof tabs> & Tabs.TabsProps>(
+export const Root = React.forwardRef<HTMLDivElement, VariantProps<typeof tabs> & Tabs.TabsProps>(
   (props, forwardedRef) => (
     <TabsProvider size={props.size}>
       <Tabs.Root ref={forwardedRef} className={tabs().tabsRoot()} {...props} />
     </TabsProvider>
   )
 )
-TabsRoot.displayName = 'TabsRoot'
+Root.displayName = 'TabsRoot'
 
-export const TabsList = React.forwardRef<HTMLDivElement, Tabs.TabsListProps>((props, forwardedRef) => {
+export const List = React.forwardRef<HTMLDivElement, Tabs.TabsListProps>((props, forwardedRef) => {
   const { classes } = React.useContext(TabsContext)!
   return <Tabs.List ref={forwardedRef} className={classes.tabsList()} {...props} />
 })
-TabsList.displayName = 'TabsList'
+List.displayName = 'TabsList'
 
-export const TabsTrigger = React.forwardRef<HTMLButtonElement, Tabs.TabsTriggerProps>((props, forwardedRef) => {
+export const Trigger = React.forwardRef<HTMLButtonElement, Tabs.TabsTriggerProps>((props, forwardedRef) => {
   const { classes } = React.useContext(TabsContext)!
   return <Tabs.Trigger ref={forwardedRef} className={classes.tabsTrigger()} {...props} />
 })
-TabsTrigger.displayName = 'TabsTrigger'
+Trigger.displayName = 'TabsTrigger'
 
-export const TabsContent = React.forwardRef<HTMLDivElement, Tabs.TabsContentProps>((props, forwardedRef) => {
+export const Content = React.forwardRef<HTMLDivElement, Tabs.TabsContentProps>((props, forwardedRef) => {
   const { classes } = React.useContext(TabsContext)!
   return <Tabs.Content ref={forwardedRef} className={classes.tabsContent()} {...props} />
 })
-TabsContent.displayName = 'TabsContent'
+Content.displayName = 'TabsContent'

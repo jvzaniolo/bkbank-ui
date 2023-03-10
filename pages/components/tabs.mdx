@@ -1,4 +1,4 @@
-import { TabsRoot, TabsList, TabsTrigger, TabsContent } from '~/Tabs'
+import * as Tabs from '~/Tabs'
 
 # Tabs
 
@@ -7,29 +7,29 @@ A set of layered sections of content—known as tab panels—that are displayed 
 See [Tabs - Radix UI](https://www.radix-ui.com/docs/primitives/components/tabs/) for the full documentation.
 
 <div className="docs-container">
-  <TabsRoot defaultValue="tab1">
-    <TabsList>
-      <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-      <TabsTrigger value="tab2">Tab 2</TabsTrigger>
-      <TabsTrigger value="tab3">Tab 3</TabsTrigger>
-    </TabsList>
-    <TabsContent value="tab1">Content 1</TabsContent>
-    <TabsContent value="tab2">Content 2</TabsContent>
-    <TabsContent value="tab3">Content 3</TabsContent>
-  </TabsRoot>
+  <Tabs.Root defaultValue="tab1">
+    <Tabs.List>
+      <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+      <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+      <Tabs.Trigger value="tab3">Tab 3</Tabs.Trigger>
+    </Tabs.List>
+    <Tabs.Content value="tab1">Content 1</Tabs.Content>
+    <Tabs.Content value="tab2">Content 2</Tabs.Content>
+    <Tabs.Content value="tab3">Content 3</Tabs.Content>
+  </Tabs.Root>
 </div>
 
 ```jsx copy
-// import { TabsRoot, TabsList, TabsTrigger, TabsContent } from '@bkbank/ui'
+// import * as Tabs from '@bkbank/ui'
 
-<TabsRoot defaultValue="tab1">
-  <TabsList>
-    <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-    <TabsTrigger value="tab2">Tab 2</TabsTrigger>
-  </TabsList>
-  <TabsContent value="tab1">Content 1</TabsContent>
-  <TabsContent value="tab3">Content 3</TabsContent>
-</TabsRoot>
+<Tabs.Root defaultValue="tab1">
+  <Tabs.List>
+    <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+    <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+  </Tabs.List>
+  <Tabs.Content value="tab1">Content 1</Tabs.Content>
+  <Tabs.Content value="tab3">Content 3</Tabs.Content>
+</Tabs.Root>
 ```
 
 ## Sizes
@@ -37,43 +37,43 @@ See [Tabs - Radix UI](https://www.radix-ui.com/docs/primitives/components/tabs/)
 The size of the Tabs. Can be `md`, or `lg`. Default is `md`.
 
 <div className="docs-container">
-  <TabsRoot defaultValue="tab1">
-    <TabsList>
-      <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-      <TabsTrigger value="tab2">Tab 2</TabsTrigger>
-    </TabsList>
-    <TabsContent value="tab1">Content 1</TabsContent>
-    <TabsContent value="tab2">Content 2</TabsContent>
-  </TabsRoot>
+  <Tabs.Root defaultValue="tab1">
+    <Tabs.List>
+      <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+      <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+    </Tabs.List>
+    <Tabs.Content value="tab1">Content 1</Tabs.Content>
+    <Tabs.Content value="tab2">Content 2</Tabs.Content>
+  </Tabs.Root>
 
-  <TabsRoot size="lg" defaultValue="tab1">
-    <TabsList>
-      <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-      <TabsTrigger value="tab2">Tab 2</TabsTrigger>
-    </TabsList>
-    <TabsContent value="tab1">Content 1</TabsContent>
-    <TabsContent value="tab2">Content 2</TabsContent>
-  </TabsRoot>
+  <Tabs.Root size="lg" defaultValue="tab1">
+    <Tabs.List>
+      <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+      <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+    </Tabs.List>
+    <Tabs.Content value="tab1">Content 1</Tabs.Content>
+    <Tabs.Content value="tab2">Content 2</Tabs.Content>
+  </Tabs.Root>
 </div>
 
 ```jsx copy {3, 12}
-// import { TabsRoot, TabsList, TabsTrigger, TabsContent } from '@bkbank/ui'
+// import * as Tabs from '@bkbank/ui'
 
-<TabsRoot size="md" defaultValue="tab1">
-  <TabsList>
-    <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-    <TabsTrigger value="tab2">Tab 2</TabsTrigger>
-  </TabsList>
-  <TabsContent value="tab1">Content 1</TabsContent>
-  <TabsContent value="tab2">Content 2</TabsContent>
-</TabsRoot>
+<Tabs.Root size="md" defaultValue="tab1">
+  <Tabs.List>
+    <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+    <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+  </Tabs.List>
+  <Tabs.Content value="tab1">Content 1</Tabs.Content>
+  <Tabs.Content value="tab2">Content 2</Tabs.Content>
+</Tabs.Root>
 
-<TabsRoot size="lg" defaultValue="tab1">
-  <TabsList>
-    <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-    <TabsTrigger value="tab2">Tab 2</TabsTrigger>
-  </TabsList>
-  <TabsContent value="tab1">Content 1</TabsContent>
-  <TabsContent value="tab2">Content 2</TabsContent>
-</TabsRoot>
+<Tabs.Root size="lg" defaultValue="tab1">
+  <Tabs.List>
+    <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+    <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+  </Tabs.List>
+  <Tabs.Content value="tab1">Content 1</Tabs.Content>
+  <Tabs.Content value="tab2">Content 2</Tabs.Content>
+</Tabs.Root>
 ```

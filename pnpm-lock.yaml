@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/react': ^2.0.16
+  '@radix-ui/react-avatar': ^1.0.2
   '@radix-ui/react-tabs': ^1.0.3
   '@types/node': 18.11.10
   '@types/react': ^18.0.28
@@ -24,6 +26,8 @@ specifiers:
   typescript: ^4.9.3
 
 dependencies:
+  '@heroicons/react': 2.0.16_react@18.2.0
+  '@radix-ui/react-avatar': 1.0.2_biqbaboplfbrettd7655fr4n2y
   '@radix-ui/react-tabs': 1.0.3_biqbaboplfbrettd7655fr4n2y
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
   nextra: 2.2.19_ld2jel3hspngo3u5lti2kgl2sq
@@ -89,6 +93,14 @@ packages:
       client-only: 0.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@heroicons/react/2.0.16_react@18.2.0:
+    resolution: {integrity: sha512-x89rFxH3SRdYaA+JCXwfe+RkE1SFTo9GcOkZettHer71Y3T7V+ogKmfw5CjTazgS3d0ClJ7p1NA+SP7VQLQcLw==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
@@ -408,6 +420,21 @@ packages:
     resolution: {integrity: sha512-3e7rn8FDMin4CgeL7Z/49smCA3rFYY3Ha2rUQ7HRWFadS5iCRw08ZgVT1LaNTCNqgvrUiyczLflrVrF0SRQtNA==}
     dependencies:
       '@babel/runtime': 7.21.0
+    dev: false
+
+  /@radix-ui/react-avatar/1.0.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-XRL8z2l9V7hRLCPjHWg/34RBPZUGpmOjmsRSNvIh2DI28GyIWDChbcsDUVc63MzOItk6Q83Ob2KK8k2FUlXlGA==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@radix-ui/react-context': 1.0.0_react@18.2.0
+      '@radix-ui/react-primitive': 1.0.2_biqbaboplfbrettd7655fr4n2y
+      '@radix-ui/react-use-callback-ref': 1.0.0_react@18.2.0
+      '@radix-ui/react-use-layout-effect': 1.0.0_react@18.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@radix-ui/react-collection/1.0.2_biqbaboplfbrettd7655fr4n2y:
