@@ -7,10 +7,12 @@
       "outputs": ["dist/**", "storybook-static/**"]
     },
     "dev": {
-      "dependsOn": ["^build"],
       "cache": false
     },
     "docs": {
+      "cache": false
+    },
+    "storybook": {
       "dependsOn": ["^build"],
       "cache": false
     },

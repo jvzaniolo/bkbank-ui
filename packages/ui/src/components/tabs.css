@@ -1,18 +1,36 @@
-.tabs .tab-list {
-  @apply flex;
-}
+.tabs {
+  &-list {
+    @apply flex;
+  }
 
-.tabs .tab {
-  @apply flex items-center gap-3 border-b-2 border-high-medium px-4 py-2 text-sm font-medium leading-normal text-low-medium hover:border-high-dark hover:bg-high-light hover:text-low-dark focus:z-10 focus:outline-none focus:ring-2 focus:ring-primary-lighter active:border-high-dark active:bg-high-medium active:text-black disabled:cursor-not-allowed disabled:border-high-dark disabled:text-high-dark disabled:hover:bg-transparent;
-}
-.tabs.tabs-md .tab {
-  @apply py-4 text-base;
-}
+  &-trigger {
+    @apply flex items-center gap-2 border-b-2 border-high-medium text-low-medium text-sm leading-normal font-medium hover:border-high-dark hover:bg-high-light hover:text-low-dark focus:z-10 focus:outline-none focus:ring-2 focus:ring-primary-lighter active:border-high-dark active:bg-high-medium active:text-black disabled:cursor-not-allowed disabled:border-high-dark disabled:text-high-dark disabled:hover:bg-transparent;
 
-.tabs .tab.tab-active {
-  @apply border-primary-medium text-primary-pure;
-}
+    &[aria-selected='true'] {
+      @apply border-primary-medium text-primary-pure;
+    }
+  }
 
-.tabs .tab-content {
-  @apply hidden p-3;
+  &-content {
+    @apply p-3;
+  }
+
+  &-md {
+    .tabs-trigger {
+      @apply py-2 px-4;
+
+      svg {
+        @apply w-2.5 h-2.5 m-1;
+      }
+    }
+  }
+  &-lg {
+    .tabs-trigger {
+      @apply p-4;
+
+      svg {
+        @apply w-3 h-3 m-1;
+      }
+    }
+  }
 }

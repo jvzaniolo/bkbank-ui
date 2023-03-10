@@ -1,0 +1,28 @@
+# Input
+
+## Default
+
+<input type="text" className="input dark:bg-transparent" />
+
+## Floating Label
+
+<label className="relative block mt-6">
+  <input
+    type="text"
+    placeholder="Floating label example"
+    className="input dark:bg-transparent dark:text-white dark:placeholder:text-neutral-400"
+  />
+  <span
+    className="input-label dark:bg-[rgb(17,17,17)] dark:text-white"
+    data-label="float"
+  >
+    Floating label
+  </span>
+</label>
+
+```html copy
+<label class="relative block">
+  <input type="text" class="input" />
+  <span class="input-label" data-label="float">Floating label</span>
+</label>
+```

@@ -1,77 +1,72 @@
 .btn {
-  @apply bg-high-light text-primary-pure flex items-center gap-2 rounded py-2 px-6 text-sm font-medium leading-none;
+  @apply rounded border inline-flex gap-2 items-center justify-center font-medium focus:outline-none focus:ring-2 focus:ring-primary-lighter;
 
-  svg,
-  i {
-    @apply h-4 w-4;
+  svg {
+    @apply w-[1em] h-[1em];
   }
 
-  &.btn-md {
-    @apply py-3 leading-normal;
-    svg,
-    i {
-      @apply h-5 w-5;
+  /* Size */
+  &-sm {
+    @apply text-sm px-6 py-2 leading-none;
+  }
+  &-md {
+    @apply text-sm px-6 py-3 leading-normal;
+  }
+  &-lg {
+    @apply text-base px-6 py-4 leading-normal;
+  }
+
+  /* State */
+  &-loading {
+    @apply cursor-wait pointer-events-none;
+
+    svg {
+      @apply animate-spin;
     }
   }
 
-  &.btn-lg {
-    @apply py-4 text-base leading-normal;
-    svg,
-    i {
-      @apply h-6 w-6;
-    }
+  /* Color */
+  &-primary {
+    @apply bg-primary-pure border-primary-pure text-primary-pure hover:bg-primary-medium hover:border-primary-medium active:bg-primary-dark active:border-primary-dark;
+  }
+  &-secondary {
+    @apply bg-secondary-pure border-secondary-pure text-secondary-pure hover:bg-secondary-medium hover:border-secondary-medium active:bg-secondary-dark active:border-secondary-dark;
   }
 
-  &.btn-icon {
-    @apply p-2;
-    svg,
-    i {
-      @apply h-4 w-4;
-    }
+  /* Variant */
+  &-solid {
+    @apply text-white disabled:bg-high-medium disabled:text-high-dark;
+  }
+  &-outline {
+    @apply border bg-transparent hover:text-white disabled:bg-high-medium disabled:text-high-dark disabled:border-high-medium;
+  }
+  &-ghost {
+    @apply border-transparent bg-transparent hover:bg-high-light hover:border-transparent active:bg-high-medium disabled:text-high-dark;
+  }
 
+  /* Compound Variant */
+  &-solid.btn-loading {
+    @apply text-secondary-lighter;
+  }
+
+  /* Derived Component */
+  &-icon {
+    &.btn-sm {
+      @apply p-2;
+    }
     &.btn-md {
       @apply p-3;
-      svg,
-      i {
-        @apply h-5 w-5;
+
+      svg {
+        @apply w-[21px] h-[21px];
       }
     }
-
     &.btn-lg {
-      @apply p-4;
-      svg,
-      i {
-        @apply h-6 w-6;
+      @apply p-3;
+
+      svg {
+        @apply w-6 h-6;
       }
-    }
-  }
-
-  &.btn-primary {
-    @apply bg-primary-pure hover:bg-primary-medium focus:ring-primary-lighter active:bg-primary-dark disabled:bg-high-medium disabled:text-high-dark text-white focus:outline-none focus:ring-2;
-  }
-  &.btn-secondary {
-    @apply bg-secondary-pure hover:bg-secondary-medium focus:ring-secondary-light active:bg-secondary-dark disabled:bg-high-medium disabled:text-high-dark text-white focus:outline-none focus:ring-2;
-  }
-
-  &.btn-outline {
-    @apply border bg-transparent focus:outline-none focus:ring-2;
-
-    &.btn-primary {
-      @apply border-primary-pure text-primary-pure hover:bg-primary-medium focus:ring-primary-lighter active:bg-primary-dark disabled:border-high-dark disabled:text-high-dark hover:text-white disabled:bg-transparent;
-    }
-    &.btn-secondary {
-      @apply border-secondary-pure text-secondary-pure hover:bg-secondary-medium focus:ring-secondary-light active:bg-secondary-dark disabled:border-high-dark disabled:text-high-dark hover:text-white disabled:bg-transparent;
-    }
-  }
-
-  &.btn-ghost {
-    @apply bg-transparent focus:outline-none focus:ring-2;
-
-    &.btn-primary {
-      @apply text-primary-pure hover:bg-high-light focus:ring-primary-lighter active:bg-high-dark disabled:text-high-dark disabled:bg-transparent;
-    }
-    &.btn-secondary {
-      @apply text-secondary-pure hover:bg-high-light focus:ring-secondary-light active:bg-high-dark disabled:text-high-dark disabled:bg-transparent;
     }
   }
 }
