@@ -1,0 +1,72 @@
+.btn {
+  @apply rounded border inline-flex gap-2 items-center justify-center font-medium focus:outline-none focus:ring-2 focus:ring-primary-lighter;
+
+  svg {
+    @apply w-[1em] h-[1em];
+  }
+
+  /* Size */
+  &-sm {
+    @apply text-sm px-6 py-2 leading-none;
+  }
+  &-md {
+    @apply text-sm px-6 py-3 leading-normal;
+  }
+  &-lg {
+    @apply text-base px-6 py-4 leading-normal;
+  }
+
+  /* State */
+  &-loading {
+    @apply cursor-wait pointer-events-none;
+
+    svg {
+      @apply animate-spin;
+    }
+  }
+
+  /* Color */
+  &-primary {
+    @apply bg-primary-pure border-primary-pure text-primary-pure hover:bg-primary-medium hover:border-primary-medium active:bg-primary-dark active:border-primary-dark;
+  }
+  &-secondary {
+    @apply bg-secondary-pure border-secondary-pure text-secondary-pure hover:bg-secondary-medium hover:border-secondary-medium active:bg-secondary-dark active:border-secondary-dark;
+  }
+
+  /* Variant */
+  &-solid {
+    @apply text-white disabled:bg-high-medium disabled:text-high-dark;
+  }
+  &-outline {
+    @apply border bg-transparent hover:text-white disabled:bg-high-medium disabled:text-high-dark disabled:border-high-medium;
+  }
+  &-ghost {
+    @apply border-transparent bg-transparent hover:bg-high-light hover:border-transparent active:bg-high-medium disabled:text-high-dark;
+  }
+
+  /* Compound Variant */
+  &-solid.btn-loading {
+    @apply text-secondary-lighter;
+  }
+
+  /* Derived Component */
+  &-icon {
+    &.btn-sm {
+      @apply p-2;
+    }
+    &.btn-md {
+      @apply p-3;
+
+      svg {
+        @apply w-[21px] h-[21px];
+      }
+    }
+    &.btn-lg {
+      @apply p-3;
+
+      svg {
+        @apply w-6 h-6;
+      }
+    }
+  }
+}

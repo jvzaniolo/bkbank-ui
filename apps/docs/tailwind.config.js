@@ -3,7 +3,7 @@ module.exports = {
   darkMode: 'class',
   content: ['./pages/**/*.{md,mdx}', './components/**/*.{ts,tsx}'],
   theme: {
-    extend: { ...require('@bkbank/ui/theme') },
+    extend: {},
   },
-  plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
-};
+  plugins: [require('@bkbank/ui')],
+}

@@ -3,7 +3,6 @@
   "version": "0.0.0-beta.21",
   "description": "BK Bank's Design System as a TailwindCSS plugin.",
   "main": "index.js",
-  "source": "src/index.html",
   "license": "ISC",
   "files": [
     "index.js",
@@ -27,9 +26,8 @@
   "scripts": {
     "dev": "parcel",
     "build": "run-s build:**",
-    "build:css": "postcss src/lib/*.css --dir lib",
+    "build:css": "postcss src/*.css --dir lib",
     "build:css-to-js": "node ./scripts/objectify.js",
-    "build:minify:js": "esbuild --bundle ./src/lib/scripts.js --outdir=lib --minify --sourcemap --out-extension:.js=.min.js",
     "release": "changeset version && changeset publish"
   },
   "dependencies": {
@@ -39,7 +37,6 @@
     "@changesets/cli": "^2.26.0",
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.13",
-    "esbuild": "^0.17.11",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.8.3",
     "postcss": "^8.4.21",

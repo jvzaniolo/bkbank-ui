@@ -1,0 +1,45 @@
+.avatar {
+  @apply bg-high-light text-primary-pure relative flex h-10 w-10 items-center justify-center rounded-full text-xs font-medium leading-normal;
+
+  svg,
+  .avatar-icon {
+    @apply h-6 w-6;
+  }
+  img {
+    @apply h-full w-full rounded-full object-cover;
+  }
+
+  &.avatar-primary {
+    @apply bg-primary-pure text-white;
+  }
+
+  &.avatar-active {
+    @apply border-highlight-pure after:bg-highlight-pure border after:absolute after:right-0 after:bottom-0 after:h-3 after:w-3 after:rounded-full;
+  }
+
+  &.avatar-sm {
+    @apply text-2xs h-6 w-6;
+
+    svg,
+    .avatar-icon {
+      @apply h-4 w-4;
+    }
+
+    &.avatar-active {
+      @apply after:h-2 after:w-2;
+    }
+  }
+
+  &.avatar-lg {
+    @apply h-16 w-16 text-xl leading-tight;
+
+    svg,
+    .avatar-icon {
+      @apply h-8 w-8;
+    }
+
+    &.avatar-active {
+      @apply after:h-4 after:w-4;
+    }
+  }
+}

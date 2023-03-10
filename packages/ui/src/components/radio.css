@@ -1,0 +1,25 @@
+.radio {
+  /* uses _base-form.css */
+  @apply form-radio;
+
+  & ~ .radio-label {
+    @apply text-low-dark ml-3 text-sm font-medium leading-normal;
+  }
+
+  &:checked ~ .radio-label {
+    @apply text-black;
+  }
+
+  &:disabled ~ .radio-label {
+    @apply text-high-dark;
+  }
+
+  &.radio-invalid:not(:disabled),
+  &:invalid:not(:disabled) {
+    @apply border-error-pure text-error-pure;
+
+    & ~ .radio-label {
+      @apply text-error-pure;
+    }
+  }
+}
