@@ -1,69 +1,23 @@
-# BK Bank UI
+# Nextra Docs Template 
 
-BK Bank's Design System written as a TailwindCSS plugin.
+This is a template for creating documentation with [Nextra](https://nextra.site).
 
-## Installation
+[**Live Demo →**](https://nextra-docs-template.vercel.app)
 
-First, set up your project to use [Tailwind CSS](https://tailwindcss.com/docs/installation).
+[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
 
-Then, install the design system as a dev dependency:
+## Quick Start
 
-```bash
-npm install -D @bkbank/ui
-```
+Click the button to clone this repository and deploy it on Vercel:
 
-In your `tailwind.config.js` file, import the design system plugin.
+[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
 
-```js
-// tailwind.config.js
-module.exports {
-  /** ... */
-  plugins: [require("@bkbank/ui")],
-}
-```
+## Local Development
 
-See [Tailwind CSS Plugins](https://tailwindcss.com/docs/plugins) for more information.
+First, run `pnpm i` to install the dependencies.
 
-## Development
+Then, run `pnpm dev` to start the development server and visit localhost:3000.
 
-To develop the design system, clone the repository and install the dependencies:
+## License
 
-```bash
-npm install
-```
-
-Then, run the Storybook server:
-
-```bash
-npm run storybook
-```
-
-Write your CSS with Tailwind `@apply` syntax in `packages/core/{base|components|utilities}`.
-
-Add them to the `index.js` file in their respective functions.
-
-Then, create a build command to transform the CSS with Tailwind into pure CSS.
-
-For example,
-
-```json
-{
-  "scripts": {
-    "build:utilities": "postcss --config packages/core packages/core/utilities/index.css -o dist/utilities.css"
-  }
-}
-```
-
-## Building
-
-To build the design system, run the following command:
-
-```bash
-npm run build
-```
-
-That will run the build commands for each package.
-
-## Issues
-
-Found something wrong? Please let us know by creating an issue on [GitHub](https://github.com/jvzaniolo/bkbank-ui/issues).
+This project is licensed under the MIT License.

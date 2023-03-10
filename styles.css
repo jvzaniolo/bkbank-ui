@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .docs-container {
+    @apply mt-6 flex items-start gap-6 justify-center w-full p-12 rounded-xl shadow-lg;
+  }
+}

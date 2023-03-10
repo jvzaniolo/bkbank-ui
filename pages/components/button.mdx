@@ -1,0 +1,91 @@
+import { Button } from '~/Button'
+
+# Button
+
+<div className="docs-container">
+  <Button>Button</Button>
+</div>
+
+```jsx copy
+<Button>Button</Button>
+```
+
+## Sizes
+
+The size of the button. Can be `sm`, `md`, or `lg`. The default is `sm`.
+
+<div className="docs-container">
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+</div>
+
+```jsx copy
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+```
+
+## Variants
+
+The variant of the button. Can be `solid`, `outline`, or `ghost`. The default is `solid`.
+
+<div className="docs-container">
+  <Button variant="solid">Solid</Button>
+  <Button variant="outline">Outline</Button>
+  <Button variant="ghost">Ghost</Button>
+</div>
+
+```jsx copy
+<Button variant="solid">Solid</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="ghost">Ghost</Button>
+```
+
+## Colors
+
+The color of the button. Can be `primary`, or `secondary`. The default is `primary`.
+
+<div className="docs-container">
+  <Button color="primary">Primary</Button>
+  <Button color="secondary">Secondary</Button>
+</div>
+
+```jsx copy
+<Button color="primary">Primary</Button>
+<Button color="secondary">Secondary</Button>
+```
+
+## Loading
+
+Whether the button is loading or not.
+
+<div className="docs-container">
+  <Button isLoading>Button</Button>
+</div>
+
+```jsx copy
+<Button isLoading>Button</Button>
+```
+
+## Disabled
+
+Disables the button.
+
+<div className="docs-container">
+  <Button disabled>Button</Button>
+</div>
+
+```jsx copy
+<Button disabled>Button</Button>
+```
+
+## Props
+
+| Name        | Type      | Default   | Description                                                      |
+| ----------- | --------- | --------- | ---------------------------------------------------------------- |
+| `size`      | `string`  | `sm`      | The size of the button. Can be `sm`, `md`, or `lg`               |
+| `variant`   | `string`  | `solid`   | The variant of the button. Can be `solid`, `outline`, or `ghost` |
+| `color`     | `string`  | `primary` | The color of the button. Can be `primary`, or `secondary`        |
+| `isLoading` | `boolean` | `false`   | Whether the button is loading or not                             |
+| `disabled`  | `boolean` | `false`   | Disables the button                                              |

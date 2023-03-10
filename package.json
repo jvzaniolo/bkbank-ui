@@ -1,16 +1,12 @@
 {
   "name": "@bkbank/ui",
-  "version": "1.1.1",
+  "version": "0.0.0",
   "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
   "main": "index.js",
   "scripts": {
-    "build": "run-p build:**",
-    "build:base": "postcss --config packages/core packages/core/base/index.css -o dist/base.css",
-    "build:components": "postcss --config packages/core packages/core/components/index.css -o dist/components.css",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "release": "yarn build && yarn publish --access public",
-    "semantic-release": "semantic-release"
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +14,6 @@
   },
   "keywords": [
     "tailwindcss",
-    "plugin",
     "design-system"
   ],
   "author": "joao.zaniolo",
@@ -27,37 +22,29 @@
     "url": "https://github.com/jvzaniolo/bkbank-ui/issues"
   },
   "homepage": "https://github.com/jvzaniolo/bkbank-ui#readme",
-  "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@semantic-release/git": "^10.0.1",
-    "@storybook/addon-actions": "^7.0.0-beta.52",
-    "@storybook/addon-essentials": "^7.0.0-beta.52",
-    "@storybook/addon-interactions": "^7.0.0-beta.52",
-    "@storybook/addon-links": "^7.0.0-beta.52",
-    "@storybook/addon-styling": "^0.1.0",
-    "@storybook/html-vite": "^7.0.0-beta.52",
-    "@storybook/testing-library": "^0.0.14-next.1",
-    "@tailwindcss/forms": "^0.5.3",
-    "autoprefixer": "^10.4.13",
-    "clsx": "^1.2.1",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-storybook": "^0.6.10",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.3",
+  "dependencies": {
+    "@radix-ui/react-tabs": "^1.0.3",
+    "next": "^13.0.6",
+    "nextra": "latest",
+    "nextra-theme-docs": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "semantic-release": "^20.1.0",
-    "storybook": "^7.0.0-beta.52",
-    "vite": "^4.1.3"
+    "tailwind-styled": "^0.0.1",
+    "tailwind-variants": "^0.0.31"
   },
-  "dependencies": {
-    "@fontsource/montserrat": "^4.5.14",
-    "postcss-js": "^4.0.1",
-    "tailwindcss": "^3.2.7"
+  "devDependencies": {
+    "@types/node": "18.11.10",
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-react": "^7.32.2",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.4",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.3"
   }
 }

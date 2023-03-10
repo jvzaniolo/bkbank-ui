@@ -1,5 +1,4 @@
 {
-  "cSpell.words": ["clsx"],
-  "editor.wordWrap": "on",
-  "tailwindCSS.experimental.classRegex": ["'@apply ([^']+)'"]
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120
 }
