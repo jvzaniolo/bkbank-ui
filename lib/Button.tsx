@@ -1,7 +1,7 @@
 import React from 'react'
-import { twStyled } from 'tailwind-styled'
+import { styled } from 'tailwind-styled'
 
-export const StyledButton = twStyled('button', [
+export const StyledButton = styled('button', [
   'rounded border inline-flex gap-2 items-center justify-center font-medium focus:outline-none focus:ring-2 focus:ring-primary-lighter [&_svg]:w-[1em] [&_svg]:h-[1em]',
   {
     variants: {

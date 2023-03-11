@@ -1,7 +1,7 @@
 import * as A from '@radix-ui/react-avatar'
-import { twStyled } from 'tailwind-styled'
+import { styled } from 'tailwind-styled'
 
-export const Root = twStyled(A.Root, [
+export const Root = styled(A.Root, [
   'relative rounded-full flex items-center justify-center',
   {
     variants: {
@@ -24,5 +24,5 @@ export const Root = twStyled(A.Root, [
     },
   },
 ])
-export const Image = twStyled(A.Image, ['absolute inset-0 object-cover rounded-full'])
+export const Image = styled(A.Image, ['absolute inset-0 object-cover rounded-full'])
 export const Fallback = A.Fallback

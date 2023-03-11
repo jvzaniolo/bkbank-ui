@@ -20,7 +20,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.2.4
   react: ^18.2.0
   react-dom: ^18.2.0
-  tailwind-styled: ^0.0.1
+  tailwind-styled: ^0.0.3
   tailwind-variants: ^0.0.31
   tailwindcss: ^3.2.7
   typescript: ^4.9.3
@@ -34,7 +34,7 @@ dependencies:
   nextra-theme-docs: 2.2.19_i765vautotixoofbdi6dinfkwe
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  tailwind-styled: 0.0.1_typescript@4.9.5
+  tailwind-styled: 0.0.3_typescript@4.9.5
   tailwind-variants: 0.0.31_tailwindcss@3.2.7
 
 devDependencies:
@@ -3769,8 +3769,8 @@ packages:
     resolution: {integrity: sha512-WFnDXSS4kFTZwjKg5/oZSGzBRU/l+qcbv5NVTzLUQvJ9yovDAP05h0F2+ZFW0Lw9EcgRoc2AfURUdZvnEFrXKg==}
     dev: false
 
-  /tailwind-styled/0.0.1_typescript@4.9.5:
-    resolution: {integrity: sha512-827W1kKeaLbMHA/EOyMGSjgC85oPTTHHNOFN1k+5S9E7lRFsQn8PJxKEPLSBWLghTth+tmqBdtWJXyagOs1iPg==}
+  /tailwind-styled/0.0.3_typescript@4.9.5:
+    resolution: {integrity: sha512-cNLQjq3EOMLUwqchl62D+8U5lgq4OjTiqUK7Dm1tF2HCTqfV4zWYUYCi0vn//9jjp7sjKVJVWKhko9S6MokfFA==}
     dependencies:
       class-variance-authority: 0.4.0_typescript@4.9.5
       tailwind-merge: 1.10.0

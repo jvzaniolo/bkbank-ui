@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from './Button'
-import { twStyled } from 'tailwind-styled'
+import { styled } from 'tailwind-styled'
 
-const StyledIconButton = twStyled(Button, [
+const StyledIconButton = styled(Button, [
   '',
   {
     variants: {

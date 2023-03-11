@@ -1,7 +1,7 @@
 {
   "tailwindCSS.experimental.classRegex": [
     ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["twStyled\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ["styled\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,

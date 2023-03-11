@@ -31,7 +31,7 @@
     "nextra-theme-docs": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-styled": "^0.0.1",
+    "tailwind-styled": "^0.0.3",
     "tailwind-variants": "^0.0.31"
   },
   "devDependencies": {
