@@ -1,4 +1,4 @@
-import { Avatar } from '~/lib'
+import { Avatar, AvatarFallback, AvatarImage } from '~/lib'
 import { UsersIcon } from '@heroicons/react/24/outline'
 
 # Avatar
@@ -6,179 +6,17 @@ import { UsersIcon } from '@heroicons/react/24/outline'
 The Avatar component is used to display a user's profile picture.
 
 <div className="docs-container">
-  <Avatar />
+  <Avatar isActive color="primary" asChild>
+    <button>
+      <AvatarFallback>JD</AvatarFallback>
+    </button>
+  </Avatar>
 </div>
 
 ```jsx copy
-<Avatar />
+<Avatar>
+  <AvatarFallback>
+    <UsersIcon />
+  </AvatarFallback>
+</Avatar>
 ```
-
-## Size
-
-<div className="docs-container">
-  <Avatar size="sm" />
-  <Avatar size="md" />
-  <Avatar size="lg" />
-</div>
-
-```jsx copy
-<Avatar size="sm" />
-<Avatar size="md" />
-<Avatar size="lg" />
-```
-
-## Color
-
-<div className="docs-container">
-  <Avatar color="high" />
-  <Avatar color="primary" />
-</div>
-
-```jsx copy
-<Avatar color="high" />
-<Avatar color="primary" />
-```
-
-## Active
-
-<div className="docs-container">
-  <Avatar isActive />
-</div>
-
-```jsx copy
-<Avatar isActive />
-```
-
-## Icon
-
-This will override the default user icon.
-
-<div className="docs-container">
-  <Avatar icon={<UsersIcon />} />
-</div>
-
-```jsx copy
-// import { UsersIcon } from '@heroicons/react/24/outline'
-
-<Avatar icon={<UsersIcon />} />
-```
-
-## Name
-
-Render initials from the user name.
-
-<div className="docs-container">
-  <Avatar name="John Snow" />
-</div>
-
-```jsx copy
-<Avatar name="John Snow" />
-```
-
-## Image
-
-Use the `src` prop to render an image.
-
-If `name` is provided, the Avatar will use the name as alt text.<br/>
-To override the alt text, use the `alt` prop.
-
-<div className="docs-container">
-  <Avatar src="https://randomuser.me/api/portraits/med/men/51.jpg" />
-</div>
-
-```jsx copy
-<Avatar src="..." /> // alt is undefined
-<Avatar name="John Snow" src="..." /> // alt is "John Snow"
-<Avatar name="John Snow" alt="Custom alt text" src="..." /> // alt is "Custom alt text"
-```
-
-## Fallback Component
-
-Use the `name` or `icon` props to render a fallback component until the image is loaded.<br />
-If none of these props are provided, the default user icon will be used.
-
-<div className="docs-container">
-  <Avatar src="https://randomuser.me/api/portraits/med/men/51.jpg" />
-  <Avatar name="John Snow" src="https://randomuser.me/api/portraits/med/men/51.jpg" />
-  <Avatar icon={<UsersIcon />} src="https://randomuser.me/api/portraits/med/men/51.jpg" />
-</div>
-
-```jsx copy
-<Avatar src="..." /> // will use the default user icon as fallback
-<Avatar name="John Snow" src="..." /> // will render the initials "JS" as fallback
-<Avatar icon={<UsersIcon />} src="..." /> // will render the provided icon as fallback
-```
-
-## API
-
-The Avatar component accepts the following props:
-
-### `as` (optional)
-
-The HTML element to render instead of the default `span`.
-
-- Type: `React.ElementType`
-- Default: `span`
-
-### `size` (optional)
-
-The size of the Avatar.
-
-- Type: `sm` | `md` | `lg`
-- Default: `md`
-
-### `color` (optional)
-
-The color of the Avatar.
-
-- Type: `high` | `primary`
-- Default: `high`
-
-### `isActive` (optional)
-
-Whether the Avatar is active.
-
-- Type: `boolean`
-- Default: `false`
-
-### `icon` (optional)
-
-The icon to render instead of the default user icon.
-
-- Type: `React.ReactElement`
-
-### `name` (optional)
-
-The name of the user.
-
-- Type: `string`
-
-### `src` (optional)
-
-The source of the image.
-
-- Type: `string`
-
-### `alt` (optional)
-
-The alt text of the image.
-
-- Type: `string`
-
-### `className` (optional)
-
-The className to override the default styles.
-
-- Type: `{ base?: string, image?: string, fallback?: string }`
-
-### `delayMs` (optional)
-
-The delay in milliseconds before the fallback component is rendered.
-
-- Type: `number`
-
-### `onLoadingStatusChange` (optional)
-
-The callback function that is called when the image loading status changes.
-
-- Type: `(status: 'idle' | 'loading' | 'loaded' | 'error') => void`

@@ -1,2 +1,4 @@
-export * from './components/Button'
-export * from './components/Avatar'
+export * from './avatar'
+export * from './button'
+export * from './icon-button'
+export * from './tabs'

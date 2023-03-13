@@ -1,12 +1,18 @@
 {
   "name": "@bkbank/ui",
   "version": "0.0.0",
-  "description": "The Bk Bank Design System written as a TailwindCSS Plugin",
-  "main": "index.js",
+  "description": "BK Bank's Design System",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "build:lib": "tsc --project tsconfig.lib.json",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +23,7 @@
     "design-system"
   ],
   "author": "joao.zaniolo",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jvzaniolo/bkbank-ui/issues"
   },
@@ -25,16 +31,23 @@
   "dependencies": {
     "@heroicons/react": "^2.0.16",
     "@radix-ui/react-avatar": "^1.0.2",
+    "@radix-ui/react-slot": "^1.0.1",
     "@radix-ui/react-tabs": "^1.0.3",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-styled": "^0.0.3",
     "tailwind-variants": "^0.0.31"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "7.0.0-rc.2",
+    "@storybook/addon-interactions": "7.0.0-rc.2",
+    "@storybook/addon-links": "7.0.0-rc.2",
+    "@storybook/blocks": "7.0.0-rc.2",
+    "@storybook/nextjs": "7.0.0-rc.2",
+    "@storybook/react": "7.0.0-rc.2",
+    "@storybook/testing-library": "0.0.14-next.1",
     "@types/node": "18.11.10",
     "@types/react": "^18.0.28",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
@@ -43,9 +56,11 @@
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-storybook": "^0.6.11",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.4",
+    "storybook": "7.0.0-rc.2",
     "tailwindcss": "^3.2.7",
     "typescript": "^4.9.3"
   }

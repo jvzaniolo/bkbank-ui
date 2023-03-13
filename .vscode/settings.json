@@ -2,5 +2,8 @@
   "tailwindCSS.experimental.classRegex": [["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]],
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,
-  "cSpell.words": ["nextra"]
+  "cSpell.words": ["nextra"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
 }

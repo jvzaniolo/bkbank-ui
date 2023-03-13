@@ -56,17 +56,21 @@ The Button component is used to trigger an action or event, such as submitting a
 ## Icon
 
 <div className="docs-container">
-  <Button leftIcon={<UserIcon />}>
+  <Button>
+    <UserIcon />
     <span>With left icon</span>
   </Button>
-  <Button rightIcon={<UserIcon />}>With right icon</Button>
+  <Button>
+    <span>With right icon</span>
+    <UserIcon />
+  </Button>
 </div>
 
 ```jsx copy
 // import { UserIcon } from '@heroicons/react/24/outline'
 
-<Button leftIcon={<UserIcon />}>With left icon</Button>
-<Button rightIcon={<UserIcon />}>Secondary</Button>
+<Button><UserIcon /> With left icon</Button>
+<Button>With right icon <UserIcon /></Button>
 ```
 
 ## Loading
@@ -101,12 +105,11 @@ The Button component is used to trigger an action or event, such as submitting a
 
 The Button component accepts the following props:
 
-### `as` (optional)
+### `asChild` (optional)
 
-The HTML element to render instead of the default `button`.
+Whether the button is a child of another component or not.
 
-- Type: `React.ElementType`
-- Default: `button`
+- Type: `boolean`
 
 ### `size` (optional)
 
@@ -128,18 +131,6 @@ The color of the button.
 
 - Type: `'primary' | 'secondary'`
 - Default: `'primary'`
-
-### `leftIcon` (optional)
-
-The icon to display on the left side of the button.
-
-- Type: `React.ReactElement`
-
-### `rightIcon` (optional)
-
-The icon to display on the right side of the button.
-
-- Type: `React.ReactElement`
 
 ### `isLoading` (optional)
 
